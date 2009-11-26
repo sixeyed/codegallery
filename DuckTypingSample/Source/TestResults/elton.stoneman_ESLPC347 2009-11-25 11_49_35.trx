@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="f0723288-a1fa-4a73-918a-96a92936ca91" name="elton.stoneman@ESLPC347 2009-11-25 11:49:35" runUser="EDENBROOK0\elton.stoneman" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2006">
+  <TestRunConfiguration name="Local Test Run" id="65929681-305b-47bd-b9e1-f9509144d466">
+    <Description>This is a default test run configuration for a local test run.</Description>
+    <Deployment runDeploymentRoot="D:\github\codegallery\DuckTypingSample\Source\TestResults\elton.stoneman_ESLPC347 2009-11-25 11_49_35">
+      <DeploymentItem filename="D:\github\codegallery\DuckTypingSample\Source\DuckTypingSample\bin\Debug\DuckTypingSample.dll" />
+    </Deployment>
+    <TestTypeSpecific />
+  </TestRunConfiguration>
+  <ResultSummary outcome="Completed">
+    <Counters total="4" executed="4" passed="4" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <Times creation="2009-11-25T11:49:35.4531250+00:00" queuing="2009-11-25T11:49:40.4843750+00:00" start="2009-11-25T11:49:40.7812500+00:00" finish="2009-11-25T11:49:44.7343750+00:00" />
+  <TestDefinitions>
+    <UnitTest name="As_Invalid" storage="d:\github\codegallery\ducktypingsample\source\ducktypingsample.tests\bin\debug\ducktypingsample.tests.dll" id="ace42804-0c05-728f-514d-2c381b664f99">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="2b2b6ece-4cd3-4c8a-b742-c62d38bef830" />
+      <TestMethod codeBase="D:\github\codegallery\DuckTypingSample\Source\DuckTypingSample.Tests\bin\Debug\DuckTypingSample.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DuckTypingSample.Tests.DuckTypeTest, DuckTypingSample.Tests" name="As_Invalid" />
+    </UnitTest>
+    <UnitTest name="As_Extension" storage="d:\github\codegallery\ducktypingsample\source\ducktypingsample.tests\bin\debug\ducktypingsample.tests.dll" id="3923d474-1986-e6a8-4284-d2d2344c4813">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="bbf28baf-108e-4ee0-8ce4-e353fcde7c83" />
+      <TestMethod codeBase="D:\github\codegallery\DuckTypingSample\Source\DuckTypingSample.Tests\bin\Debug\DuckTypingSample.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DuckTypingSample.Tests.DuckTypeTest, DuckTypingSample.Tests" name="As_Extension" />
+    </UnitTest>
+    <UnitTest name="As" storage="d:\github\codegallery\ducktypingsample\source\ducktypingsample.tests\bin\debug\ducktypingsample.tests.dll" id="b3a8bfe9-c9f0-b643-a74a-775259098007">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="aefbba17-343b-4377-8765-7de7a1a1ed30" />
+      <TestMethod codeBase="D:\github\codegallery\DuckTypingSample\Source\DuckTypingSample.Tests\bin\Debug\DuckTypingSample.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DuckTypingSample.Tests.DuckTypeTest, DuckTypingSample.Tests" name="As" />
+    </UnitTest>
+    <UnitTest name="As_Struct" storage="d:\github\codegallery\ducktypingsample\source\ducktypingsample.tests\bin\debug\ducktypingsample.tests.dll" id="1fcfaa21-e7b1-e518-85f8-7d23cee64c1b">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="8d047a58-e50a-4d6e-85ba-eecab3e9c17e" />
+      <TestMethod codeBase="D:\github\codegallery\DuckTypingSample\Source\DuckTypingSample.Tests\bin\Debug\DuckTypingSample.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DuckTypingSample.Tests.DuckTypeTest, DuckTypingSample.Tests" name="As_Struct" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="b3a8bfe9-c9f0-b643-a74a-775259098007" executionId="aefbba17-343b-4377-8765-7de7a1a1ed30" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3923d474-1986-e6a8-4284-d2d2344c4813" executionId="bbf28baf-108e-4ee0-8ce4-e353fcde7c83" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ace42804-0c05-728f-514d-2c381b664f99" executionId="2b2b6ece-4cd3-4c8a-b742-c62d38bef830" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1fcfaa21-e7b1-e518-85f8-7d23cee64c1b" executionId="8d047a58-e50a-4d6e-85ba-eecab3e9c17e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="aefbba17-343b-4377-8765-7de7a1a1ed30" testId="b3a8bfe9-c9f0-b643-a74a-775259098007" testName="As" computerName="ESLPC347" duration="00:00:01.9318206" startTime="2009-11-25T11:49:40.9375000+00:00" endTime="2009-11-25T11:49:44.0937500+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="bbf28baf-108e-4ee0-8ce4-e353fcde7c83" testId="3923d474-1986-e6a8-4284-d2d2344c4813" testName="As_Extension" computerName="ESLPC347" duration="00:00:00.1265325" startTime="2009-11-25T11:49:44.0937500+00:00" endTime="2009-11-25T11:49:44.2343750+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="2b2b6ece-4cd3-4c8a-b742-c62d38bef830" testId="ace42804-0c05-728f-514d-2c381b664f99" testName="As_Invalid" computerName="ESLPC347" duration="00:00:00.0007908" startTime="2009-11-25T11:49:44.2656250+00:00" endTime="2009-11-25T11:49:44.3593750+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="8d047a58-e50a-4d6e-85ba-eecab3e9c17e" testId="1fcfaa21-e7b1-e518-85f8-7d23cee64c1b" testName="As_Struct" computerName="ESLPC347" duration="00:00:00.0426353" startTime="2009-11-25T11:49:44.3593750+00:00" endTime="2009-11-25T11:49:44.4062500+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

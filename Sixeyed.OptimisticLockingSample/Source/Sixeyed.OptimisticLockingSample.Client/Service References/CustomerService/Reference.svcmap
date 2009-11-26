@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bcf4d945-46f8-4f8d-b04f-d8980b7d4b25" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/Sixeyed.OptimisticLockingSample.Services/CustomerService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CustomerService1.wsdl" MetadataType="Wsdl" ID="3d78ea9a-d220-4fcf-bf0c-1221e004d708" SourceId="1" SourceUrl="http://win-jmwgpj7lql5/Sixeyed.OptimisticLockingSample.Services/CustomerService.svc?wsdl" />
+    <MetadataFile FileName="CustomerService2.xsd" MetadataType="Schema" ID="72efb2b6-cf47-4114-b659-4203f728cd0e" SourceId="1" SourceUrl="http://win-jmwgpj7lql5/Sixeyed.OptimisticLockingSample.Services/CustomerService.svc?xsd=xsd1" />
+    <MetadataFile FileName="CustomerService1.disco" MetadataType="Disco" ID="7ec679a6-d9bf-4fd3-a07c-59505e6143cb" SourceId="1" SourceUrl="http://win-jmwgpj7lql5/Sixeyed.OptimisticLockingSample.Services/CustomerService.svc?disco" />
+    <MetadataFile FileName="CustomerService21.xsd" MetadataType="Schema" ID="c1f1e113-4550-48f2-99b6-3b8a8b722697" SourceId="1" SourceUrl="http://win-jmwgpj7lql5/Sixeyed.OptimisticLockingSample.Services/CustomerService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

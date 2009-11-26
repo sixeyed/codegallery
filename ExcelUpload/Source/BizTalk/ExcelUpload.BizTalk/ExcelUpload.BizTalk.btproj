@@ -1,0 +1,107 @@
+﻿<VisualStudioProject>
+    <BIZTALK
+        ProductVersion = "3.6.1404"
+        SchemaVersion = "1.0"
+        ProjectGuid = "{DC073AB1-78B2-4E87-A92E-164852E88ECB}"
+    >
+        <Build>
+            <Settings>
+                <EditorCommon/>
+                <ProjectCommon
+                    AssemblyKeyName = ""
+                    AssemblyKeyFile = "E:\ExcelUpload\Source\ExcelUpload.snk"
+                    AssemblyDelaySign = "False"
+                    AssemblyTitle = ""
+                    AssemblyDescription = ""
+                    AssemblyDefaultAlias = ""
+                    AssemblyConfiguration = ""
+                    AssemblyTrademark = ""
+                    AssemblyProduct = ""
+                    AssemblyInformationalVersion = "1.0.0.0"
+                    AssemblyFileVersion = "1.0.0.0"
+                    AssemblyCopyright = ""
+                    AssemblyCompany = ""
+                    AssemblyVersion = "1.0.0.0"
+                    DefaultNamespace = "ExcelUpload.BizTalk"
+                    AssemblyName = "ExcelUpload.BizTalk"
+                />
+                <Config
+                    Name = "Development"
+                    ApplicationName = "ExcelUpload"
+                    BpelCompliance = "True"
+                    GenerateDebuggingInformation = "True"
+                    EmbedTrackingInformation = "True"
+                    TreatWarningsAsErrors = "False"
+                    WarningLevel = "4"
+                    OutputPath = "bin\Development\"
+                />
+                <Config
+                    Name = "Deployment"
+                    ApplicationName = "ExcelUpload"
+                    BpelCompliance = "True"
+                    GenerateDebuggingInformation = "False"
+                    EmbedTrackingInformation = "True"
+                    TreatWarningsAsErrors = "False"
+                    WarningLevel = "4"
+                    OutputPath = "bin\Deployment\"
+                />
+            </Settings>
+            <References>
+                <Reference
+                    Name = "System"
+                    AssemblyName = "System"
+                />
+                <Reference
+                    Name = "System.XML"
+                    AssemblyName = "System.Xml"
+                />
+                <Reference
+                    Name = "System.configuration"
+                    AssemblyName = "System.Configuration"
+                />
+                <Reference
+                    Name = "Microsoft.BizTalk.DefaultPipelines"
+                    AssemblyName = "Microsoft.BizTalk.DefaultPipelines"
+                />
+                <Reference
+                    Name = "Microsoft.BizTalk.GlobalPropertySchemas"
+                    AssemblyName = "Microsoft.BizTalk.GlobalPropertySchemas"
+                />
+                <Reference
+                    Name = "ExcelUpload.PipelineComponents"
+                    AssemblyName = "ExcelUpload.PipelineComponents"
+                    HintPath = "C:\Program Files\Microsoft BizTalk Server 2006\Pipeline Components\ExcelUpload.PipelineComponents.dll"
+                />
+            </References>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "AddProduct.xsd"
+                    BuildAction = "Compile"
+                    Namespace = "ExcelUpload.BizTalk"
+                    Type = "AddProduct"
+                />
+                <File
+                    RelPath = "AddProductToInsertProduct.btm"
+                    BuildAction = "Compile"
+                    Namespace = "ExcelUpload.BizTalk"
+                    Type = "AddProductToInsertProduct"
+                />
+                <File
+                    RelPath = "ExcelReceive.btp"
+                    BuildAction = "Compile"
+                    Namespace = "ExcelUpload.BizTalk"
+                    Type = "ExcelReceive"
+                />
+                <File
+                    RelPath = "SQLService.xsd"
+                    BuildAction = "Compile"
+                    Namespace = "ExcelUpload.BizTalk"
+                    Type = "SQLService"
+                />
+            </Include>
+        </Files>
+    </BIZTALK>
+</VisualStudioProject>
+

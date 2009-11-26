@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{EF7E3281-CD33-11D4-8326-00C04FA0CE8D}") = "PowerShellSample.Schemas", "PowerShellSample.Schemas.btproj", "{FF5DD8FF-8AE5-465C-9C13-82301B483F6F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Deployment|.NET = Deployment|.NET
+		Development|.NET = Development|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF5DD8FF-8AE5-465C-9C13-82301B483F6F}.Deployment|.NET.ActiveCfg = Deployment|.NET
+		{FF5DD8FF-8AE5-465C-9C13-82301B483F6F}.Deployment|.NET.Build.0 = Deployment|.NET
+		{FF5DD8FF-8AE5-465C-9C13-82301B483F6F}.Deployment|.NET.Deploy.0 = Deployment|.NET
+		{FF5DD8FF-8AE5-465C-9C13-82301B483F6F}.Development|.NET.ActiveCfg = Development|.NET
+		{FF5DD8FF-8AE5-465C-9C13-82301B483F6F}.Development|.NET.Build.0 = Development|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,4 @@
+﻿<%@ ServiceHost Language="C#" 
+Debug="true" 
+Service="Sixeyed.OptimisticLockingSample.Services.CustomerService" 
+CodeBehind="CustomerService.svc.cs" %>

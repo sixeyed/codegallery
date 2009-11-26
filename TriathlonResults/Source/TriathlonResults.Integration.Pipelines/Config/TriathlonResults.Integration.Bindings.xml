@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BindingInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Assembly="Microsoft.BizTalk.Deployment, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Version="3.5.1.0" BindingStatus="FullyBound" BoundEndpoints="4" TotalEndpoints="4">
+  <Timestamp>2008-10-24T07:54:02.059312+01:00</Timestamp>
+  <ModuleRefCollection>
+    <ModuleRef Name="[Application:TriathlonResults]" Version="" Culture="" PublicKeyToken="" FullName="[Application:TriathlonResults], Version=, Culture=, PublicKeyToken=">
+      <Services />
+      <TrackedSchemas>
+        <Schema FullName="TriathlonResults.Integration.Schemas.SectorResultStaging" RootName="StagingSectorTime" AssemblyQualifiedName="TriathlonResults.Integration.Schemas.SectorResultStaging,TriathlonResults.Integration.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=69ced1fd880f9d6b" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="TriathlonResults.Integration.Schemas.SQLService__x31_x2e0" RootName="SectorTimes" AssemblyQualifiedName="TriathlonResults.Integration.Schemas.SQLService__x31_x2e0,TriathlonResults.Integration.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=69ced1fd880f9d6b" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="TriathlonResults.Integration.Schemas.SQLService__x31_x2e0" RootName="SectorTimeUpdate" AssemblyQualifiedName="TriathlonResults.Integration.Schemas.SQLService__x31_x2e0,TriathlonResults.Integration.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=69ced1fd880f9d6b" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="TriathlonResults.Integration.Schemas.ResultService" RootName="RecordResult" AssemblyQualifiedName="TriathlonResults.Integration.Schemas.ResultService,TriathlonResults.Integration.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=69ced1fd880f9d6b" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="TriathlonResults.Integration.Schemas.ResultService" RootName="RecordResultResponse" AssemblyQualifiedName="TriathlonResults.Integration.Schemas.ResultService,TriathlonResults.Integration.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=69ced1fd880f9d6b" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="TriathlonResults.Integration.Schemas.ConsoleOutput" RootName="RecordResult" AssemblyQualifiedName="TriathlonResults.Integration.Schemas.ConsoleOutput,TriathlonResults.Integration.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=69ced1fd880f9d6b" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+      </TrackedSchemas>
+    </ModuleRef>
+    <ModuleRef Name="TriathlonResults.Integration.Schemas" Version="1.0.0.0" Culture="neutral" PublicKeyToken="69ced1fd880f9d6b" FullName="TriathlonResults.Integration.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=69ced1fd880f9d6b">
+      <Services />
+      <TrackedSchemas />
+    </ModuleRef>
+    <ModuleRef Name="TriathlonResults.Integration.Maps" Version="1.0.0.0" Culture="neutral" PublicKeyToken="69ced1fd880f9d6b" FullName="TriathlonResults.Integration.Maps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=69ced1fd880f9d6b">
+      <Services />
+      <TrackedSchemas />
+    </ModuleRef>
+    <ModuleRef Name="TriathlonResults.Integration.Orchestrations" Version="1.0.0.0" Culture="neutral" PublicKeyToken="69ced1fd880f9d6b" FullName="TriathlonResults.Integration.Orchestrations, Version=1.0.0.0, Culture=neutral, PublicKeyToken=69ced1fd880f9d6b">
+      <Services>
+        <Service Name="TriathlonResults.Integration.Orchestrations.ProcessSectorFlat" State="Started" TrackingOption="ServiceStartEnd MessageSendReceive InboundMessageBody OutboundMessageBody OrchestrationEvents TrackPropertiesForIncomingMessages TrackPropertiesForOutgoingMessages" Description="">
+          <Ports>
+            <Port Name="ReceiveFlatPort" Modifier="2" BindingOption="1">
+              <SendPortRef xsi:nil="true" />
+              <DistributionListRef xsi:nil="true" />
+              <ReceivePortRef Name="ReceiveFlat" />
+            </Port>
+          </Ports>
+          <Roles />
+          <Host Name="BizTalkServerApplication" NTGroupName="BizTalk Application Users" Type="1" Trusted="false" />
+        </Service>
+        <Service Name="TriathlonResults.Integration.Orchestrations.ProcessSectorSQL" State="Started" TrackingOption="ServiceStartEnd MessageSendReceive OrchestrationEvents" Description="">
+          <Ports>
+            <Port Name="ReceiveStagingPort" Modifier="2" BindingOption="1">
+              <SendPortRef xsi:nil="true" />
+              <DistributionListRef xsi:nil="true" />
+              <ReceivePortRef Name="ReceiveStaging" />
+            </Port>
+            <Port Name="SQLUpdate" Modifier="1" BindingOption="1">
+              <SendPortRef Name="SendStagingUpdate" />
+              <DistributionListRef xsi:nil="true" />
+              <ReceivePortRef xsi:nil="true" />
+            </Port>
+          </Ports>
+          <Roles />
+          <Host Name="BizTalkServerApplication" NTGroupName="BizTalk Application Users" Type="1" Trusted="false" />
+        </Service>
+        <Service Name="TriathlonResults.Integration.Orchestrations.ProcessSectorTime" State="Started" TrackingOption="ServiceStartEnd MessageSendReceive OrchestrationEvents" Description="">
+          <Ports>
+            <Port Name="SendServiceRequestPort" Modifier="1" BindingOption="4">
+              <SendPortRef Name="TriathlonResults.Integration.Orchestrations_1.0.0.0_TriathlonResults.Integration.Orchestrations.ProcessSectorTime_SendServiceRequestPort_69ced1fd880f9d6b" />
+              <DistributionListRef xsi:nil="true" />
+              <ReceivePortRef xsi:nil="true" />
+            </Port>
+          </Ports>
+          <Roles />
+          <Host Name="BizTalkServerApplication" NTGroupName="BizTalk Application Users" Type="1" Trusted="false" />
+        </Service>
+      </Services>
+      <TrackedSchemas />
+    </ModuleRef>
+    <ModuleRef Name="TriathlonResults.Integration.Pipelines" Version="1.0.0.0" Culture="neutral" PublicKeyToken="69ced1fd880f9d6b" FullName="TriathlonResults.Integration.Pipelines, Version=1.0.0.0, Culture=neutral, PublicKeyToken=69ced1fd880f9d6b">
+      <Services />
+      <TrackedSchemas />
+    </ModuleRef>
+  </ModuleRefCollection>
+  <SendPortCollection>
+    <SendPort Name="TriathlonResults.Integration.Orchestrations_1.0.0.0_TriathlonResults.Integration.Orchestrations.ProcessSectorTime_SendServiceRequestPort_69ced1fd880f9d6b" IsStatic="false" IsTwoWay="true" BindingOption="4">
+      <Description xsi:nil="true" />
+      <TransmitPipeline Name="Microsoft.BizTalk.DefaultPipelines.XMLTransmit" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.XMLTransmit, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="2" TrackingOption="ServiceStartEnd MessageSendReceive PipelineEvents" Description="" />
+      <ReceivePipeline Name="Microsoft.BizTalk.DefaultPipelines.XMLReceive" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.XMLReceive, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="1" TrackingOption="ServiceStartEnd MessageSendReceive PipelineEvents" Description="" />
+      <ReceivePipelineData xsi:nil="true" />
+      <Tracking>0</Tracking>
+      <Filter />
+      <Transforms />
+      <InboundTransforms />
+      <OrderedDelivery>false</OrderedDelivery>
+      <Priority>5</Priority>
+      <StopSendingOnFailure>false</StopSendingOnFailure>
+      <RouteFailedMessage>false</RouteFailedMessage>
+      <ApplicationName>TriathlonResults</ApplicationName>
+    </SendPort>
+    <SendPort Name="SendStagingUpdate" IsStatic="true" IsTwoWay="true" BindingOption="1">
+      <Description xsi:nil="true" />
+      <TransmitPipeline Name="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="2" TrackingOption="ServiceStartEnd MessageSendReceive PipelineEvents" Description="" />
+      <PrimaryTransport>
+        <Address>SQL://biztest\dev01/TriathlonStaging/</Address>
+        <TransportType Name="SQL" Capabilities="81163" ConfigurationClsid="6e688659-1374-4f37-90dc-40cb6dd3c73d" />
+        <TransportTypeData>&lt;CustomProps&gt;&lt;AdapterConfig vt="8"&gt;&amp;lt;Send xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&amp;gt;&amp;lt;connectionString&amp;gt;Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=TriathlonStaging;Data Source=biztest\dev01&amp;lt;/connectionString&amp;gt;&amp;lt;outputRootElementName&amp;gt;SectorTimeUpdate&amp;lt;/outputRootElementName&amp;gt;&amp;lt;documentTargetNamespace&amp;gt;http://TriathlonResults.Central.Schemas.Staging/1.0/&amp;lt;/documentTargetNamespace&amp;gt;&amp;lt;uri&amp;gt;SQL://biztest\dev01/TriathlonStaging/&amp;lt;/uri&amp;gt;&amp;lt;/Send&amp;gt;&lt;/AdapterConfig&gt;&lt;/CustomProps&gt;</TransportTypeData>
+        <RetryCount>3</RetryCount>
+        <RetryInterval>5</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2008-10-20T23:00:00</FromTime>
+        <ToTime>2008-10-21T22:59:59</ToTime>
+        <Primary>true</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>1</DeliveryNotification>
+        <SendHandler Name="BizTalkServerApplication" HostTrusted="false">
+          <TransportType Name="SQL" Capabilities="81163" ConfigurationClsid="6e688659-1374-4f37-90dc-40cb6dd3c73d" />
+        </SendHandler>
+      </PrimaryTransport>
+      <SecondaryTransport>
+        <Address />
+        <RetryCount>3</RetryCount>
+        <RetryInterval>5</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2008-10-20T23:00:00</FromTime>
+        <ToTime>2008-10-21T22:59:59</ToTime>
+        <Primary>false</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>1</DeliveryNotification>
+        <SendHandler xsi:nil="true" />
+      </SecondaryTransport>
+      <ReceivePipeline Name="Microsoft.BizTalk.DefaultPipelines.PassThruReceive" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.PassThruReceive, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="1" TrackingOption="ServiceStartEnd MessageSendReceive PipelineEvents" Description="" />
+      <ReceivePipelineData xsi:nil="true" />
+      <Tracking>0</Tracking>
+      <Filter />
+      <Transforms />
+      <InboundTransforms />
+      <OrderedDelivery>false</OrderedDelivery>
+      <Priority>5</Priority>
+      <StopSendingOnFailure>false</StopSendingOnFailure>
+      <RouteFailedMessage>false</RouteFailedMessage>
+      <ApplicationName>TriathlonResults</ApplicationName>
+    </SendPort>
+    <SendPort Name="DynamicRequestResponse" IsStatic="false" IsTwoWay="true" BindingOption="0">
+      <Description xsi:nil="true" />
+      <TransmitPipeline Name="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="2" TrackingOption="ServiceStartEnd MessageSendReceive PipelineEvents" Description="" />
+      <ReceivePipeline Name="Microsoft.BizTalk.DefaultPipelines.PassThruReceive" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.PassThruReceive, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="1" TrackingOption="ServiceStartEnd MessageSendReceive PipelineEvents" Description="" />
+      <ReceivePipelineData xsi:nil="true" />
+      <Tracking>0</Tracking>
+      <Filter>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;Filter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;Group&gt;
+    &lt;Statement Property="Microsoft.Practices.ESB.Itinerary.Schemas.ServiceType" Operator="0" Value="Messaging" /&gt;
+    &lt;Statement Property="Microsoft.Practices.ESB.Itinerary.Schemas.ServiceState" Operator="0" Value="Pending" /&gt;
+    &lt;Statement Property="Microsoft.Practices.ESB.Itinerary.Schemas.ServiceName" Operator="0" Value="DynamicResolutionSolicitResp" /&gt;
+  &lt;/Group&gt;
+&lt;/Filter&gt;</Filter>
+      <Transforms />
+      <InboundTransforms />
+      <OrderedDelivery>false</OrderedDelivery>
+      <Priority>5</Priority>
+      <StopSendingOnFailure>false</StopSendingOnFailure>
+      <RouteFailedMessage>false</RouteFailedMessage>
+      <ApplicationName>TriathlonResults</ApplicationName>
+    </SendPort>
+  </SendPortCollection>
+  <DistributionListCollection />
+  <ReceivePortCollection>
+    <ReceivePort Name="ReceiveStaging" IsTwoWay="false" BindingOption="1">
+      <Description xsi:nil="true" />
+      <ReceiveLocations>
+        <ReceiveLocation Name="ReceiveStagingSQL">
+          <Description xsi:nil="true" />
+          <Address>SQL://biztest\dev01/TriathlonStaging/</Address>
+          <PublicAddress />
+          <Primary>true</Primary>
+          <ReceiveLocationServiceWindowEnabled>false</ReceiveLocationServiceWindowEnabled>
+          <ReceiveLocationFromTime>2008-10-20T23:00:00</ReceiveLocationFromTime>
+          <ReceiveLocationToTime>2008-10-21T22:59:59</ReceiveLocationToTime>
+          <ReceiveLocationStartDateEnabled>false</ReceiveLocationStartDateEnabled>
+          <ReceiveLocationStartDate>2008-10-21T01:00:00</ReceiveLocationStartDate>
+          <ReceiveLocationEndDateEnabled>false</ReceiveLocationEndDateEnabled>
+          <ReceiveLocationEndDate>2008-10-22T01:00:00</ReceiveLocationEndDate>
+          <ReceiveLocationTransportType Name="SQL" Capabilities="81163" ConfigurationClsid="6e688659-1374-4f37-90dc-40cb6dd3c73d" />
+          <ReceiveLocationTransportTypeData>&lt;CustomProps&gt;&lt;AdapterConfig vt="8"&gt;&amp;lt;Receive xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&amp;gt;&amp;lt;sqlCommand&amp;gt;exec GetUnprocessedSectorTimes&amp;lt;/sqlCommand&amp;gt;&amp;lt;connectionString&amp;gt;Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=TriathlonStaging;Data Source=biztest\dev01&amp;lt;/connectionString&amp;gt;&amp;lt;documentRootElementName&amp;gt;StagingSectorTime&amp;lt;/documentRootElementName&amp;gt;&amp;lt;documentTargetNamespace&amp;gt;http://TriathlonResults.Central.Schemas.Staging/1.0/&amp;lt;/documentTargetNamespace&amp;gt;&amp;lt;pollingUnitOfMeasure&amp;gt;Seconds&amp;lt;/pollingUnitOfMeasure&amp;gt;&amp;lt;pollingInterval&amp;gt;60&amp;lt;/pollingInterval&amp;gt;&amp;lt;uri&amp;gt;SQL://biztest\dev01/TriathlonStaging/&amp;lt;/uri&amp;gt;&amp;lt;pollWhileDataFound&amp;gt;False&amp;lt;/pollWhileDataFound&amp;gt;&amp;lt;/Receive&amp;gt;&lt;/AdapterConfig&gt;&lt;/CustomProps&gt;</ReceiveLocationTransportTypeData>
+          <ReceivePipeline Name="TriathlonResults.Integration.Pipelines.ReceiveSectorResult" FullyQualifiedName="TriathlonResults.Integration.Pipelines.ReceiveSectorResult, TriathlonResults.Integration.Pipelines, Version=1.0.0.0, Culture=neutral, PublicKeyToken=69ced1fd880f9d6b" Type="1" TrackingOption="ServiceStartEnd MessageSendReceive PipelineEvents" Description="" />
+          <ReceivePipelineData xsi:nil="true" />
+          <SendPipeline xsi:nil="true" />
+          <SendPipelineData xsi:nil="true" />
+          <Enable>true</Enable>
+          <ReceiveHandler Name="BizTalkServerApplication" HostTrusted="false">
+            <TransportType Name="SQL" Capabilities="81163" ConfigurationClsid="6e688659-1374-4f37-90dc-40cb6dd3c73d" />
+          </ReceiveHandler>
+        </ReceiveLocation>
+      </ReceiveLocations>
+      <SendPipelineData xsi:nil="true" />
+      <Authentication>0</Authentication>
+      <Tracking>51</Tracking>
+      <Transforms />
+      <RouteFailedMessage>false</RouteFailedMessage>
+      <ApplicationName>TriathlonResults</ApplicationName>
+    </ReceivePort>
+    <ReceivePort Name="ReceiveFlat" IsTwoWay="false" BindingOption="1">
+      <Description xsi:nil="true" />
+      <ReceiveLocations>
+        <ReceiveLocation Name="ReceiveFlatFILE">
+          <Description xsi:nil="true" />
+          <Address>G:\stonemae\TriathlonResults\Locations\Receive\*.txt</Address>
+          <PublicAddress />
+          <Primary>true</Primary>
+          <ReceiveLocationServiceWindowEnabled>false</ReceiveLocationServiceWindowEnabled>
+          <ReceiveLocationFromTime>2008-10-20T23:00:00</ReceiveLocationFromTime>
+          <ReceiveLocationToTime>2008-10-21T22:59:59</ReceiveLocationToTime>
+          <ReceiveLocationStartDateEnabled>false</ReceiveLocationStartDateEnabled>
+          <ReceiveLocationStartDate>2008-10-21T01:00:00</ReceiveLocationStartDate>
+          <ReceiveLocationEndDateEnabled>false</ReceiveLocationEndDateEnabled>
+          <ReceiveLocationEndDate>2008-10-22T01:00:00</ReceiveLocationEndDate>
+          <ReceiveLocationTransportType Name="FILE" Capabilities="11" ConfigurationClsid="5e49e3a6-b4fc-4077-b44c-22f34a242fdb" />
+          <ReceiveLocationTransportTypeData>&lt;CustomProps&gt;&lt;RemoveReceivedFileRetryCount vt="19"&gt;5&lt;/RemoveReceivedFileRetryCount&gt;&lt;RemoveReceivedFileMaxInterval vt="19"&gt;300000&lt;/RemoveReceivedFileMaxInterval&gt;&lt;FileMask vt="8"&gt;*.txt&lt;/FileMask&gt;&lt;BatchSizeInBytes vt="19"&gt;102400&lt;/BatchSizeInBytes&gt;&lt;PollingInterval vt="19"&gt;60000&lt;/PollingInterval&gt;&lt;BatchSize vt="19"&gt;20&lt;/BatchSize&gt;&lt;FileNetFailRetryInt vt="19"&gt;5&lt;/FileNetFailRetryInt&gt;&lt;RemoveReceivedFileDelay vt="19"&gt;10&lt;/RemoveReceivedFileDelay&gt;&lt;RenameReceivedFiles vt="11"&gt;0&lt;/RenameReceivedFiles&gt;&lt;FileNetFailRetryCount vt="19"&gt;5&lt;/FileNetFailRetryCount&gt;&lt;/CustomProps&gt;</ReceiveLocationTransportTypeData>
+          <ReceivePipeline Name="TriathlonResults.Integration.Pipelines.ReceiveSectorResultFlat" FullyQualifiedName="TriathlonResults.Integration.Pipelines.ReceiveSectorResultFlat, TriathlonResults.Integration.Pipelines, Version=1.0.0.0, Culture=neutral, PublicKeyToken=69ced1fd880f9d6b" Type="1" TrackingOption="ServiceStartEnd MessageSendReceive PipelineEvents" Description="" />
+          <ReceivePipelineData xsi:nil="true" />
+          <SendPipeline xsi:nil="true" />
+          <SendPipelineData xsi:nil="true" />
+          <Enable>true</Enable>
+          <ReceiveHandler Name="BizTalkServerApplication" HostTrusted="false">
+            <TransportType Name="FILE" Capabilities="11" ConfigurationClsid="5e49e3a6-b4fc-4077-b44c-22f34a242fdb" />
+          </ReceiveHandler>
+        </ReceiveLocation>
+      </ReceiveLocations>
+      <SendPipelineData xsi:nil="true" />
+      <Authentication>0</Authentication>
+      <Tracking>51</Tracking>
+      <Transforms />
+      <RouteFailedMessage>false</RouteFailedMessage>
+      <ApplicationName>TriathlonResults</ApplicationName>
+    </ReceivePort>
+  </ReceivePortCollection>
+  <PartyCollection />
+</BindingInfo>

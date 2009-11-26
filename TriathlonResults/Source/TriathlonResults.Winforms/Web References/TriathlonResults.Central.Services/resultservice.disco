@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://localhost/triathlonresults.central/resultservice.asmx?wsdl" docRef="http://localhost/triathlonresults.central/resultservice.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://localhost/triathlonresults.central/resultservice.asmx" xmlns:q1="http://TriathlonResults.Central.Schemas/1.0/" binding="q1:ResultServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://localhost/triathlonresults.central/resultservice.asmx" xmlns:q2="http://TriathlonResults.Central.Schemas/1.0/" binding="q2:ResultServiceSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

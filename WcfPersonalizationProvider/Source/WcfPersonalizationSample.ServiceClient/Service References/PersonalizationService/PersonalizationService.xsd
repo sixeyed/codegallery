@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WcfPersonalizationProvider" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfPersonalizationProvider" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:1321/PersonalizationService.svc?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/System.Web.UI.WebControls.WebParts" />
+  <xs:complexType name="FindStateResult">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.Web.UI.WebControls.WebParts" minOccurs="0" name="StateInfoCollection" nillable="true" type="q1:PersonalizationStateInfoCollection" />
+      <xs:element minOccurs="0" name="TotalRecords" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FindStateResult" nillable="true" type="tns:FindStateResult" />
+</xs:schema>

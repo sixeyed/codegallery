@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelUpload.Data", "ExcelUpload.Data.csproj", "{26C50A86-C020-4C62-93FA-4FC43BBD0F65}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug - No FxCop|Any CPU = Debug - No FxCop|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{26C50A86-C020-4C62-93FA-4FC43BBD0F65}.Debug - No FxCop|Any CPU.ActiveCfg = Debug - No FxCop|Any CPU
+		{26C50A86-C020-4C62-93FA-4FC43BBD0F65}.Debug - No FxCop|Any CPU.Build.0 = Debug - No FxCop|Any CPU
+		{26C50A86-C020-4C62-93FA-4FC43BBD0F65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26C50A86-C020-4C62-93FA-4FC43BBD0F65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26C50A86-C020-4C62-93FA-4FC43BBD0F65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26C50A86-C020-4C62-93FA-4FC43BBD0F65}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

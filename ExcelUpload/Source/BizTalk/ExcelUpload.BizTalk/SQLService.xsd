@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://BTSExcelUpload" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:appinfo>
+      <msbtssql:sqlScript value="exec uspInsertProduct @DaysToManufacture=&quot; &quot;, @ListPrice=&quot; &quot;, @Name=&quot; &quot;, @ProductNumber=&quot; &quot;, @ReorderPoint=&quot; &quot;, @SafetyStockLevel=&quot; &quot;, @SellStartDate=&quot; &quot;, @StandardCost=&quot; &quot;" xmlns:msbtssql="http://schemas.microsoft.com/BizTalk/2003" />
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="InsertProduct">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="uspInsertProduct">
+          <xs:complexType>
+            <xs:attribute name="DaysToManufacture" type="xs:int" />
+            <xs:attribute name="ListPrice" type="xs:string" />
+            <xs:attribute name="Name" type="xs:string" />
+            <xs:attribute name="ProductNumber" type="xs:string" />
+            <xs:attribute name="ReorderPoint" type="xs:short" />
+            <xs:attribute name="SafetyStockLevel" type="xs:short" />
+            <xs:attribute name="SellStartDate" type="xs:string" />
+            <xs:attribute name="StandardCost" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertProductResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Success" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

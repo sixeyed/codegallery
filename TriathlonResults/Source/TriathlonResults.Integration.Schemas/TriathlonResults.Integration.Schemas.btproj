@@ -1,0 +1,110 @@
+﻿<VisualStudioProject>
+    <BIZTALK
+        ProductVersion = "3.6.1404"
+        SchemaVersion = "1.0"
+        ProjectGuid = "{D5C6208D-9D7E-4D1A-97D5-CC6E8104ADF1}"
+    >
+        <Build>
+            <Settings>
+                <EditorCommon/>
+                <ProjectCommon
+                    AssemblyKeyName = ""
+                    AssemblyKeyFile = "..\..\..\TriathlonResults.snk"
+                    AssemblyDelaySign = "False"
+                    AssemblyTitle = ""
+                    AssemblyDescription = ""
+                    AssemblyDefaultAlias = ""
+                    AssemblyConfiguration = ""
+                    AssemblyTrademark = ""
+                    AssemblyProduct = ""
+                    AssemblyInformationalVersion = "1.0.0.0"
+                    AssemblyFileVersion = "1.0.0.0"
+                    AssemblyCopyright = ""
+                    AssemblyCompany = ""
+                    AssemblyVersion = "1.0.0.0"
+                    DefaultNamespace = "TriathlonResults.Integration.Schemas"
+                    AssemblyName = "TriathlonResults.Integration.Schemas"
+                />
+                <Config
+                    Name = "Development"
+                    ApplicationName = ""
+                    BpelCompliance = "True"
+                    GenerateDebuggingInformation = "True"
+                    EmbedTrackingInformation = "True"
+                    TreatWarningsAsErrors = "False"
+                    WarningLevel = "4"
+                    OutputPath = "bin\Development\"
+                />
+                <Config
+                    Name = "Deployment"
+                    ApplicationName = "TriathlonResults"
+                    BpelCompliance = "True"
+                    GenerateDebuggingInformation = "False"
+                    EmbedTrackingInformation = "True"
+                    TreatWarningsAsErrors = "False"
+                    WarningLevel = "4"
+                    OutputPath = "bin\Deployment\"
+                />
+            </Settings>
+            <References>
+                <Reference
+                    Name = "System"
+                    AssemblyName = "System"
+                />
+                <Reference
+                    Name = "System.XML"
+                    AssemblyName = "System.Xml"
+                />
+                <Reference
+                    Name = "System.configuration"
+                    AssemblyName = "System.Configuration"
+                />
+                <Reference
+                    Name = "Microsoft.BizTalk.DefaultPipelines"
+                    AssemblyName = "Microsoft.BizTalk.DefaultPipelines"
+                />
+                <Reference
+                    Name = "Microsoft.BizTalk.GlobalPropertySchemas"
+                    AssemblyName = "Microsoft.BizTalk.GlobalPropertySchemas"
+                />
+            </References>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "ResultService.xsd"
+                    BuildAction = "Compile"
+                    Namespace = "TriathlonResults.Integration.Schemas"
+                    Type = "ResultService"
+                />
+                <File
+                    RelPath = "SectorResultFlat.xsd"
+                    BuildAction = "Compile"
+                    Namespace = "TriathlonResults.Integration.Schemas"
+                    Type = "ConsoleOutput"
+                />
+                <File
+                    RelPath = "SectorResultStaging.xsd"
+                    BuildAction = "Compile"
+                    Namespace = "TriathlonResults.Integration.Schemas"
+                    Type = "SectorResultStaging"
+                />
+                <File
+                    RelPath = "UpdateProcessedSectorTime.xsd"
+                    BuildAction = "Compile"
+                    Namespace = "TriathlonResults.Integration.Schemas"
+                    Type = "SQLService__x31_x2e0"
+                />
+                <File
+                    RelPath = "SampleMessages\SectorResultStaging.xml"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "SampleMessages\SectorResultStaging_MapOut.xml"
+                    BuildAction = "None"
+                />
+            </Include>
+        </Files>
+    </BIZTALK>
+</VisualStudioProject>
+

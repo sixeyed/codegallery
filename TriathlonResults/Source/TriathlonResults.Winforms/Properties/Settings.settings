@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TriathlonResults.Winforms.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="TriathlonResults_Winforms_TriathlonResults_Central_Services_ResultService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/triathlonresults.central/resultservice.asmx</Value>
+    </Setting>
+    <Setting Name="UseESB" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,78 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B9CCF5BD-A16A-4772-918E-246270337496}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TriathlonResults.Central.Services</RootNamespace>
+    <AssemblyName>TriathlonResults.Central.Services</AssemblyName>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAL\SetSectorTime.cs" />
+    <Compile Include="DAL\SqlStoredProcedure.cs" />
+    <Compile Include="ResultService.asmx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TriathlonResults.Entities\TriathlonResults.Entities.csproj">
+      <Project>{C9782B2E-2914-489E-BA47-2B6855822E56}</Project>
+      <Name>TriathlonResults.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Config\TriathlonResults.Central.ResultService.uddi" />
+    <None Include="Config\web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ResultService.asmx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>md "$(ProjectDir)\Website"
+md "$(ProjectDir)\Website\bin"
+xcopy "$(TargetDir)*.*" "$(ProjectDir)\Website\bin" /R /Y /Q
+xcopy "$(ProjectDir)Config\*.config" "$(ProjectDir)\Website" /R /Y /Q
+xcopy "$(ProjectDir)Config\*.uddi" "$(ProjectDir)\Website" /R /Y /Q
+xcopy "$(ProjectDir)*.asmx" "$(ProjectDir)\Website" /R /Y /Q
+xcopy "$(ProjectDir)*.asax" "$(ProjectDir)\Website" /R /Y /Q</PostBuildEvent>
+  </PropertyGroup>
+</Project>

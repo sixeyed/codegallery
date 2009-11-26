@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <Import Project="TriathlonResults.properties"/>
+  <Import Project="Setup.proj"/>
+
+  <Target Name="Deploy">
+    <CallTarget Targets="GacAssemblies"/>
+    <CallTarget Targets="RegisterServiceRequestAssembly"/>
+    <CallTarget Targets="CreateDatabases"/>
+    <CallTarget Targets="ResetResultsDb"/>
+    <CallTarget Targets="DeployIIS"/>
+    <CallTarget Targets="DeployUDDI"/>
+    <CallTarget Targets="DeployBizTalk"/>
+    <CallTarget Targets="UpdateConnectionStrings"/>
+    <CallTarget Targets="CreateShortcuts"/>
+  </Target>
+
+  <Target Name="RegisterServiceRequestAssembly">
+    <RegisterAssembly Assemblies="$(ServiceRequestDir)\TriathlonResults.Central.ServiceRequests.dll"
+                      TypeLibFiles="$(ServiceRequestDir)\TriathlonResults.Central.ServiceRequests.tlb"
+                      CreateCodeBase="true" />
+  </Target>
+
+  <Target Name="GacAssemblies">
+    <GacUtil Assemblies="$(ReferencedAssembliesDir)\ESBSimpleSamples.ServiceClient.dll"/>
+    <GacUtil Assemblies="$(ServiceRequestDir)\TriathlonResults.Central.ServiceRequests.dll"/>
+    <GacUtil Assemblies="$(EntitiesDir)\TriathlonResults.Entities.dll"/>
+  </Target>
+
+  <Target Name="CreateDatabases">
+    <Message Text="Deploying to SQL Server instance: $(SQLServerName)"/>
+    <ExecuteDDL ConnectionString="$(CreateConnectionString)"
+                Files="TriathlonResults.Database\Create Scripts\CreateTriathlonResults.sql"
+                ContinueOnError="false"/>
+    <ExecuteDDL ConnectionString="$(CreateConnectionString)"
+                Files="TriathlonResults.StagingDatabase\Create Scripts\CreateTriathlonStaging.sql"
+                ContinueOnError="false"/>
+  </Target>
+
+  <Target Name="DeployIIS">
+    <Message Text="Creating virtual directory: TriathlonResults.Web"/>
+    <WebDirectoryDelete VirtualDirectoryName="TriathlonResults.Web" ContinueOnError="true"/>
+    <WebDirectoryCreate VirtualDirectoryName="TriathlonResults.Web"
+                        VirtualDirectoryPhysicalPath="$(WebSiteDir)"
+                        AccessExecute="true" AccessRead="true" AccessScript="true"/>
+    <Message Text="Creating virtual directory: TriathlonResults.Central"/>
+    <WebDirectoryDelete VirtualDirectoryName="TriathlonResults.Central" ContinueOnError="true"/>
+    <WebDirectoryCreate VirtualDirectoryName="TriathlonResults.Central"
+                        VirtualDirectoryPhysicalPath="$(WebServiceDir)"
+                        AccessExecute="true" AccessRead="true" AccessScript="true"/>
+  </Target>
+
+  <Target Name="DeployUDDI">
+    <Message Text="Importing UDDI config to localhost"/>
+    <Exec Command='$(UDDIBinDir)\bootstrap /f "$(WebServiceDir)\TriathlonResults.Central.ResultService.uddi"'/>
+  </Target>
+
+  <Target Name="DeployBizTalk">
+    <!-- Copy the Pipeline components-->
+    <Exec Command='xcopy "$(PipelineComponentsSourceDir)\TriathlonResults.Integration.PipelineComponents.dll" "$(PipelineComponentsDir)" /R/Y/Q'/>
+    <!-- Setup bindings using current values for Receive locations-->
+    <CallTarget Targets="UpdateBindings"/>
+    <!-- Import bindings-->
+    <Message Text="Importing bindings: $(BindingsDir)\TriathlonResults.Integration.Bindings.xml"/>
+    <Exec Command='BTSTask ImportBindings -Source:$(BindingsDir)\TriathlonResults.Integration.Bindings.xml -ApplicationName:$(BizTalkApplicationName) -Server:$(SQLServerName) -Database:$(BizTalkManagementDatabaseName)'/>
+  </Target>
+
+  <Target Name="UpdateBindings">
+    <FileUpdate Regex="G:\\stonemae"
+            ReplacementText="$(MSBuildProjectDirectory)"
+            Files="$(BindingsDir)\TriathlonResults.Integration.Bindings.xml"/>
+    <FileUpdate Regex="biztest\\dev01"
+                ReplacementText="$(SQLServerName)"
+                Files="$(BindingsDir)\TriathlonResults.Integration.Bindings.xml"/>    
+  </Target>
+
+  <Target Name="UpdateConnectionStrings">
+    <!-- brute approach used to get all app. web. and exe. configs:-->
+    <XmlUpdate XmlFileName="$(MSBuildProjectDirectory)\%(ConfigFiles.RecursiveDir)%(ConfigFiles.FileName)%(ConfigFiles.Extension)"
+               XPath="/configuration/connectionStrings/add[1]/@connectionString"
+               Value="$(ResetConnectionString)"
+               ContinueOnError="true"/>
+  </Target>
+
+  <Target Name="CreateShortcuts">
+    <Exec Command='CreateShortcut.vbs """$(ConsoleDir)""" TriathlonResults.Console.exe Console_SwimSector.exe'/>
+    <Exec Command='CreateShortcut.vbs """$(WinFormsDir)""" TriathlonResults.Winforms.exe WinForms_BikeSector.exe'/>
+    <Exec Command='CreateShortcut.vbs """$(ExcelDir)""" RunSectorTimer.xls Excel_RunSector.xls'/>
+    <Exec Command='CreateShortcut.vbs """$(MSBuildProjectDirectory)""" SetupPhase0.cmd SetupPhase0.cmd'/>
+    <Exec Command='CreateShortcut.vbs """$(MSBuildProjectDirectory)""" SetupPhase1.cmd SetupPhase1.cmd'/>
+    <Exec Command='CreateShortcut.vbs """$(MSBuildProjectDirectory)""" SetupPhase2.cmd SetupPhase2.cmd'/>
+    <Exec Command='CreateShortcut.vbs """$(MSBuildProjectDirectory)""" TriathlonResults.Phase1.sln TriathlonResults.Phase1.sln'/>
+  </Target>
+
+</Project>

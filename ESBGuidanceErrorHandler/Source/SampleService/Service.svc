@@ -1,0 +1,1 @@
+<% @ServiceHost Language=C# Debug="true" Service="ErroringService" CodeBehind="~/App_Code/ErroringService.cs" %>

@@ -1,0 +1,90 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelUpload.Messages", "ExcelUpload.Messages\ExcelUpload.Messages.csproj", "{69F7CF8C-5DE5-48E0-A178-17525288C11F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelUpload.Client", "ExcelUpload.Client\ExcelUpload.Client.csproj", "{8B9FADA1-4DAB-45FE-97DD-211A3EA53993}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelUpload.Host", "ExcelUpload.Host\ExcelUpload.Host.csproj", "{17AE698E-39D0-4B38-8299-381003DF12E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DB Scripts", "DB Scripts", "{10BE8BAC-AF5C-41A1-ADD0-06BD6F27F2A6}"
+	ProjectSection(SolutionItems) = preProject
+		..\Common\DB Scripts\uspInsertProduct.CREATE.sql = ..\Common\DB Scripts\uspInsertProduct.CREATE.sql
+		..\Common\DB Scripts\uspInsertProduct.CREATESYNONYM.sql = ..\Common\DB Scripts\uspInsertProduct.CREATESYNONYM.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CodeGen Templates", "CodeGen Templates", "{3255D042-B87E-4D49-85E7-787B5863CC56}"
+	ProjectSection(SolutionItems) = preProject
+		..\Common\CodeGen Templates\SqlStoredProcedure.cs.tt = ..\Common\CodeGen Templates\SqlStoredProcedure.cs.tt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelUpload.Core", "..\Common\ExcelUpload.Core\ExcelUpload.Core.csproj", "{DF8898B4-68EA-44FB-B6ED-49F559181689}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelUpload.Data", "..\Common\ExcelUpload.Data\ExcelUpload.Data.csproj", "{26C50A86-C020-4C62-93FA-4FC43BBD0F65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelUpload.Data.SqlServer", "..\Common\ExcelUpload.Data.SqlServer\ExcelUpload.Data.SqlServer.csproj", "{4A1D6848-83C6-44ED-A96B-925614BCB875}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4E24EF25-0F1C-40D6-8A7D-480E0ECDBFB0}"
+	ProjectSection(SolutionItems) = preProject
+		ExcelUpload.nServiceBus.vsmdi = ExcelUpload.nServiceBus.vsmdi
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelUpload.AddProductService", "ExcelUpload.AddProductService\ExcelUpload.AddProductService.csproj", "{645AC1AE-5151-4B31-B98C-31FE2D0418E4}"
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = ExcelUpload.nServiceBus.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug - No FxCop|Any CPU = Debug - No FxCop|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{69F7CF8C-5DE5-48E0-A178-17525288C11F}.Debug - No FxCop|Any CPU.ActiveCfg = Debug|Any CPU
+		{69F7CF8C-5DE5-48E0-A178-17525288C11F}.Debug - No FxCop|Any CPU.Build.0 = Debug|Any CPU
+		{69F7CF8C-5DE5-48E0-A178-17525288C11F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69F7CF8C-5DE5-48E0-A178-17525288C11F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69F7CF8C-5DE5-48E0-A178-17525288C11F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69F7CF8C-5DE5-48E0-A178-17525288C11F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B9FADA1-4DAB-45FE-97DD-211A3EA53993}.Debug - No FxCop|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B9FADA1-4DAB-45FE-97DD-211A3EA53993}.Debug - No FxCop|Any CPU.Build.0 = Debug|Any CPU
+		{8B9FADA1-4DAB-45FE-97DD-211A3EA53993}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B9FADA1-4DAB-45FE-97DD-211A3EA53993}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B9FADA1-4DAB-45FE-97DD-211A3EA53993}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B9FADA1-4DAB-45FE-97DD-211A3EA53993}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17AE698E-39D0-4B38-8299-381003DF12E8}.Debug - No FxCop|Any CPU.ActiveCfg = Debug|Any CPU
+		{17AE698E-39D0-4B38-8299-381003DF12E8}.Debug - No FxCop|Any CPU.Build.0 = Debug|Any CPU
+		{17AE698E-39D0-4B38-8299-381003DF12E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17AE698E-39D0-4B38-8299-381003DF12E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17AE698E-39D0-4B38-8299-381003DF12E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17AE698E-39D0-4B38-8299-381003DF12E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF8898B4-68EA-44FB-B6ED-49F559181689}.Debug - No FxCop|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF8898B4-68EA-44FB-B6ED-49F559181689}.Debug - No FxCop|Any CPU.Build.0 = Debug|Any CPU
+		{DF8898B4-68EA-44FB-B6ED-49F559181689}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF8898B4-68EA-44FB-B6ED-49F559181689}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF8898B4-68EA-44FB-B6ED-49F559181689}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF8898B4-68EA-44FB-B6ED-49F559181689}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26C50A86-C020-4C62-93FA-4FC43BBD0F65}.Debug - No FxCop|Any CPU.ActiveCfg = Debug - No FxCop|Any CPU
+		{26C50A86-C020-4C62-93FA-4FC43BBD0F65}.Debug - No FxCop|Any CPU.Build.0 = Debug - No FxCop|Any CPU
+		{26C50A86-C020-4C62-93FA-4FC43BBD0F65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26C50A86-C020-4C62-93FA-4FC43BBD0F65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26C50A86-C020-4C62-93FA-4FC43BBD0F65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26C50A86-C020-4C62-93FA-4FC43BBD0F65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A1D6848-83C6-44ED-A96B-925614BCB875}.Debug - No FxCop|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A1D6848-83C6-44ED-A96B-925614BCB875}.Debug - No FxCop|Any CPU.Build.0 = Debug|Any CPU
+		{4A1D6848-83C6-44ED-A96B-925614BCB875}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A1D6848-83C6-44ED-A96B-925614BCB875}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A1D6848-83C6-44ED-A96B-925614BCB875}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A1D6848-83C6-44ED-A96B-925614BCB875}.Release|Any CPU.Build.0 = Release|Any CPU
+		{645AC1AE-5151-4B31-B98C-31FE2D0418E4}.Debug - No FxCop|Any CPU.ActiveCfg = Debug|Any CPU
+		{645AC1AE-5151-4B31-B98C-31FE2D0418E4}.Debug - No FxCop|Any CPU.Build.0 = Debug|Any CPU
+		{645AC1AE-5151-4B31-B98C-31FE2D0418E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{645AC1AE-5151-4B31-B98C-31FE2D0418E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{645AC1AE-5151-4B31-B98C-31FE2D0418E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{645AC1AE-5151-4B31-B98C-31FE2D0418E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

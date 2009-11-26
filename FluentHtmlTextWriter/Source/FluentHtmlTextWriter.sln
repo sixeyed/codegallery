@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentHtmlTextWriter.Tests", "FluentHtmlTextWriter.Tests\FluentHtmlTextWriter.Tests.csproj", "{47D40F76-D393-4DEE-A5E0-6422A762E4D8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{90E224F0-366A-4BBB-A000-17B795F0D8AA}"
+	ProjectSection(SolutionItems) = preProject
+		FluentHtmlTextWriter.vsmdi = FluentHtmlTextWriter.vsmdi
+		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentHtmlTextWriter", "FluentHtmlTextWriter\FluentHtmlTextWriter.csproj", "{5B8D8148-FF34-414B-A06A-0557DC2C12D8}"
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = FluentHtmlTextWriter.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{47D40F76-D393-4DEE-A5E0-6422A762E4D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47D40F76-D393-4DEE-A5E0-6422A762E4D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47D40F76-D393-4DEE-A5E0-6422A762E4D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47D40F76-D393-4DEE-A5E0-6422A762E4D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B8D8148-FF34-414B-A06A-0557DC2C12D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B8D8148-FF34-414B-A06A-0557DC2C12D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B8D8148-FF34-414B-A06A-0557DC2C12D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B8D8148-FF34-414B-A06A-0557DC2C12D8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

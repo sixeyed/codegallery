@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8ff21ba4-0427-419e-8dab-f4251a3a1cf9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1321/PersonalizationService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PersonalizationService2.xsd" MetadataType="Schema" ID="02270db7-c054-4966-b076-ad4d20a23de4" SourceId="1" SourceUrl="http://localhost:1321/PersonalizationService.svc?xsd=xsd0" />
+    <MetadataFile FileName="PersonalizationService.xsd" MetadataType="Schema" ID="a449d5dc-051c-4a25-a740-639ae4e98549" SourceId="1" SourceUrl="http://localhost:1321/PersonalizationService.svc?xsd=xsd4" />
+    <MetadataFile FileName="PersonalizationService.disco" MetadataType="Disco" ID="8f57f57a-028c-4eb6-bda5-12aaf6c902e1" SourceId="1" SourceUrl="http://localhost:1321/PersonalizationService.svc?disco" />
+    <MetadataFile FileName="PersonalizationService3.xsd" MetadataType="Schema" ID="19e0a0e7-dce1-4afe-b1c8-3c240f423c1c" SourceId="1" SourceUrl="http://localhost:1321/PersonalizationService.svc?xsd=xsd2" />
+    <MetadataFile FileName="PersonalizationService1.xsd" MetadataType="Schema" ID="261dd551-140e-4999-9cac-85c9eea9f4f4" SourceId="1" SourceUrl="http://localhost:1321/PersonalizationService.svc?xsd=xsd1" />
+    <MetadataFile FileName="PersonalizationService.wsdl" MetadataType="Wsdl" ID="66ca3c57-51c5-4c1e-9f1d-b8a18e135122" SourceId="1" SourceUrl="http://localhost:1321/PersonalizationService.svc?wsdl" />
+    <MetadataFile FileName="PersonalizationService4.xsd" MetadataType="Schema" ID="569c2260-ca59-4497-8274-0df1b9be2dfa" SourceId="1" SourceUrl="http://localhost:1321/PersonalizationService.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Sixeyed.OptimisticLockingSample/2009" elementFormDefault="qualified" targetNamespace="http://Sixeyed.OptimisticLockingSample/2009" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="GetCustomer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCustomerResult" nillable="true" type="tns:Customer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="Customer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreditLimit" type="xs:float" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Logo" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Customer" nillable="true" type="tns:Customer" />
+  <xs:element name="UpdateCustomer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="customer" nillable="true" type="tns:Customer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCustomerResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ConcurrencyViolation">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="ConcurrencyViolation" nillable="true" type="tns:ConcurrencyViolation" />
+  <xs:complexType name="NoDataSignature">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="NoDataSignature" nillable="true" type="tns:NoDataSignature" />
+</xs:schema>

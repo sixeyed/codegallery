@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DuckTypingSample", "DuckTypingSample\DuckTypingSample.csproj", "{D9040C16-E5AC-4FBD-9920-5DED4621CC9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DuckTypingSample.Tests", "DuckTypingSample.Tests\DuckTypingSample.Tests.csproj", "{30E2806D-0ED1-423B-86EC-9FBB01376FC3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{10346B0C-D6BA-4778-B600-FA63C8CFF7F1}"
+	ProjectSection(SolutionItems) = preProject
+		DuckTypingSample.vsmdi = DuckTypingSample.vsmdi
+		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = DuckTypingSample.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9040C16-E5AC-4FBD-9920-5DED4621CC9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9040C16-E5AC-4FBD-9920-5DED4621CC9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9040C16-E5AC-4FBD-9920-5DED4621CC9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9040C16-E5AC-4FBD-9920-5DED4621CC9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30E2806D-0ED1-423B-86EC-9FBB01376FC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30E2806D-0ED1-423B-86EC-9FBB01376FC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30E2806D-0ED1-423B-86EC-9FBB01376FC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30E2806D-0ED1-423B-86EC-9FBB01376FC3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

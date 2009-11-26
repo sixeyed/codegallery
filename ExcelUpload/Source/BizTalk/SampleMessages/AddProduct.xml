@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<Messages xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tempuri.net/ExcelUpload.Messages">
+  <AddProduct>
+    <BatchId>7a80fed4-9d30-44fe-95b0-08218c5f328e</BatchId>
+    <RegistrationIndex>58</RegistrationIndex>
+    <RegistrationsInBatch>254</RegistrationsInBatch>
+    <BatchSourcePath>E:\ExcelUpload\1.0.0.0\Binaries\Drops\ProductUpload.xls</BatchSourcePath>
+    <OriginatorDestination>ExcelUpload.Client.InputQueue@WIN2003R2-VM</OriginatorDestination>
+    <Name>new product 58</Name>
+    <ProductNumber>xlu-np-58</ProductNumber>
+    <SafetyStockLevel>100</SafetyStockLevel>
+    <ReorderPoint>20</ReorderPoint>
+    <StandardCost>10</StandardCost>
+    <ListPrice>15.5</ListPrice>
+    <DaysToManufacture>60</DaysToManufacture>
+    <SellStartDate>2005-02-27T00:00:00.0000000</SellStartDate>
+  </AddProduct>
+</Messages>

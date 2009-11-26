@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Log4NetSample", "Log4NetSample\Log4NetSample.csproj", "{E1E53EB8-82FD-4646-B46C-03AD69F83D68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Log4NetSample.Tests", "Log4NetSample.Tests\Log4NetSample.Tests.csproj", "{5DD60842-1C08-4888-92B7-10789E451A00}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C0BE25FC-A70B-4B9F-B2D5-60E8FDF7CE02}"
+	ProjectSection(SolutionItems) = preProject
+		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
+		Log4NetSample.vsmdi = Log4NetSample.vsmdi
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Log4NetSample.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E1E53EB8-82FD-4646-B46C-03AD69F83D68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1E53EB8-82FD-4646-B46C-03AD69F83D68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1E53EB8-82FD-4646-B46C-03AD69F83D68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1E53EB8-82FD-4646-B46C-03AD69F83D68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DD60842-1C08-4888-92B7-10789E451A00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DD60842-1C08-4888-92B7-10789E451A00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DD60842-1C08-4888-92B7-10789E451A00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DD60842-1C08-4888-92B7-10789E451A00}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

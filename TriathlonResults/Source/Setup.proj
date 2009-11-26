@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <Import Project="TriathlonResults.properties"/>
+
+  <Target Name="SetupPhase0">
+    <CallTarget Targets="ResetResultsDb"/>
+    <CallTarget Targets="StopApplication"/>
+    <CallTarget Targets="SetConfigsToPhase0"/>
+    <CallTarget Targets="EnableTrigger"/>
+  </Target>
+
+  <Target Name="SetupPhase1">
+    <CallTarget Targets="ResetResultsDb"/>
+    <CallTarget Targets="StartApplication"/>
+    <CallTarget Targets="SetConfigsToPhase1"/>
+    <CallTarget Targets="DisableTrigger"/>
+  </Target>
+
+  <Target Name="SetupPhase2">
+    <CallTarget Targets="ResetResultsDb"/>
+    <CallTarget Targets="StartApplication"/>
+    <CallTarget Targets="SetConfigsToPhase2"/>
+    <CallTarget Targets="DisableTrigger"/>
+  </Target>
+
+  <Target Name="StopApplication">
+    <!-- Stop the running application-->
+    <BizTalk2006.Application.Stop
+      Application="$(BizTalkApplicationName)"
+      Server="$(BizTalkDatabaseServerName)"
+      Database="$(BizTalkManagementDatabaseName)"/>
+  </Target>
+
+  <Target Name="StartApplication">
+    <BizTalk2006.Application.Start
+      Application="$(BizTalkApplicationName)"
+      Server="$(BizTalkDatabaseServerName)"
+      Database="$(BizTalkManagementDatabaseName)"/>
+  </Target>
+
+  <Target Name="SetConfigsToPhase0">
+    <XmlUpdate XmlFileName="$(WinFormsDir)\TriathlonResults.Winforms.exe.config"
+               XPath="/configuration/applicationSettings/TriathlonResults.Winforms.Properties.Settings/setting[2]/value"
+               Value="False"/>
+    <XmlUpdate XmlFileName="$(ConsoleDir)\TriathlonResults.Console.exe.config"
+               XPath="/configuration/applicationSettings/TriathlonResults.Console.Properties.Settings/setting[1]/value"
+               Value="False"/>
+  </Target>
+
+  <Target Name="SetConfigsToPhase1">
+    <XmlUpdate XmlFileName="$(WinFormsDir)\TriathlonResults.Winforms.exe.config"
+               XPath="/configuration/applicationSettings/TriathlonResults.Winforms.Properties.Settings/setting[2]/value"
+               Value="True"/>
+    <XmlUpdate XmlFileName="$(ConsoleDir)\TriathlonResults.Console.exe.config"
+               XPath="/configuration/applicationSettings/TriathlonResults.Console.Properties.Settings/setting[1]/value"
+               Value="False"/>
+  </Target>
+
+  <Target Name="SetConfigsToPhase2">
+    <XmlUpdate XmlFileName="$(WinFormsDir)\TriathlonResults.Winforms.exe.config"
+               XPath="/configuration/applicationSettings/TriathlonResults.Winforms.Properties.Settings/setting[2]/value"
+               Value="True"/>
+    <XmlUpdate XmlFileName="$(ConsoleDir)\TriathlonResults.Console.exe.config"
+               XPath="/configuration/applicationSettings/TriathlonResults.Console.Properties.Settings/setting[1]/value"
+               Value="True"/>
+  </Target>
+
+  <Target Name="ResetResultsDb">
+    <ExecuteDDL ConnectionString="$(ResetConnectionString)"
+                Files="TriathlonResults.Database\Queries\Reset.sql"/>
+    <ExecuteDDL ConnectionString="$(ResetConnectionString)"
+                Files="TriathlonResults.StagingDatabase\Queries\Reset.sql"/>
+  </Target>
+
+  <Target Name="EnableTrigger">
+    <ExecuteDDL ConnectionString="$(ResetConnectionString)"
+                Files="TriathlonResults.StagingDatabase\Queries\EnableTrigger.sql"/>
+  </Target>
+
+  <Target Name="DisableTrigger">
+    <ExecuteDDL ConnectionString="$(ResetConnectionString)"
+                Files="TriathlonResults.StagingDatabase\Queries\DisableTrigger.sql"/>
+  </Target>
+
+</Project>

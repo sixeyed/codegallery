@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://TriathlonResults.Central.Schemas/1.0/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://TriathlonResults.Central.Schemas/1.0/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://TriathlonResults.Central.Schemas/1.0/">
+      <s:element name="RecordResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="result" nillable="true" type="tns:SectorTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SectorTime">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="RaceId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SectorId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AthleteId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="StartTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="EndTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Duration" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RecordResultResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RecordResultResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="RecordResultSoapIn">
+    <wsdl:part name="parameters" element="tns:RecordResult" />
+  </wsdl:message>
+  <wsdl:message name="RecordResultSoapOut">
+    <wsdl:part name="parameters" element="tns:RecordResultResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ResultServiceSoap">
+    <wsdl:operation name="RecordResult">
+      <wsdl:input message="tns:RecordResultSoapIn" />
+      <wsdl:output message="tns:RecordResultSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ResultServiceSoap" type="tns:ResultServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RecordResult">
+      <soap:operation soapAction="http://TriathlonResults.Central.Schemas/1.0/RecordResult" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ResultServiceSoap12" type="tns:ResultServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RecordResult">
+      <soap12:operation soapAction="http://TriathlonResults.Central.Schemas/1.0/RecordResult" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ResultService">
+    <wsdl:port name="ResultServiceSoap" binding="tns:ResultServiceSoap">
+      <soap:address location="http://localhost/triathlonresults.central/resultservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ResultServiceSoap12" binding="tns:ResultServiceSoap12">
+      <soap12:address location="http://localhost/triathlonresults.central/resultservice.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,357 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="35a80a67-b4c3-4f74-9e4c-069cd0530c13" LowerBound="1.1" HigherBound="78.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="TriathlonResults.Integration.Orchestrations" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="f1109953-ab51-46d3-b8a0-2e8ce65dc4c7" ParentLink="Module_PortType" LowerBound="28.1" HigherBound="35.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="ReceiveFlatPortType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="b408e6ea-3ec9-406d-b7d4-68598520819f" ParentLink="PortType_OperationDeclaration" LowerBound="30.1" HigherBound="34.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ReceiveFlatMessage" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="48f7431a-45cf-4201-b33d-3032e43561b3" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="32.13" HigherBound="32.28">
+                    <om:Property Name="Ref" Value="TriathlonResults.Integration.Orchestrations.FlatMessageType" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="b9914cad-8d65-4384-9b42-d21285b85ee2" ParentLink="Module_PortType" LowerBound="35.1" HigherBound="42.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="SendSectorPortType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="33088e03-6611-4ea7-b462-49409ac4d21c" ParentLink="PortType_OperationDeclaration" LowerBound="37.1" HigherBound="41.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="e09e8853-6d59-481b-aa42-52dd6c988006" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="39.13" HigherBound="39.39">
+                    <om:Property Name="Ref" Value="TriathlonResults.Integration.Orchestrations.ServiceResponseMessageType" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="174c8020-daf5-4b91-9288-2590e3dc16c4" ParentLink="Module_MessageType" LowerBound="4.1" HigherBound="8.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="Adapter metadata message type: " />
+            <om:Property Name="Name" Value="procedureResponse" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PartDeclaration" OID="92e4dbd4-cd2b-4bfe-aee5-28988b9d38f2" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="6.1" HigherBound="7.1">
+                <om:Property Name="ClassName" Value="TriathlonResults.Integration.Schemas.SQLService__x31_x2e0.SectorTimeUpdate" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="Adapter metadata message part: " />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="2cf5e963-87e9-4f79-97d4-ff13c05cd488" ParentLink="Module_MessageType" LowerBound="8.1" HigherBound="12.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="Adapter metadata message type: " />
+            <om:Property Name="Name" Value="procedureRequest" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PartDeclaration" OID="703cca46-5b52-41f3-a3e3-e4d481230e5c" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="10.1" HigherBound="11.1">
+                <om:Property Name="ClassName" Value="TriathlonResults.Integration.Schemas.SQLService__x31_x2e0.SectorTimes" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="Adapter metadata message part: " />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="d4d321ad-7411-4835-8649-378853cbfe7d" ParentLink="Module_MessageType" LowerBound="12.1" HigherBound="16.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="FlatMessageType" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="PartDeclaration" OID="d0ef59c2-4612-4f80-a404-d29cfa661eae" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="14.1" HigherBound="15.1">
+                <om:Property Name="ClassName" Value="TriathlonResults.Integration.Schemas.ConsoleOutput" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Body" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="4ce28515-e1e0-4c37-b05c-53daaba8a52e" ParentLink="Module_MessageType" LowerBound="16.1" HigherBound="20.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="SectorMessageType" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="PartDeclaration" OID="a6d49522-bbea-40e3-baf6-609e4ac9d30a" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="18.1" HigherBound="19.1">
+                <om:Property Name="ClassName" Value="TriathlonResults.Integration.Schemas.ResultService.RecordResult" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Body" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="fc65bffe-1241-4cc2-be19-a02b1bcdd094" ParentLink="Module_MessageType" LowerBound="20.1" HigherBound="24.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="ServiceResponseMessageType" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="PartDeclaration" OID="2e4aa60a-1b1d-4a70-9686-72714ff3bd1e" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="22.1" HigherBound="23.1">
+                <om:Property Name="ClassName" Value="TriathlonResults.Integration.Schemas.ResultService.RecordResultResponse" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Body" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="e6ba61a1-5e8c-4b16-9cc0-99b9ac15cfd7" ParentLink="Module_MessageType" LowerBound="24.1" HigherBound="28.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="StagingMessageType" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="PartDeclaration" OID="b1cc8fc9-33d6-44f6-911d-5bf5e41495e3" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="26.1" HigherBound="27.1">
+                <om:Property Name="ClassName" Value="TriathlonResults.Integration.Schemas.SectorResultStaging" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Body" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="41552142-4ba2-4e7b-9cc5-d1257377b6cf" ParentLink="Module_ServiceDeclaration" LowerBound="42.1" HigherBound="77.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="ProcessSectorFlat" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="VariableDeclaration" OID="b182cb54-cddb-423c-9812-1c2bbf3bcd45" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="52.1" HigherBound="53.1">
+                <om:Property Name="InitialValue" Value="false" />
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.Boolean" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="FromStaging" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="965a4a91-b6b9-49a9-822a-cb85297a2e3d" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="47.1" HigherBound="48.1">
+                <om:Property Name="Type" Value="TriathlonResults.Integration.Orchestrations.FlatMessageType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="InputFlatMessage" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="4da1d90f-c4ed-406e-a84f-056844ac8f3a" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="48.1" HigherBound="49.1">
+                <om:Property Name="Type" Value="TriathlonResults.Integration.Orchestrations.SectorMessageType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SectorMessage" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="37757281-d956-41fe-9679-0f8a53ea57bb" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="49.1" HigherBound="50.1">
+                <om:Property Name="Type" Value="TriathlonResults.Integration.Orchestrations.ServiceResponseMessageType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ServiceResponse" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="f4c4def4-2ba6-40a4-a124-c3417902e02a" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="50.1" HigherBound="51.1">
+                <om:Property Name="Type" Value="TriathlonResults.Integration.Orchestrations.StagingMessageType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="InputStagingMessage" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="9d3c9074-76ee-416c-9d82-67bcffefa320" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="51.1" HigherBound="52.1">
+                <om:Property Name="Type" Value="TriathlonResults.Integration.Orchestrations.procedureRequest" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="UpdateProcessedSector" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="cc4a67fd-16b2-400c-ab1c-2894ca5e244e" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="92e365bd-5d2e-4e83-9d90-c967b5992003" ParentLink="ServiceBody_Statement" LowerBound="55.1" HigherBound="58.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="ReceiveFlatPort" />
+                    <om:Property Name="MessageName" Value="InputFlatMessage" />
+                    <om:Property Name="OperationName" Value="ReceiveFlatMessage" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive Flat input" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="89f20447-a190-4c40-8fb9-045b02d874cb" ParentLink="ServiceBody_Statement" LowerBound="58.1" HigherBound="60.1">
+                    <om:Property Name="Expression" Value="System.Diagnostics.Debug.WriteLine(&quot;ProcessSectorTimeFlat: receiveed message&quot;);" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Trace" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="10abc0e6-099a-4677-aafa-29161a9c894a" ParentLink="ServiceBody_Statement" LowerBound="60.1" HigherBound="69.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Build WS request" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="MessageRef" OID="fedf085a-aa0e-4cbe-bee2-950d5ab4410c" ParentLink="Construct_MessageRef" LowerBound="61.23" HigherBound="61.36">
+                        <om:Property Name="Ref" Value="SectorMessage" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="Transform" OID="2a718e02-9708-4ac7-aa13-a33a448b1590" ParentLink="ComplexStatement_Statement" LowerBound="63.1" HigherBound="65.1">
+                        <om:Property Name="ClassName" Value="TriathlonResults.Integration.Maps.SectorResultFlatToResultService" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Map to WS request" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="MessagePartRef" OID="e02d453c-ffbd-4fdd-813f-4914d6de9ef7" ParentLink="Transform_InputMessagePartRef" LowerBound="64.117" HigherBound="64.138">
+                            <om:Property Name="MessageRef" Value="InputFlatMessage" />
+                            <om:Property Name="PartRef" Value="Body" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_1" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="c1b32796-9c42-4e2f-9928-70fdd4eb933c" ParentLink="Transform_OutputMessagePartRef" LowerBound="64.28" HigherBound="64.46">
+                            <om:Property Name="MessageRef" Value="SectorMessage" />
+                            <om:Property Name="PartRef" Value="Body" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_2" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="MessageAssignment" OID="721cfb78-03e5-465c-8292-b02aaa743df1" ParentLink="ComplexStatement_Statement" LowerBound="65.1" HigherBound="68.1">
+                        <om:Property Name="Expression" Value="//copy context:&#xD;&#xA;SectorMessage(*) = InputFlatMessage(*);" />
+                        <om:Property Name="ReportToAnalyst" Value="False" />
+                        <om:Property Name="Name" Value="Copy context" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="9c06b0f2-804e-46c4-a660-07b00ebd61dc" ParentLink="ServiceBody_Statement" LowerBound="69.1" HigherBound="71.1">
+                    <om:Property Name="Expression" Value="System.Diagnostics.Debug.WriteLine(&quot;ProcessSectorTimeFlat: built WS message&quot;);" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Trace" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Call" OID="0095c324-6f51-414d-99e5-516bc86f8ccd" ParentLink="ServiceBody_Statement" LowerBound="71.1" HigherBound="73.1">
+                    <om:Property Name="Identifier" Value="CallOrchestration_1" />
+                    <om:Property Name="Invokee" Value="TriathlonResults.Integration.Orchestrations.ProcessSectorTime" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Call WS" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Parameter" OID="4ce2afaf-a95a-46be-adaa-9951d71b6942" ParentLink="InvokeStatement_Parameter">
+                        <om:Property Name="Direction" Value="In" />
+                        <om:Property Name="Name" Value="SectorMessage" />
+                        <om:Property Name="Type" Value="TriathlonResults.Integration.Orchestrations.SectorMessageType" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="cec4db53-c94b-4642-baef-427d19226b03" ParentLink="ServiceBody_Statement" LowerBound="73.1" HigherBound="75.1">
+                    <om:Property Name="Expression" Value="System.Diagnostics.Debug.WriteLine(&quot;ProcessSectorTimeFlat: complete&quot;);" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Trace" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="b54e3174-f3f6-4dae-ab1e-44a891a70b0e" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="45.1" HigherBound="47.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="TriathlonResults.Integration.Orchestrations.ReceiveFlatPortType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ReceiveFlatPort" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="af6fed32-0800-449b-9d1a-aee2dc91cb44" ParentLink="PortDeclaration_CLRAttribute" LowerBound="45.1" HigherBound="46.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module TriathlonResults.Integration.Orchestrations
+{
+    internal messagetype procedureResponse
+    {
+        body TriathlonResults.Integration.Schemas.SQLService__x31_x2e0.SectorTimeUpdate parameters;
+    };
+    internal messagetype procedureRequest
+    {
+        body TriathlonResults.Integration.Schemas.SQLService__x31_x2e0.SectorTimes parameters;
+    };
+    internal messagetype FlatMessageType
+    {
+        body TriathlonResults.Integration.Schemas.ConsoleOutput Body;
+    };
+    internal messagetype SectorMessageType
+    {
+        body TriathlonResults.Integration.Schemas.ResultService.RecordResult Body;
+    };
+    internal messagetype ServiceResponseMessageType
+    {
+        body TriathlonResults.Integration.Schemas.ResultService.RecordResultResponse Body;
+    };
+    internal messagetype StagingMessageType
+    {
+        body TriathlonResults.Integration.Schemas.SectorResultStaging Body;
+    };
+    internal porttype ReceiveFlatPortType
+    {
+        oneway ReceiveFlatMessage
+        {
+            FlatMessageType
+        };
+    };
+    internal porttype SendSectorPortType
+    {
+        oneway Operation_1
+        {
+            ServiceResponseMessageType
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service ProcessSectorFlat
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements ReceiveFlatPortType ReceiveFlatPort;
+        message FlatMessageType InputFlatMessage;
+        message SectorMessageType SectorMessage;
+        message ServiceResponseMessageType ServiceResponse;
+        message StagingMessageType InputStagingMessage;
+        message procedureRequest UpdateProcessedSector;
+        System.Boolean FromStaging;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("92e365bd-5d2e-4e83-9d90-c967b5992003")]
+            activate receive (ReceiveFlatPort.ReceiveFlatMessage, InputFlatMessage);
+            FromStaging = false;
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("89f20447-a190-4c40-8fb9-045b02d874cb")]
+            System.Diagnostics.Debug.WriteLine("ProcessSectorTimeFlat: receiveed message");
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("10abc0e6-099a-4677-aafa-29161a9c894a")]
+            construct SectorMessage
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("2a718e02-9708-4ac7-aa13-a33a448b1590")]
+                transform (SectorMessage.Body) = TriathlonResults.Integration.Maps.SectorResultFlatToResultService (InputFlatMessage.Body);
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("721cfb78-03e5-465c-8292-b02aaa743df1")]
+                //copy context:
+                SectorMessage(*) = InputFlatMessage(*);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("9c06b0f2-804e-46c4-a660-07b00ebd61dc")]
+            System.Diagnostics.Debug.WriteLine("ProcessSectorTimeFlat: built WS message");
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("0095c324-6f51-414d-99e5-516bc86f8ccd")]
+            call TriathlonResults.Integration.Orchestrations.ProcessSectorTime (SectorMessage);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("cec4db53-c94b-4642-baef-427d19226b03")]
+            System.Diagnostics.Debug.WriteLine("ProcessSectorTimeFlat: complete");
+        }
+    }
+}
+

@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="e08c5222-f031-4995-82ca-b079d13ccff3" name="elton.stoneman@ESLPC347 2009-11-25 13:52:36" runUser="EDENBROOK0\elton.stoneman" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2006">
+  <TestRunConfiguration name="Local Test Run" id="bf0c7a8b-c0a7-4b50-a6b9-8168f81142db">
+    <Description>This is a default test run configuration for a local test run.</Description>
+    <Deployment runDeploymentRoot="D:\github\codegallery\Log4NetSample\Source\TestResults\elton.stoneman_ESLPC347 2009-11-25 13_52_36">
+      <DeploymentItem filename="D:\github\codegallery\Log4NetSample\Source\Log4NetSample\bin\Debug\Log4NetSample.dll" />
+    </Deployment>
+    <TestTypeSpecific />
+  </TestRunConfiguration>
+  <ResultSummary outcome="Completed">
+    <Counters total="6" executed="6" passed="6" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <Times creation="2009-11-25T13:52:36.9687500+00:00" queuing="2009-11-25T13:52:39.6406250+00:00" start="2009-11-25T13:52:40.0312500+00:00" finish="2009-11-25T13:53:19.9218750+00:00" />
+  <TestDefinitions>
+    <UnitTest name="WarnLambda" storage="d:\github\codegallery\log4netsample\source\log4netsample.tests\bin\debug\log4netsample.tests.dll" id="caca1f93-655a-2653-f283-4159f7388cdd">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="8d1b8742-3421-4e57-9382-1f45423588d2" />
+      <TestMethod codeBase="D:\github\codegallery\Log4NetSample\Source\Log4NetSample.Tests\bin\Debug\Log4NetSample.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Log4NetSample.Tests.LogTest, Log4NetSample.Tests" name="WarnLambda" />
+    </UnitTest>
+    <UnitTest name="Warn" storage="d:\github\codegallery\log4netsample\source\log4netsample.tests\bin\debug\log4netsample.tests.dll" id="07d3ae2a-b998-d87e-3c36-0c5c55ad2fa1">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="a2f4e96b-22f9-4e44-b7ec-45a4fe0a8aba" />
+      <TestMethod codeBase="D:\github\codegallery\Log4NetSample\Source\Log4NetSample.Tests\bin\Debug\Log4NetSample.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Log4NetSample.Tests.LogTest, Log4NetSample.Tests" name="Warn" />
+    </UnitTest>
+    <UnitTest name="DebugDelegate" storage="d:\github\codegallery\log4netsample\source\log4netsample.tests\bin\debug\log4netsample.tests.dll" id="6bd47abf-56c0-7c2e-6be5-b6ba8634909a">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="834193b7-dffd-470c-b51a-710768772218" />
+      <TestMethod codeBase="D:\github\codegallery\Log4NetSample\Source\Log4NetSample.Tests\bin\Debug\Log4NetSample.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Log4NetSample.Tests.LogTest, Log4NetSample.Tests" name="DebugDelegate" />
+    </UnitTest>
+    <UnitTest name="DebugLambda" storage="d:\github\codegallery\log4netsample\source\log4netsample.tests\bin\debug\log4netsample.tests.dll" id="7d30b872-ceb4-fa26-b231-88c28d1a3b22">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="53a2cf9a-4914-4121-849f-da8ae9b8f279" />
+      <TestMethod codeBase="D:\github\codegallery\Log4NetSample\Source\Log4NetSample.Tests\bin\Debug\Log4NetSample.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Log4NetSample.Tests.LogTest, Log4NetSample.Tests" name="DebugLambda" />
+    </UnitTest>
+    <UnitTest name="WarnDelegate" storage="d:\github\codegallery\log4netsample\source\log4netsample.tests\bin\debug\log4netsample.tests.dll" id="cea17893-d603-c69b-f46d-96efa57fb9a8">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="9c379273-9ffa-4c66-a195-bb4d9e43e49b" />
+      <TestMethod codeBase="D:\github\codegallery\Log4NetSample\Source\Log4NetSample.Tests\bin\Debug\Log4NetSample.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Log4NetSample.Tests.LogTest, Log4NetSample.Tests" name="WarnDelegate" />
+    </UnitTest>
+    <UnitTest name="Debug" storage="d:\github\codegallery\log4netsample\source\log4netsample.tests\bin\debug\log4netsample.tests.dll" id="2b4f2f96-e83d-f225-fae6-b5114217a799">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="29befbc1-1524-4b56-838b-62d3251a1f0a" />
+      <TestMethod codeBase="D:\github\codegallery\Log4NetSample\Source\Log4NetSample.Tests\bin\Debug\Log4NetSample.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Log4NetSample.Tests.LogTest, Log4NetSample.Tests" name="Debug" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="2b4f2f96-e83d-f225-fae6-b5114217a799" executionId="29befbc1-1524-4b56-838b-62d3251a1f0a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6bd47abf-56c0-7c2e-6be5-b6ba8634909a" executionId="834193b7-dffd-470c-b51a-710768772218" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7d30b872-ceb4-fa26-b231-88c28d1a3b22" executionId="53a2cf9a-4914-4121-849f-da8ae9b8f279" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="07d3ae2a-b998-d87e-3c36-0c5c55ad2fa1" executionId="a2f4e96b-22f9-4e44-b7ec-45a4fe0a8aba" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cea17893-d603-c69b-f46d-96efa57fb9a8" executionId="9c379273-9ffa-4c66-a195-bb4d9e43e49b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="caca1f93-655a-2653-f283-4159f7388cdd" executionId="8d1b8742-3421-4e57-9382-1f45423588d2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="29befbc1-1524-4b56-838b-62d3251a1f0a" testId="2b4f2f96-e83d-f225-fae6-b5114217a799" testName="Debug" computerName="ESLPC347" duration="00:00:04.9071457" startTime="2009-11-25T13:52:40.1406250+00:00" endTime="2009-11-25T13:52:45.8906250+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="834193b7-dffd-470c-b51a-710768772218" testId="6bd47abf-56c0-7c2e-6be5-b6ba8634909a" testName="DebugDelegate" computerName="ESLPC347" duration="00:00:00.1349987" startTime="2009-11-25T13:52:45.8906250+00:00" endTime="2009-11-25T13:52:46.0312500+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="53a2cf9a-4914-4121-849f-da8ae9b8f279" testId="7d30b872-ceb4-fa26-b231-88c28d1a3b22" testName="DebugLambda" computerName="ESLPC347" duration="00:00:00.0879972" startTime="2009-11-25T13:52:46.0312500+00:00" endTime="2009-11-25T13:52:46.1250000+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a2f4e96b-22f9-4e44-b7ec-45a4fe0a8aba" testId="07d3ae2a-b998-d87e-3c36-0c5c55ad2fa1" testName="Warn" computerName="ESLPC347" duration="00:00:10.6733601" startTime="2009-11-25T13:52:46.1250000+00:00" endTime="2009-11-25T13:52:56.7968750+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="9c379273-9ffa-4c66-a195-bb4d9e43e49b" testId="cea17893-d603-c69b-f46d-96efa57fb9a8" testName="WarnDelegate" computerName="ESLPC347" duration="00:00:12.3158504" startTime="2009-11-25T13:52:56.7968750+00:00" endTime="2009-11-25T13:53:09.1250000+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="8d1b8742-3421-4e57-9382-1f45423588d2" testId="caca1f93-655a-2653-f283-4159f7388cdd" testName="WarnLambda" computerName="ESLPC347" duration="00:00:10.7201934" startTime="2009-11-25T13:53:09.1250000+00:00" endTime="2009-11-25T13:53:19.8437500+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

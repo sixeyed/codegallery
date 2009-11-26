@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<SSOApplication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://SSOConfig/SSOApplication.xsd">
+  <Name>PowerShellSample</Name>
+  <Description>Dummy configuration store for PowerShellSample</Description>
+  <ContactInfo></ContactInfo>
+  <UserGroup>BizTalk Application Users</UserGroup>
+  <AdminGroup>BizTalk Server Administrators</AdminGroup>
+  <Fields>
+    <Field name="SampleField" masked="false" type="System.String">
+      <ValueObject xsi:type="xsd:string">Sample value</ValueObject>
+      <Value>Sample value</Value>
+    </Field>
+  </Fields>
+</SSOApplication>

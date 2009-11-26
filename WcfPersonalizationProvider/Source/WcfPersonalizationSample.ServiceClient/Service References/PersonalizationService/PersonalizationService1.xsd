@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/System.Web.UI.WebControls.WebParts" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/System.Web.UI.WebControls.WebParts" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:1321/PersonalizationService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="PersonalizationStateQuery">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="_data" nillable="true" type="q1:ArrayOfKeyValueOfanyTypeanyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PersonalizationStateQuery" nillable="true" type="tns:PersonalizationStateQuery" />
+  <xs:simpleType name="PersonalizationScope">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="User" />
+      <xs:enumeration value="Shared" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PersonalizationScope" nillable="true" type="tns:PersonalizationScope" />
+  <xs:complexType name="PersonalizationStateInfoCollection">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="_indices" nillable="true" type="q2:ArrayOfKeyValueOfPersonalizationStateInfoCollection.Keyint03rBeFXg" />
+      <xs:element name="_readOnly" type="xs:boolean" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="_values" nillable="true" type="q3:ArrayOfanyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PersonalizationStateInfoCollection" nillable="true" type="tns:PersonalizationStateInfoCollection" />
+  <xs:complexType name="PersonalizationStateInfoCollection.Key">
+    <xs:sequence>
+      <xs:element name="Path" nillable="true" type="xs:string" />
+      <xs:element name="Username" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PersonalizationStateInfoCollection.Key" nillable="true" type="tns:PersonalizationStateInfoCollection.Key" />
+  <xs:complexType name="SharedPersonalizationStateInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PersonalizationStateInfo">
+        <xs:sequence>
+          <xs:element name="_countOfPersonalizations" type="xs:int" />
+          <xs:element name="_sizeOfPersonalizations" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SharedPersonalizationStateInfo" nillable="true" type="tns:SharedPersonalizationStateInfo" />
+  <xs:complexType name="PersonalizationStateInfo">
+    <xs:sequence>
+      <xs:element name="_lastUpdatedDate" type="xs:dateTime" />
+      <xs:element name="_path" nillable="true" type="xs:string" />
+      <xs:element name="_size" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PersonalizationStateInfo" nillable="true" type="tns:PersonalizationStateInfo" />
+  <xs:complexType name="UserPersonalizationStateInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PersonalizationStateInfo">
+        <xs:sequence>
+          <xs:element name="_lastActivityDate" type="xs:dateTime" />
+          <xs:element name="_username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserPersonalizationStateInfo" nillable="true" type="tns:UserPersonalizationStateInfo" />
+</xs:schema>

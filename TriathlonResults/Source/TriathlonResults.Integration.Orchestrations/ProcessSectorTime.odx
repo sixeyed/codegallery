@@ -1,0 +1,155 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="71f80530-0840-404b-bb28-427632d90bf8" LowerBound="1.1" HigherBound="36.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="TriathlonResults.Integration.Orchestrations" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="ServiceDeclaration" OID="b0672c59-8d2d-46ee-9bad-97e644c8e34e" ParentLink="Module_ServiceDeclaration" LowerBound="11.1" HigherBound="35.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="ProcessSectorTime" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="MessageDeclaration" OID="03db2188-7b54-4988-854c-8198ba43ddd9" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="16.1" HigherBound="17.1">
+                <om:Property Name="Type" Value="TriathlonResults.Integration.Orchestrations.ServiceResponseMessageType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ServiceResponse" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="ecdf9c66-9a8b-42ef-985c-cf953f78d43f" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageDeclaration" OID="fffc6118-af78-49cf-8886-44dbf91c0a69" ParentLink="ServiceBody_Declaration" LowerBound="17.15" HigherBound="17.51">
+                    <om:Property Name="Type" Value="TriathlonResults.Integration.Orchestrations.SectorMessageType" />
+                    <om:Property Name="ParamDirection" Value="In" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="SectorTime" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="542d733f-e8ea-46d9-b26f-b39cc9ba446b" ParentLink="ServiceBody_Statement" LowerBound="19.1" HigherBound="21.1">
+                    <om:Property Name="Expression" Value="System.Diagnostics.Debug.WriteLine(&quot;ProcessSectorTime: called&quot;);" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Trace" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="24528a8c-5f30-421d-9947-ed2afdcc5e29" ParentLink="ServiceBody_Statement" LowerBound="21.1" HigherBound="27.1">
+                    <om:Property Name="Expression" Value="//configure the port from context:&#xD;&#xA;SendServiceRequestPort(Microsoft.XLANGs.BaseTypes.Address) = SectorTime(BTS.OutboundTransportLocation);&#xD;&#xA;SendServiceRequestPort(Microsoft.XLANGs.BaseTypes.TransportType) = SectorTime(BTS.OutboundTransportType);&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Configure port" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Send" OID="ff5a69b1-c140-45a4-b2e6-26c1576838df" ParentLink="ServiceBody_Statement" LowerBound="27.1" HigherBound="29.1">
+                    <om:Property Name="PortName" Value="SendServiceRequestPort" />
+                    <om:Property Name="MessageName" Value="SectorTime" />
+                    <om:Property Name="OperationName" Value="SubmitSectorResult" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="SectorTime" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Receive" OID="eae3f37c-ddc0-4b7f-b52e-57bd53a7eb1e" ParentLink="ServiceBody_Statement" LowerBound="29.1" HigherBound="31.1">
+                    <om:Property Name="Activate" Value="False" />
+                    <om:Property Name="PortName" Value="SendServiceRequestPort" />
+                    <om:Property Name="MessageName" Value="ServiceResponse" />
+                    <om:Property Name="OperationName" Value="SubmitSectorResult" />
+                    <om:Property Name="OperationMessageName" Value="Response" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ServiceResponse" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="a5656c45-d916-4a39-8198-5c17f9db6cea" ParentLink="ServiceBody_Statement" LowerBound="31.1" HigherBound="33.1">
+                    <om:Property Name="Expression" Value="System.Diagnostics.Debug.WriteLine(&quot;ProcessSectorTime: completed&quot;);" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Trace" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="3fd863d6-27b2-4d6f-b454-359c5148d80d" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="14.1" HigherBound="16.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="4" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="TriathlonResults.Integration.Orchestrations.ServicePortType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SendServiceRequestPort" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="PhysicalBindingAttribute" OID="88358c7e-c675-4e15-bf99-efaafb709cfe" ParentLink="PortDeclaration_CLRAttribute" LowerBound="14.1" HigherBound="15.1">
+                    <om:Property Name="InPipeline" Value="Microsoft.BizTalk.DefaultPipelines.XMLReceive" />
+                    <om:Property Name="OutPipeline" Value="Microsoft.BizTalk.DefaultPipelines.XMLTransmit" />
+                    <om:Property Name="TransportType" Value="HTTP" />
+                    <om:Property Name="URI" Value="http://tempURI" />
+                    <om:Property Name="IsDynamic" Value="True" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="b639dd6f-d9a1-4456-9e47-67985d9af739" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="ServicePortType" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="OperationDeclaration" OID="300152de-3725-43b7-9333-d0aa5d7c9b08" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SubmitSectorResult" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="310cd3f0-dad7-4f85-b7b5-00bd14d5f103" ParentLink="OperationDeclaration_ResponseMessageRef" LowerBound="8.32" HigherBound="8.58">
+                    <om:Property Name="Ref" Value="TriathlonResults.Integration.Orchestrations.ServiceResponseMessageType" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="94832f9b-c20e-4597-a7df-b2b6dac132c8" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.30">
+                    <om:Property Name="Ref" Value="TriathlonResults.Integration.Orchestrations.SectorMessageType" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module TriathlonResults.Integration.Orchestrations
+{
+    internal porttype ServicePortType
+    {
+        requestresponse SubmitSectorResult
+        {
+            SectorMessageType, ServiceResponseMessageType
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service ProcessSectorTime
+    {
+        [Microsoft.XLANGs.BaseTypes.PhysicalBinding(typeof(Microsoft.BizTalk.DefaultPipelines.XMLReceive), typeof(Microsoft.BizTalk.DefaultPipelines.XMLTransmit))]
+        port uses dynamic ServicePortType SendServiceRequestPort;
+        message ServiceResponseMessageType ServiceResponse;
+        body (message SectorMessageType SectorTime)
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("542d733f-e8ea-46d9-b26f-b39cc9ba446b")]
+            System.Diagnostics.Debug.WriteLine("ProcessSectorTime: called");
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("24528a8c-5f30-421d-9947-ed2afdcc5e29")]
+            //configure the port from context:
+            SendServiceRequestPort(Microsoft.XLANGs.BaseTypes.Address) = SectorTime(BTS.OutboundTransportLocation);
+            SendServiceRequestPort(Microsoft.XLANGs.BaseTypes.TransportType) = SectorTime(BTS.OutboundTransportType);
+            
+            
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("ff5a69b1-c140-45a4-b2e6-26c1576838df")]
+            send (SendServiceRequestPort.SubmitSectorResult, SectorTime);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("eae3f37c-ddc0-4b7f-b52e-57bd53a7eb1e")]
+            receive (SendServiceRequestPort.SubmitSectorResult, ServiceResponse);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("a5656c45-d916-4a39-8198-5c17f9db6cea")]
+            System.Diagnostics.Debug.WriteLine("ProcessSectorTime: completed");
+        }
+    }
+}
+

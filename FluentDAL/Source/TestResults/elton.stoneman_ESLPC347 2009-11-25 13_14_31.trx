@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="e4447ba8-aeb5-4326-8c52-f95236ad5654" name="elton.stoneman@ESLPC347 2009-11-25 13:14:31" runUser="EDENBROOK0\elton.stoneman" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2006">
+  <TestRunConfiguration name="Local Test Run" id="d3e40fb5-68c8-48f1-ae7a-25f94142e8ed">
+    <Description>This is a default test run configuration for a local test run.</Description>
+    <Deployment runDeploymentRoot="D:\github\codegallery\FluentDAL\Source\TestResults\elton.stoneman_ESLPC347 2009-11-25 13_14_31">
+      <DeploymentItem filename="D:\github\codegallery\FluentDAL\Source\FluentDAL.Sample\bin\Debug\FluentDAL.Sample.dll" />
+      <DeploymentItem filename="D:\github\codegallery\FluentDAL\Source\FluentDAL\bin\Debug\FluentDAL.dll" />
+      <DeploymentItem filename="D:\github\codegallery\FluentDAL\Library\Castle.Core.dll" />
+      <DeploymentItem filename="D:\github\codegallery\FluentDAL\Library\Castle.DynamicProxy2.dll" />
+      <DeploymentItem filename="D:\github\codegallery\FluentDAL\Library\Rhino.Mocks.dll" />
+    </Deployment>
+    <TestTypeSpecific />
+  </TestRunConfiguration>
+  <ResultSummary outcome="Completed">
+    <Counters total="7" executed="7" passed="7" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <Times creation="2009-11-25T13:14:31.0000000+00:00" queuing="2009-11-25T13:14:36.3281250+00:00" start="2009-11-25T13:14:36.7187500+00:00" finish="2009-11-25T13:14:39.2656250+00:00" />
+  <TestDefinitions>
+    <UnitTest name="Populate" storage="d:\github\codegallery\fluentdal\source\fluentdal.sample.tests\bin\debug\fluentdal.tests.dll" id="d8885707-cf10-6e5c-7d7c-015953d4c98a">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="8c79e73d-8c52-4fbb-aef9-78165b119db4" />
+      <TestMethod codeBase="D:\github\codegallery\FluentDAL\Source\FluentDAL.Sample.Tests\bin\Debug\FluentDAL.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="FluentDAL.Tests.UserMapTest, FluentDAL.Tests" name="Populate" />
+    </UnitTest>
+    <UnitTest name="Populate_Unactivated" storage="d:\github\codegallery\fluentdal\source\fluentdal.sample.tests\bin\debug\fluentdal.tests.dll" id="cffc33b2-4732-b5cd-081b-351d660569aa">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="60f907be-14ea-417c-9149-d8c7310a2ffe" />
+      <TestMethod codeBase="D:\github\codegallery\FluentDAL\Source\FluentDAL.Sample.Tests\bin\Debug\FluentDAL.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="FluentDAL.Tests.AccountMapTest, FluentDAL.Tests" name="Populate_Unactivated" />
+    </UnitTest>
+    <UnitTest name="Create_Activated" storage="d:\github\codegallery\fluentdal\source\fluentdal.sample.tests\bin\debug\fluentdal.tests.dll" id="eb3563b8-eede-421f-c344-255f924809d6">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="80059b3a-dd42-4af6-b534-5ccb6de65a74" />
+      <TestMethod codeBase="D:\github\codegallery\FluentDAL\Source\FluentDAL.Sample.Tests\bin\Debug\FluentDAL.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="FluentDAL.Tests.AccountMapTest, FluentDAL.Tests" name="Create_Activated" />
+    </UnitTest>
+    <UnitTest name="GetUser" storage="d:\github\codegallery\fluentdal\source\fluentdal.sample.tests\bin\debug\fluentdal.tests.dll" id="a16b639b-4185-23c9-fded-40704cc59356">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="f40924cc-a3fb-41ad-af2b-a8fa0604e9d2" />
+      <TestMethod codeBase="D:\github\codegallery\FluentDAL\Source\FluentDAL.Sample.Tests\bin\Debug\FluentDAL.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="FluentDAL.Tests.Repositories.UserRepositoryTest, FluentDAL.Tests" name="GetUser" />
+    </UnitTest>
+    <UnitTest name="Constructor" storage="d:\github\codegallery\fluentdal\source\fluentdal.sample.tests\bin\debug\fluentdal.tests.dll" id="ad285575-6d88-d439-34a5-bcf923a07a6c">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="051efce6-a466-4ac1-92c0-7a79be8d6191" />
+      <TestMethod codeBase="D:\github\codegallery\FluentDAL\Source\FluentDAL.Sample.Tests\bin\Debug\FluentDAL.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="FluentDAL.Tests.AccountMapTest, FluentDAL.Tests" name="Constructor" />
+    </UnitTest>
+    <UnitTest name="Create" storage="d:\github\codegallery\fluentdal\source\fluentdal.sample.tests\bin\debug\fluentdal.tests.dll" id="26b98180-0615-703b-3093-8969b761e3ac">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="eb317bd8-077b-4ead-98c4-0fbc29d870f2" />
+      <TestMethod codeBase="D:\github\codegallery\FluentDAL\Source\FluentDAL.Sample.Tests\bin\Debug\FluentDAL.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="FluentDAL.Tests.UserMapTest, FluentDAL.Tests" name="Create" />
+    </UnitTest>
+    <UnitTest name="Constructor" storage="d:\github\codegallery\fluentdal\source\fluentdal.sample.tests\bin\debug\fluentdal.tests.dll" id="2e068bb9-eb12-410d-6a48-40260701163c">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="261a7927-613a-441f-9513-aa052804859c" />
+      <TestMethod codeBase="D:\github\codegallery\FluentDAL\Source\FluentDAL.Sample.Tests\bin\Debug\FluentDAL.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="FluentDAL.Tests.UserMapTest, FluentDAL.Tests" name="Constructor" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="ad285575-6d88-d439-34a5-bcf923a07a6c" executionId="051efce6-a466-4ac1-92c0-7a79be8d6191" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2e068bb9-eb12-410d-6a48-40260701163c" executionId="261a7927-613a-441f-9513-aa052804859c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="26b98180-0615-703b-3093-8969b761e3ac" executionId="eb317bd8-077b-4ead-98c4-0fbc29d870f2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="eb3563b8-eede-421f-c344-255f924809d6" executionId="80059b3a-dd42-4af6-b534-5ccb6de65a74" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a16b639b-4185-23c9-fded-40704cc59356" executionId="f40924cc-a3fb-41ad-af2b-a8fa0604e9d2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d8885707-cf10-6e5c-7d7c-015953d4c98a" executionId="8c79e73d-8c52-4fbb-aef9-78165b119db4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cffc33b2-4732-b5cd-081b-351d660569aa" executionId="60f907be-14ea-417c-9149-d8c7310a2ffe" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="051efce6-a466-4ac1-92c0-7a79be8d6191" testId="ad285575-6d88-d439-34a5-bcf923a07a6c" testName="Constructor" computerName="ESLPC347" duration="00:00:00.1484694" startTime="2009-11-25T13:14:36.8906250+00:00" endTime="2009-11-25T13:14:37.9062500+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="261a7927-613a-441f-9513-aa052804859c" testId="2e068bb9-eb12-410d-6a48-40260701163c" testName="Constructor" computerName="ESLPC347" duration="00:00:00.0094140" startTime="2009-11-25T13:14:37.9062500+00:00" endTime="2009-11-25T13:14:37.9218750+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="eb317bd8-077b-4ead-98c4-0fbc29d870f2" testId="26b98180-0615-703b-3093-8969b761e3ac" testName="Create" computerName="ESLPC347" duration="00:00:01.1832082" startTime="2009-11-25T13:14:37.9218750+00:00" endTime="2009-11-25T13:14:39.1093750+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="80059b3a-dd42-4af6-b534-5ccb6de65a74" testId="eb3563b8-eede-421f-c344-255f924809d6" testName="Create_Activated" computerName="ESLPC347" duration="00:00:00.0099677" startTime="2009-11-25T13:14:39.1093750+00:00" endTime="2009-11-25T13:14:39.1250000+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="f40924cc-a3fb-41ad-af2b-a8fa0604e9d2" testId="a16b639b-4185-23c9-fded-40704cc59356" testName="GetUser" computerName="ESLPC347" duration="00:00:00.0653669" startTime="2009-11-25T13:14:39.1250000+00:00" endTime="2009-11-25T13:14:39.1875000+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="8c79e73d-8c52-4fbb-aef9-78165b119db4" testId="d8885707-cf10-6e5c-7d7c-015953d4c98a" testName="Populate" computerName="ESLPC347" duration="00:00:00.0068450" startTime="2009-11-25T13:14:39.1875000+00:00" endTime="2009-11-25T13:14:39.2031250+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="60f907be-14ea-417c-9149-d8c7310a2ffe" testId="cffc33b2-4732-b5cd-081b-351d660569aa" testName="Populate_Unactivated" computerName="ESLPC347" duration="00:00:00.0033870" startTime="2009-11-25T13:14:39.2031250+00:00" endTime="2009-11-25T13:14:39.2031250+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

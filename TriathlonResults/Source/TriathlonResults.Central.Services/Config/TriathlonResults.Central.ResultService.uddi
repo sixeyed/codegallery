@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<resources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:uddi-microsoft-com:api_v2_extensions">
+  <businessDetail generic="2.0" operator="uddi-dataexport" xmlns="urn:uddi-org:api_v2">
+    <businessEntity businessKey="d8942966-c83a-6e1a-6cc6-c3d7fec58cba">
+      <name xml:lang="en-gb">TriathlonResults</name>
+      <businessServices>
+        <businessService serviceKey="9dd503e1-b54a-4ad2-896e-befa40b9dc2e" businessKey="d8942966-c83a-6e1a-6cc6-c3d7fec58cba">
+          <name xml:lang="en-gb">RecordResult</name>
+          <bindingTemplates>
+            <bindingTemplate serviceKey="9dd503e1-b54a-4ad2-896e-befa40b9dc2e" bindingKey="8734036a-89e4-4d01-aeb1-d4e83c0eb35d">
+              <accessPoint URLType="other">TransportLocation://http://localhost/TriathlonResults.Central/ResultService.asmx</accessPoint>
+              <tModelInstanceDetails />
+            </bindingTemplate>
+            <bindingTemplate serviceKey="9dd503e1-b54a-4ad2-896e-befa40b9dc2e" bindingKey="7cc96d7a-6c94-4698-a518-9a53b6f350d6">
+              <accessPoint URLType="other">TargetNamespace://http://TriathlonResults.Central.Schemas/1.0/</accessPoint>
+              <tModelInstanceDetails />
+            </bindingTemplate>
+            <bindingTemplate serviceKey="9dd503e1-b54a-4ad2-896e-befa40b9dc2e" bindingKey="f0afb9c4-ec52-4183-a76a-66b776160570">
+              <accessPoint URLType="other">Action://http://TriathlonResults.Central.Schemas/1.0/RecordResult</accessPoint>
+              <tModelInstanceDetails />
+            </bindingTemplate>
+          </bindingTemplates>
+        </businessService>
+      </businessServices>
+    </businessEntity>
+  </businessDetail>
+</resources>
+
+

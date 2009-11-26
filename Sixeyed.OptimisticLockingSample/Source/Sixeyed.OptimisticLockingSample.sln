@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sixeyed.OptimisticLockingSample.Entities", "Sixeyed.OptimisticLockingSample.Entities\Sixeyed.OptimisticLockingSample.Entities.csproj", "{81011FDF-6BE8-4C95-A596-F1C28AC233FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sixeyed.OptimisticLockingSample.EntityServices", "Sixeyed.OptimisticLockingSample.EntityServices\Sixeyed.OptimisticLockingSample.EntityServices.csproj", "{E478983A-A41D-4EF0-BB06-C34BD82F568C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sixeyed.OptimisticLockingSample.Services", "Sixeyed.OptimisticLockingSample.Services\Sixeyed.OptimisticLockingSample.Services.csproj", "{0023DD58-4102-4A1A-B560-EE0F4B28CD70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sixeyed.OptimisticLockingSample.Client", "Sixeyed.OptimisticLockingSample.Client\Sixeyed.OptimisticLockingSample.Client.csproj", "{A808393E-DF15-43AE-A4D6-CEBB6E58F92A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sixeyed.OptimisticLockingSample.Database", "Sixeyed.OptimisticLockingSample.Database\Sixeyed.OptimisticLockingSample.Database.csproj", "{4FF07617-8226-41BF-ACC8-48C3D1277CAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sixeyed.OptimisticLockingSample.ServiceModel", "Sixeyed.OptimisticLockingSample.ServiceModel\Sixeyed.OptimisticLockingSample.ServiceModel.csproj", "{0198DCFA-F1FA-4BBA-890E-81D8F1F200F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{81011FDF-6BE8-4C95-A596-F1C28AC233FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81011FDF-6BE8-4C95-A596-F1C28AC233FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81011FDF-6BE8-4C95-A596-F1C28AC233FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81011FDF-6BE8-4C95-A596-F1C28AC233FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E478983A-A41D-4EF0-BB06-C34BD82F568C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E478983A-A41D-4EF0-BB06-C34BD82F568C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E478983A-A41D-4EF0-BB06-C34BD82F568C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E478983A-A41D-4EF0-BB06-C34BD82F568C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0023DD58-4102-4A1A-B560-EE0F4B28CD70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0023DD58-4102-4A1A-B560-EE0F4B28CD70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0023DD58-4102-4A1A-B560-EE0F4B28CD70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0023DD58-4102-4A1A-B560-EE0F4B28CD70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A808393E-DF15-43AE-A4D6-CEBB6E58F92A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A808393E-DF15-43AE-A4D6-CEBB6E58F92A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A808393E-DF15-43AE-A4D6-CEBB6E58F92A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A808393E-DF15-43AE-A4D6-CEBB6E58F92A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FF07617-8226-41BF-ACC8-48C3D1277CAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FF07617-8226-41BF-ACC8-48C3D1277CAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FF07617-8226-41BF-ACC8-48C3D1277CAD}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4FF07617-8226-41BF-ACC8-48C3D1277CAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FF07617-8226-41BF-ACC8-48C3D1277CAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FF07617-8226-41BF-ACC8-48C3D1277CAD}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{0198DCFA-F1FA-4BBA-890E-81D8F1F200F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0198DCFA-F1FA-4BBA-890E-81D8F1F200F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0198DCFA-F1FA-4BBA-890E-81D8F1F200F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0198DCFA-F1FA-4BBA-890E-81D8F1F200F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,118 @@
+<#@ template language="C#" #>
+<#@ property processor="PropertyProcessor" name="MetadataItem" #>
+<#@ property processor="PropertyProcessor" name="TemplateConfiguration" #>
+<#@ assembly name="System.dll" #>
+<#@ assembly name="System.Data.dll" #>
+<#@ assembly name="Sixeyed.CodeGeneration.dll" #>
+<#@ import namespace="System.Data" #>
+<#@ import namespace="System.Data.SqlClient" #>
+<#@ import namespace="Sixeyed.CodeGeneration.Generation" #>
+<#@ import namespace="Sixeyed.CodeGeneration.Generation.Mapping" #>
+<# PrepareOutput(); #>
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;   
+
+namespace ExcelUpload.Data.SqlServer.StoredProcedures
+{   
+	/// <summary>
+    /// Wraps access to <#=MetadataItem.Key#> stored procedure on AdventureWorks
+	/// </summary>
+	[System.CodeDom.Compiler.GeneratedCode("SqlStoredProcedure.cs.tt", "1.0.0.0")]
+    public class <#= TemplateConfiguration.ClassName #> : SqlStoredProcedureBase
+    {               
+        /// <summary>
+        /// Default constructor
+        /// </summary>
+        public <#= TemplateConfiguration.ClassName #>() {}
+        
+        <# foreach (SqlParameter parameter in Command.Parameters) { #>
+		/// <summary>
+        /// Gets/sets <#= parameter.ParameterName #> parameter value
+        /// </summary>
+        public virtual <#= SqlParameterTypeMap.GetFrameworkTypeName(parameter) #> <#= MemberName.GetPropertyName(parameter.ParameterName) #> { get; set; }       
+        <# } #>   
+                   
+        /// <summary>
+        /// Gets the name of the stored procedure to execute
+        /// </summary>
+        public override string SPName
+        {
+            get { return "<#= Command.CommandText #>"; }
+        }
+        
+        /// <summary>
+        /// Gets the name of the database to execute on
+        /// </summary>
+        public override string DatabaseName
+        {
+            get { return Database.AdventureWorks; }
+        }
+        
+        /// <summary>
+        /// Creates the parameter collection for the procedure
+        /// </summary>
+        protected override void CreateParameters()
+        {
+			<# foreach (SqlParameter parameter in Command.Parameters) { #>
+			this.AddParameter(ParameterName.<#= MemberName.GetPropertyName(parameter.ParameterName) #>, SqlDbType.<#= parameter.SqlDbType.ToString() #>, <#= parameter.Size.ToString() #>, ParameterDirection.<#= parameter.Direction.ToString() #>);
+			<# } #> 
+        }
+        
+        /// <summary>
+        /// Maps property values to parameter input values
+        /// </summary>
+        protected override void SetInputParameterValues()
+        {
+			<# foreach (SqlParameter parameter in Command.Parameters) { 
+				if (parameter.Direction == ParameterDirection.Input || parameter.Direction == ParameterDirection.InputOutput) {#>
+            this.Parameters[ParameterName.<#= MemberName.GetPropertyName(parameter.ParameterName) #>].Value = this.<#= MemberName.GetPropertyName(parameter.ParameterName) #>;
+            <# }
+			}#>
+        }
+        
+        /// <summary>
+        /// Maps property return values to parameter output values
+        /// </summary>
+        protected override void GetOutputParameterValues()
+        {
+			<# foreach (SqlParameter parameter in Command.Parameters) { 
+				if (parameter.Direction == ParameterDirection.Output || parameter.Direction == ParameterDirection.InputOutput || parameter.Direction == ParameterDirection.ReturnValue) {#>
+             this.<#= MemberName.GetPropertyName(parameter.ParameterName)#> = (<#=SqlParameterTypeMap.GetFrameworkTypeName(parameter)#>) this.Parameters[ParameterName.<#= MemberName.GetPropertyName(parameter.ParameterName) #>].Value;
+            <# }
+			}#>
+        }
+        
+        /// <summary>
+        /// Executes the Stored Procedure
+        /// </summary>
+        public virtual TODO_ReturnType Execute()
+        {
+            return this.ExecuteTODO_ReturnType();
+        }
+        
+        /// <summary>
+        /// Parameter names used in the stored procedure
+        /// </summary>
+        public struct ParameterName
+        {       
+			<# foreach (SqlParameter parameter in Command.Parameters) { #>
+			public const string <#= MemberName.GetPropertyName(parameter.ParameterName) #> = "<#= parameter.ParameterName #>"; 
+			<# } #>
+        }
+    }
+}
+
+<#+
+private SqlCommand Command
+{
+	get{ return MetadataItem.Item as SqlCommand; }
+}
+
+private void PrepareOutput()
+{
+	TemplateConfiguration.ClassName = MemberName.ToPascalCase(MetadataItem.Key, true);
+	TemplateConfiguration.FileExtension = "cs";
+}
+#>

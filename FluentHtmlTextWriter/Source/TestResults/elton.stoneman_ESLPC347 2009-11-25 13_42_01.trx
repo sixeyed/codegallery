@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="58eefb5c-264f-4893-bfae-7c9c7ac0825d" name="elton.stoneman@ESLPC347 2009-11-25 13:42:01" runUser="EDENBROOK0\elton.stoneman" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2006">
+  <TestRunConfiguration name="Local Test Run" id="bade5798-8cb9-473e-8e88-9c39ba238e28">
+    <Description>This is a default test run configuration for a local test run.</Description>
+    <CodeCoverage enabled="true">
+      <Regular>
+        <CodeCoverageItem binaryFile="D:\github\codegallery\FluentHtmlTextWriter\Source\FluentHtmlTextWriter\bin\Debug\FluentHtmlTextWriter.dll" pdbFile="D:\github\codegallery\FluentHtmlTextWriter\Source\FluentHtmlTextWriter\bin\Debug\FluentHtmlTextWriter.instr.pdb" instrumentInPlace="true" />
+      </Regular>
+    </CodeCoverage>
+    <Deployment runDeploymentRoot="D:\github\codegallery\FluentHtmlTextWriter\Source\TestResults\elton.stoneman_ESLPC347 2009-11-25 13_42_01">
+      <DeploymentItem filename="D:\github\codegallery\FluentHtmlTextWriter\Source\FluentHtmlTextWriter\obj\Debug\FluentHtmlTextWriter.dll" />
+    </Deployment>
+    <Plugins>
+      <Plugin>Microsoft.VisualStudio.TestTools.CodeCoverage.CoveragePlugIn, Microsoft.VisualStudio.QualityTools.Plugins.CodeCoverage, PublicKeyToken=b03f5f7f11d50a3a</Plugin>
+    </Plugins>
+    <TestTypeSpecific />
+  </TestRunConfiguration>
+  <ResultSummary outcome="Warning">
+    <Counters total="6" executed="6" passed="6" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="ESLPC347" outcome="Warning" timestamp="2009-11-25T13:42:05.6406250+00:00">
+        <Text>Code coverage instrumentation warning while processing file FluentHtmlTextWriter.dll:
+Warning VSP2013 : Instrumenting this image requires it to run as a 32-bit process.  The CLR header flags have been updated to reflect this.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <Times creation="2009-11-25T13:42:01.8750000+00:00" queuing="2009-11-25T13:42:07.1562500+00:00" start="2009-11-25T13:42:07.3906250+00:00" finish="2009-11-25T13:42:10.7187500+00:00" />
+  <TestDefinitions>
+    <UnitTest name="WriteSpan" storage="d:\github\codegallery\fluenthtmltextwriter\source\fluenthtmltextwriter.tests\bin\debug\fluenthtmltextwriter.tests.dll" id="fa0f6ff1-b148-d778-f681-966be63679cf">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="4ae9f958-4b05-489a-9670-fe8f4c97ae65" />
+      <TestMethod codeBase="D:\github\codegallery\FluentHtmlTextWriter\Source\FluentHtmlTextWriter.Tests\bin\Debug\FluentHtmlTextWriter.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="FluentHtmlTextWriter.Tests.FluentHtmlWriterTest, FluentHtmlTextWriter.Tests" name="WriteSpan" />
+    </UnitTest>
+    <UnitTest name="WriteMenu" storage="d:\github\codegallery\fluenthtmltextwriter\source\fluenthtmltextwriter.tests\bin\debug\fluenthtmltextwriter.tests.dll" id="ffa8078b-0018-4519-75b4-519185b88ba8">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="f2a91802-d071-49cc-98ac-733920fda409" />
+      <TestMethod codeBase="D:\github\codegallery\FluentHtmlTextWriter\Source\FluentHtmlTextWriter.Tests\bin\Debug\FluentHtmlTextWriter.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="FluentHtmlTextWriter.Tests.FluentHtmlWriterTest, FluentHtmlTextWriter.Tests" name="WriteMenu" />
+    </UnitTest>
+    <UnitTest name="WriteImg_WithTextWriter" storage="d:\github\codegallery\fluenthtmltextwriter\source\fluenthtmltextwriter.tests\bin\debug\fluenthtmltextwriter.tests.dll" id="fa4b12fe-7d2d-6480-ff38-da94585cb50b">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="b572943f-a70d-4af3-a261-ad848fff1175" />
+      <TestMethod codeBase="D:\github\codegallery\FluentHtmlTextWriter\Source\FluentHtmlTextWriter.Tests\bin\Debug\FluentHtmlTextWriter.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="FluentHtmlTextWriter.Tests.FluentHtmlWriterTest, FluentHtmlTextWriter.Tests" name="WriteImg_WithTextWriter" />
+    </UnitTest>
+    <UnitTest name="WriteMenu_WithTextWriter" storage="d:\github\codegallery\fluenthtmltextwriter\source\fluenthtmltextwriter.tests\bin\debug\fluenthtmltextwriter.tests.dll" id="50995afc-271d-ce73-1f22-cb2ca5850d88">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="a0d0a988-d4b9-479f-95d9-d2c173bed55b" />
+      <TestMethod codeBase="D:\github\codegallery\FluentHtmlTextWriter\Source\FluentHtmlTextWriter.Tests\bin\Debug\FluentHtmlTextWriter.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="FluentHtmlTextWriter.Tests.FluentHtmlWriterTest, FluentHtmlTextWriter.Tests" name="WriteMenu_WithTextWriter" />
+    </UnitTest>
+    <UnitTest name="WriteImg_WithStyle" storage="d:\github\codegallery\fluenthtmltextwriter\source\fluenthtmltextwriter.tests\bin\debug\fluenthtmltextwriter.tests.dll" id="425fe5f2-c641-1eb4-9b6e-1cd21c93a91a">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="87d33983-a800-488d-a1ca-35944f004da4" />
+      <TestMethod codeBase="D:\github\codegallery\FluentHtmlTextWriter\Source\FluentHtmlTextWriter.Tests\bin\Debug\FluentHtmlTextWriter.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="FluentHtmlTextWriter.Tests.FluentHtmlWriterTest, FluentHtmlTextWriter.Tests" name="WriteImg_WithStyle" />
+    </UnitTest>
+    <UnitTest name="WriteImg" storage="d:\github\codegallery\fluenthtmltextwriter\source\fluenthtmltextwriter.tests\bin\debug\fluenthtmltextwriter.tests.dll" id="7a47a36d-f81a-eb72-c0db-b33f00286ea2">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="e3d0f31d-aace-4163-b774-74f8ef43e8eb" />
+      <TestMethod codeBase="D:\github\codegallery\FluentHtmlTextWriter\Source\FluentHtmlTextWriter.Tests\bin\Debug\FluentHtmlTextWriter.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="FluentHtmlTextWriter.Tests.FluentHtmlWriterTest, FluentHtmlTextWriter.Tests" name="WriteImg" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="7a47a36d-f81a-eb72-c0db-b33f00286ea2" executionId="e3d0f31d-aace-4163-b774-74f8ef43e8eb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="425fe5f2-c641-1eb4-9b6e-1cd21c93a91a" executionId="87d33983-a800-488d-a1ca-35944f004da4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fa4b12fe-7d2d-6480-ff38-da94585cb50b" executionId="b572943f-a70d-4af3-a261-ad848fff1175" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ffa8078b-0018-4519-75b4-519185b88ba8" executionId="f2a91802-d071-49cc-98ac-733920fda409" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="50995afc-271d-ce73-1f22-cb2ca5850d88" executionId="a0d0a988-d4b9-479f-95d9-d2c173bed55b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fa0f6ff1-b148-d778-f681-966be63679cf" executionId="4ae9f958-4b05-489a-9670-fe8f4c97ae65" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="e3d0f31d-aace-4163-b774-74f8ef43e8eb" testId="7a47a36d-f81a-eb72-c0db-b33f00286ea2" testName="WriteImg" computerName="ESLPC347" duration="00:00:00.1302749" startTime="2009-11-25T13:42:08.2968750+00:00" endTime="2009-11-25T13:42:09.3906250+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="87d33983-a800-488d-a1ca-35944f004da4" testId="425fe5f2-c641-1eb4-9b6e-1cd21c93a91a" testName="WriteImg_WithStyle" computerName="ESLPC347" duration="00:00:00.0014001" startTime="2009-11-25T13:42:09.3906250+00:00" endTime="2009-11-25T13:42:09.3906250+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b572943f-a70d-4af3-a261-ad848fff1175" testId="fa4b12fe-7d2d-6480-ff38-da94585cb50b" testName="WriteImg_WithTextWriter" computerName="ESLPC347" duration="00:00:00.0012227" startTime="2009-11-25T13:42:09.3906250+00:00" endTime="2009-11-25T13:42:09.3906250+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="f2a91802-d071-49cc-98ac-733920fda409" testId="ffa8078b-0018-4519-75b4-519185b88ba8" testName="WriteMenu" computerName="ESLPC347" duration="00:00:00.0032501" startTime="2009-11-25T13:42:09.4062500+00:00" endTime="2009-11-25T13:42:09.4062500+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a0d0a988-d4b9-479f-95d9-d2c173bed55b" testId="50995afc-271d-ce73-1f22-cb2ca5850d88" testName="WriteMenu_WithTextWriter" computerName="ESLPC347" duration="00:00:00.0012607" startTime="2009-11-25T13:42:09.4062500+00:00" endTime="2009-11-25T13:42:09.4062500+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="4ae9f958-4b05-489a-9670-fe8f4c97ae65" testId="fa0f6ff1-b148-d778-f681-966be63679cf" testName="WriteSpan" computerName="ESLPC347" duration="00:00:00.0003031" startTime="2009-11-25T13:42:09.4062500+00:00" endTime="2009-11-25T13:42:09.4218750+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

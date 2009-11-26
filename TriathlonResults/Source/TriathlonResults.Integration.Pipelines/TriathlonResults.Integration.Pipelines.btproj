@@ -1,0 +1,124 @@
+﻿<VisualStudioProject>
+    <BIZTALK
+        ProductVersion = "3.6.1404"
+        SchemaVersion = "1.0"
+        ProjectGuid = "{3D193A01-A0F0-4CF5-AD31-3B0878257A0D}"
+    >
+        <Build>
+            <Settings>
+                <EditorCommon/>
+                <ProjectCommon
+                    AssemblyKeyName = ""
+                    AssemblyKeyFile = "..\..\..\TriathlonResults.snk"
+                    AssemblyDelaySign = "False"
+                    AssemblyTitle = ""
+                    AssemblyDescription = ""
+                    AssemblyDefaultAlias = ""
+                    AssemblyConfiguration = ""
+                    AssemblyTrademark = ""
+                    AssemblyProduct = ""
+                    AssemblyInformationalVersion = "1.0.0.0"
+                    AssemblyFileVersion = "1.0.0.0"
+                    AssemblyCopyright = ""
+                    AssemblyCompany = ""
+                    AssemblyVersion = "1.0.0.0"
+                    DefaultNamespace = "TriathlonResults.Integration.Pipelines"
+                    AssemblyName = "TriathlonResults.Integration.Pipelines"
+                />
+                <Config
+                    Name = "Development"
+                    ApplicationName = ""
+                    BpelCompliance = "True"
+                    GenerateDebuggingInformation = "True"
+                    EmbedTrackingInformation = "True"
+                    TreatWarningsAsErrors = "False"
+                    WarningLevel = "4"
+                    OutputPath = "bin\Development\"
+                />
+                <Config
+                    Name = "Deployment"
+                    ApplicationName = "TriathlonResults"
+                    BpelCompliance = "True"
+                    GenerateDebuggingInformation = "False"
+                    EmbedTrackingInformation = "True"
+                    TreatWarningsAsErrors = "False"
+                    WarningLevel = "4"
+                    OutputPath = "bin\Deployment\"
+                />
+            </Settings>
+            <References>
+                <Reference
+                    Name = "System"
+                    AssemblyName = "System"
+                />
+                <Reference
+                    Name = "System.XML"
+                    AssemblyName = "System.Xml"
+                />
+                <Reference
+                    Name = "System.configuration"
+                    AssemblyName = "System.Configuration"
+                />
+                <Reference
+                    Name = "Microsoft.BizTalk.DefaultPipelines"
+                    AssemblyName = "Microsoft.BizTalk.DefaultPipelines"
+                />
+                <Reference
+                    Name = "Microsoft.BizTalk.GlobalPropertySchemas"
+                    AssemblyName = "Microsoft.BizTalk.GlobalPropertySchemas"
+                />
+                <Reference
+                    Name = "TriathlonResults.Integration.PipelineComponents"
+                    Project = "{C1AE023F-EAFE-4945-A3C5-2A19EEFAC90B}"
+                    Package = "{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"
+                />
+                <Reference
+                    Name = "Microsoft.Practices.ESB.Itinerary.PipelineComponents"
+                    AssemblyName = "Microsoft.Practices.ESB.Itinerary.PipelineComponents"
+                    HintPath = "..\ReferencedAssemblies\Microsoft.Practices.ESB.Itinerary.PipelineComponents.dll"
+                />
+                <Reference
+                    Name = "Microsoft.Practices.ESB.PipelineComponents"
+                    AssemblyName = "Microsoft.Practices.ESB.PipelineComponents"
+                    HintPath = "..\ReferencedAssemblies\Microsoft.Practices.ESB.PipelineComponents.dll"
+                />
+                <Reference
+                    Name = "Microsoft.BizTalk.Pipeline.Components"
+                    AssemblyName = "Microsoft.BizTalk.Pipeline.Components"
+                    HintPath = "..\ReferencedAssemblies\Microsoft.BizTalk.Pipeline.Components.dll"
+                />
+                <Reference
+                    Name = "TriathlonResults.Integration.Schemas"
+                    Project = "{D5C6208D-9D7E-4D1A-97D5-CC6E8104ADF1}"
+                    Package = "{EF7E3281-CD33-11D4-8326-00C04FA0CE8D}"
+                />
+                <Reference
+                    Name = "Microsoft.Practices.ESB.Namespace.PipelineComponents"
+                    AssemblyName = "Microsoft.Practices.ESB.Namespace.PipelineComponents"
+                    HintPath = "C:\Program Files\Microsoft BizTalk Server 2006\Pipeline Components\Microsoft.Practices.ESB.Namespace.PipelineComponents.dll"
+                />
+            </References>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "ReceiveSectorResult.btp"
+                    BuildAction = "Compile"
+                    Namespace = "TriathlonResults.Integration.Pipelines"
+                    Type = "ReceiveSectorResult"
+                />
+                <File
+                    RelPath = "ReceiveSectorResultFlat.btp"
+                    BuildAction = "Compile"
+                    Namespace = "TriathlonResults.Integration.Pipelines"
+                    Type = "ReceiveSectorResultFlat"
+                />
+                <File
+                    RelPath = "Config\TriathlonResults.Integration.Bindings.xml"
+                    BuildAction = "None"
+                />
+            </Include>
+        </Files>
+    </BIZTALK>
+</VisualStudioProject>
+

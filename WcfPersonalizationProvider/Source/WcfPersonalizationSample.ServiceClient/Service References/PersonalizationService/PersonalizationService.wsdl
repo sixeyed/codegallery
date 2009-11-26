@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="http://tempuri.org/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" name="PersonalizationService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:1321/PersonalizationService.svc?xsd=xsd3" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:1321/PersonalizationService.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:1321/PersonalizationService.svc?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/System.Web.UI.WebControls.WebParts" />
+      <xsd:import schemaLocation="http://localhost:1321/PersonalizationService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:1321/PersonalizationService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/WcfPersonalizationProvider" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPersonalizationService_FindState_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindState" />
+  </wsdl:message>
+  <wsdl:message name="IPersonalizationService_FindState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonalizationService_GetCountOfState_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountOfState" />
+  </wsdl:message>
+  <wsdl:message name="IPersonalizationService_GetCountOfState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountOfStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonalizationService_GetSharedPersonalizationBlob_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSharedPersonalizationBlob" />
+  </wsdl:message>
+  <wsdl:message name="IPersonalizationService_GetSharedPersonalizationBlob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSharedPersonalizationBlobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonalizationService_GetUserPersonalizationBlob_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserPersonalizationBlob" />
+  </wsdl:message>
+  <wsdl:message name="IPersonalizationService_GetUserPersonalizationBlob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserPersonalizationBlobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonalizationService_ResetPersonalizationBlob_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResetPersonalizationBlob" />
+  </wsdl:message>
+  <wsdl:message name="IPersonalizationService_ResetPersonalizationBlob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResetPersonalizationBlobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonalizationService_ResetState_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResetState" />
+  </wsdl:message>
+  <wsdl:message name="IPersonalizationService_ResetState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResetStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonalizationService_ResetUserState_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResetUserState" />
+  </wsdl:message>
+  <wsdl:message name="IPersonalizationService_ResetUserState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResetUserStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonalizationService_SavePersonalizationBlob_InputMessage">
+    <wsdl:part name="parameters" element="tns:SavePersonalizationBlob" />
+  </wsdl:message>
+  <wsdl:message name="IPersonalizationService_SavePersonalizationBlob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SavePersonalizationBlobResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPersonalizationService">
+    <wsdl:operation name="FindState">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonalizationService/FindState" message="tns:IPersonalizationService_FindState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonalizationService/FindStateResponse" message="tns:IPersonalizationService_FindState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountOfState">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonalizationService/GetCountOfState" message="tns:IPersonalizationService_GetCountOfState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonalizationService/GetCountOfStateResponse" message="tns:IPersonalizationService_GetCountOfState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSharedPersonalizationBlob">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonalizationService/GetSharedPersonalizationBlob" message="tns:IPersonalizationService_GetSharedPersonalizationBlob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonalizationService/GetSharedPersonalizationBlobResponse" message="tns:IPersonalizationService_GetSharedPersonalizationBlob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserPersonalizationBlob">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonalizationService/GetUserPersonalizationBlob" message="tns:IPersonalizationService_GetUserPersonalizationBlob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonalizationService/GetUserPersonalizationBlobResponse" message="tns:IPersonalizationService_GetUserPersonalizationBlob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetPersonalizationBlob">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonalizationService/ResetPersonalizationBlob" message="tns:IPersonalizationService_ResetPersonalizationBlob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonalizationService/ResetPersonalizationBlobResponse" message="tns:IPersonalizationService_ResetPersonalizationBlob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetState">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonalizationService/ResetState" message="tns:IPersonalizationService_ResetState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonalizationService/ResetStateResponse" message="tns:IPersonalizationService_ResetState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetUserState">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonalizationService/ResetUserState" message="tns:IPersonalizationService_ResetUserState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonalizationService/ResetUserStateResponse" message="tns:IPersonalizationService_ResetUserState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SavePersonalizationBlob">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonalizationService/SavePersonalizationBlob" message="tns:IPersonalizationService_SavePersonalizationBlob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonalizationService/SavePersonalizationBlobResponse" message="tns:IPersonalizationService_SavePersonalizationBlob_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IPersonalizationService" type="tns:IPersonalizationService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FindState">
+      <soap:operation soapAction="http://tempuri.org/IPersonalizationService/FindState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountOfState">
+      <soap:operation soapAction="http://tempuri.org/IPersonalizationService/GetCountOfState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSharedPersonalizationBlob">
+      <soap:operation soapAction="http://tempuri.org/IPersonalizationService/GetSharedPersonalizationBlob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserPersonalizationBlob">
+      <soap:operation soapAction="http://tempuri.org/IPersonalizationService/GetUserPersonalizationBlob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetPersonalizationBlob">
+      <soap:operation soapAction="http://tempuri.org/IPersonalizationService/ResetPersonalizationBlob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetState">
+      <soap:operation soapAction="http://tempuri.org/IPersonalizationService/ResetState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetUserState">
+      <soap:operation soapAction="http://tempuri.org/IPersonalizationService/ResetUserState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SavePersonalizationBlob">
+      <soap:operation soapAction="http://tempuri.org/IPersonalizationService/SavePersonalizationBlob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PersonalizationService">
+    <wsdl:port name="BasicHttpBinding_IPersonalizationService" binding="tns:BasicHttpBinding_IPersonalizationService">
+      <soap:address location="http://localhost:1321/PersonalizationService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,5 @@
+[DEFAULT]
+BASEURL=http://localhost:35675/Home/Homepage.aspx?tzo=1
+[InternetShortcut]
+URL=http://localhost/TriathlonResults.Web/Home.aspx
+Modified=F09F4A064F2DC90125

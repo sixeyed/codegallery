@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BindingInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Assembly="Microsoft.BizTalk.Deployment, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Version="3.5.1.0" BindingStatus="NoBindings" BoundEndpoints="0" TotalEndpoints="0">
+  <Timestamp>2009-11-21T06:52:38.4686432+00:00</Timestamp>
+  <ModuleRefCollection>
+    <ModuleRef Name="[Application:ExcelUpload]" Version="" Culture="" PublicKeyToken="" FullName="[Application:ExcelUpload], Version=, Culture=, PublicKeyToken=">
+      <Services />
+      <TrackedSchemas>
+        <Schema FullName="ExcelUpload.BizTalk.SQLService" RootName="InsertProduct" AssemblyQualifiedName="ExcelUpload.BizTalk.SQLService,ExcelUpload.BizTalk, Version=1.0.0.0, Culture=neutral, PublicKeyToken=80464dbfab31f762" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="ExcelUpload.BizTalk.SQLService" RootName="InsertProductResponse" AssemblyQualifiedName="ExcelUpload.BizTalk.SQLService,ExcelUpload.BizTalk, Version=1.0.0.0, Culture=neutral, PublicKeyToken=80464dbfab31f762" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="ExcelUpload.BizTalk.AddProduct" RootName="Messages" AssemblyQualifiedName="ExcelUpload.BizTalk.AddProduct,ExcelUpload.BizTalk, Version=1.0.0.0, Culture=neutral, PublicKeyToken=80464dbfab31f762" AlwaysTrackAllProperties="false" Description="">
+          <TrackedPropertyNames />
+        </Schema>
+      </TrackedSchemas>
+    </ModuleRef>
+    <ModuleRef Name="ExcelUpload.BizTalk" Version="1.0.0.0" Culture="neutral" PublicKeyToken="80464dbfab31f762" FullName="ExcelUpload.BizTalk, Version=1.0.0.0, Culture=neutral, PublicKeyToken=80464dbfab31f762">
+      <Services />
+      <TrackedSchemas />
+    </ModuleRef>
+  </ModuleRefCollection>
+  <SendPortCollection>
+    <SendPort Name="SendInsertProduct.SQL" IsStatic="true" IsTwoWay="false" BindingOption="0">
+      <Description xsi:nil="true" />
+      <TransmitPipeline Name="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="2" TrackingOption="ServiceStartEnd MessageSendReceive PipelineEvents" Description="" />
+      <PrimaryTransport>
+        <Address>SQL://WIN2003R2-VM\DEV01/AdventureWorks/</Address>
+        <TransportType Name="SQL" Capabilities="81163" ConfigurationClsid="6e688659-1374-4f37-90dc-40cb6dd3c73d" />
+        <TransportTypeData>&lt;CustomProps&gt;&lt;AdapterConfig vt="8"&gt;&amp;lt;Send xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&amp;gt;&amp;lt;connectionString&amp;gt;Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=AdventureWorks;Data Source=WIN2003R2-VM\DEV01&amp;lt;/connectionString&amp;gt;&amp;lt;outputRootElementName&amp;gt;InsertProductResponse&amp;lt;/outputRootElementName&amp;gt;&amp;lt;documentTargetNamespace&amp;gt;http://BTSExcelUpload&amp;lt;/documentTargetNamespace&amp;gt;&amp;lt;uri&amp;gt;SQL://WIN2003R2-VM\DEV01/AdventureWorks/&amp;lt;/uri&amp;gt;&amp;lt;/Send&amp;gt;&lt;/AdapterConfig&gt;&lt;/CustomProps&gt;</TransportTypeData>
+        <RetryCount>3</RetryCount>
+        <RetryInterval>5</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2000-01-01T00:00:00</FromTime>
+        <ToTime>2000-01-01T23:59:59</ToTime>
+        <Primary>true</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>1</DeliveryNotification>
+        <SendHandler Name="BizTalkServerApplication" HostTrusted="false">
+          <TransportType Name="SQL" Capabilities="81163" ConfigurationClsid="6e688659-1374-4f37-90dc-40cb6dd3c73d" />
+        </SendHandler>
+      </PrimaryTransport>
+      <SecondaryTransport>
+        <Address />
+        <RetryCount>3</RetryCount>
+        <RetryInterval>5</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2000-01-01T00:00:00</FromTime>
+        <ToTime>2000-01-01T23:59:59</ToTime>
+        <Primary>false</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>1</DeliveryNotification>
+        <SendHandler xsi:nil="true" />
+      </SecondaryTransport>
+      <ReceivePipelineData xsi:nil="true" />
+      <Tracking>0</Tracking>
+      <Filter>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;Filter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;Group&gt;
+    &lt;Statement Property="BTS.MessageType" Operator="0" Value="http://tempuri.net/ExcelUpload.Messages#Messages" /&gt;
+  &lt;/Group&gt;
+&lt;/Filter&gt;</Filter>
+      <Transforms>
+        <Transform FullName="ExcelUpload.BizTalk.AddProductToInsertProduct" AssemblyQualifiedName="ExcelUpload.BizTalk.AddProductToInsertProduct,ExcelUpload.BizTalk, Version=1.0.0.0, Culture=neutral, PublicKeyToken=80464dbfab31f762" />
+      </Transforms>
+      <OrderedDelivery>false</OrderedDelivery>
+      <Priority>5</Priority>
+      <StopSendingOnFailure>false</StopSendingOnFailure>
+      <RouteFailedMessage>false</RouteFailedMessage>
+      <ApplicationName>ExcelUpload</ApplicationName>
+    </SendPort>
+    <SendPort Name="SendAddProduct.MSMQ" IsStatic="true" IsTwoWay="false" BindingOption="0">
+      <Description xsi:nil="true" />
+      <TransmitPipeline Name="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="2" TrackingOption="ServiceStartEnd MessageSendReceive PipelineEvents" Description="" />
+      <PrimaryTransport>
+        <Address>FORMATNAME:DIRECT=OS:WIN2003R2-VM\PRIVATE$\EXCELUPLOAD.ADDPRODUCTSERVICE.1.INPUTQUEUE</Address>
+        <TransportType Name="MSMQ" Capabilities="13579" ConfigurationClsid="ff5cee87-fd92-4422-b47d-f7d033311693" />
+        <TransportTypeData>&lt;CustomProps&gt;&lt;AdapterConfig vt="8"&gt;&amp;lt;Config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&amp;gt;&amp;lt;queue&amp;gt;FORMATNAME:DIRECT=OS:WIN2003R2-VM\PRIVATE$\EXCELUPLOAD.ADDPRODUCTSERVICE.1.INPUTQUEUE&amp;lt;/queue&amp;gt;&amp;lt;maximumMessageSize&amp;gt;1024&amp;lt;/maximumMessageSize&amp;gt;&amp;lt;acknowledgeType&amp;gt;None&amp;lt;/acknowledgeType&amp;gt;&amp;lt;timeOut&amp;gt;4&amp;lt;/timeOut&amp;gt;&amp;lt;priority&amp;gt;Normal&amp;lt;/priority&amp;gt;&amp;lt;recoverable&amp;gt;true&amp;lt;/recoverable&amp;gt;&amp;lt;encryptionAlgorithm&amp;gt;None&amp;lt;/encryptionAlgorithm&amp;gt;&amp;lt;useAuthentication&amp;gt;false&amp;lt;/useAuthentication&amp;gt;&amp;lt;segmentationSupport&amp;gt;false&amp;lt;/segmentationSupport&amp;gt;&amp;lt;transactional&amp;gt;true&amp;lt;/transactional&amp;gt;&amp;lt;useJournalQueue&amp;gt;false&amp;lt;/useJournalQueue&amp;gt;&amp;lt;useDeadLetterQueue&amp;gt;true&amp;lt;/useDeadLetterQueue&amp;gt;&amp;lt;ackTypeEnumsValue&amp;gt;0&amp;lt;/ackTypeEnumsValue&amp;gt;&amp;lt;timeOutUnits&amp;gt;Days&amp;lt;/timeOutUnits&amp;gt;&amp;lt;bodyType&amp;gt;8209&amp;lt;/bodyType&amp;gt;&amp;lt;uri&amp;gt;FORMATNAME:DIRECT=OS:WIN2003R2-VM\PRIVATE$\EXCELUPLOAD.ADDPRODUCTSERVICE.1.INPUTQUEUE&amp;lt;/uri&amp;gt;&amp;lt;/Config&amp;gt;&lt;/AdapterConfig&gt;&lt;/CustomProps&gt;</TransportTypeData>
+        <RetryCount>3</RetryCount>
+        <RetryInterval>5</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2000-01-01T00:00:00</FromTime>
+        <ToTime>2000-01-01T23:59:59</ToTime>
+        <Primary>true</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>1</DeliveryNotification>
+        <SendHandler Name="BizTalkServerApplication" HostTrusted="false">
+          <TransportType Name="MSMQ" Capabilities="13579" ConfigurationClsid="ff5cee87-fd92-4422-b47d-f7d033311693" />
+        </SendHandler>
+      </PrimaryTransport>
+      <SecondaryTransport>
+        <Address />
+        <RetryCount>3</RetryCount>
+        <RetryInterval>5</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2000-01-01T00:00:00</FromTime>
+        <ToTime>2000-01-01T23:59:59</ToTime>
+        <Primary>false</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>1</DeliveryNotification>
+        <SendHandler xsi:nil="true" />
+      </SecondaryTransport>
+      <ReceivePipelineData xsi:nil="true" />
+      <Tracking>0</Tracking>
+      <Filter>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;Filter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;Group&gt;
+    &lt;Statement Property="BTS.MessageType" Operator="0" Value="http://tempuri.net/ExcelUpload.Messages#Messages" /&gt;
+  &lt;/Group&gt;
+&lt;/Filter&gt;</Filter>
+      <Transforms />
+      <OrderedDelivery>false</OrderedDelivery>
+      <Priority>5</Priority>
+      <StopSendingOnFailure>false</StopSendingOnFailure>
+      <RouteFailedMessage>false</RouteFailedMessage>
+      <ApplicationName>ExcelUpload</ApplicationName>
+    </SendPort>
+  </SendPortCollection>
+  <DistributionListCollection />
+  <ReceivePortCollection>
+    <ReceivePort Name="ReceiveStartUpload.FILE" IsTwoWay="false" BindingOption="0">
+      <Description xsi:nil="true" />
+      <ReceiveLocations>
+        <ReceiveLocation Name="ReceiveStartUpload.FILE.XLS">
+          <Description xsi:nil="true" />
+          <Address>C:\drops\ExcelUpload\*.xls</Address>
+          <PublicAddress />
+          <Primary>true</Primary>
+          <ReceiveLocationServiceWindowEnabled>false</ReceiveLocationServiceWindowEnabled>
+          <ReceiveLocationFromTime>2000-01-01T00:00:00</ReceiveLocationFromTime>
+          <ReceiveLocationToTime>2000-01-01T23:59:59</ReceiveLocationToTime>
+          <ReceiveLocationStartDateEnabled>false</ReceiveLocationStartDateEnabled>
+          <ReceiveLocationStartDate>2009-11-19T00:00:00</ReceiveLocationStartDate>
+          <ReceiveLocationEndDateEnabled>false</ReceiveLocationEndDateEnabled>
+          <ReceiveLocationEndDate>2009-11-20T23:59:59</ReceiveLocationEndDate>
+          <ReceiveLocationTransportType Name="FILE" Capabilities="11" ConfigurationClsid="5e49e3a6-b4fc-4077-b44c-22f34a242fdb" />
+          <ReceiveLocationTransportTypeData>&lt;CustomProps&gt;&lt;RemoveReceivedFileRetryCount vt="19"&gt;5&lt;/RemoveReceivedFileRetryCount&gt;&lt;RemoveReceivedFileMaxInterval vt="19"&gt;300000&lt;/RemoveReceivedFileMaxInterval&gt;&lt;FileMask vt="8"&gt;*.xls&lt;/FileMask&gt;&lt;BatchSizeInBytes vt="19"&gt;102400&lt;/BatchSizeInBytes&gt;&lt;PollingInterval vt="19"&gt;60000&lt;/PollingInterval&gt;&lt;BatchSize vt="19"&gt;20&lt;/BatchSize&gt;&lt;FileNetFailRetryInt vt="19"&gt;5&lt;/FileNetFailRetryInt&gt;&lt;RemoveReceivedFileDelay vt="19"&gt;10&lt;/RemoveReceivedFileDelay&gt;&lt;RenameReceivedFiles vt="11"&gt;0&lt;/RenameReceivedFiles&gt;&lt;FileNetFailRetryCount vt="19"&gt;5&lt;/FileNetFailRetryCount&gt;&lt;/CustomProps&gt;</ReceiveLocationTransportTypeData>
+          <ReceivePipeline Name="ExcelUpload.BizTalk.ExcelReceive" FullyQualifiedName="ExcelUpload.BizTalk.ExcelReceive, ExcelUpload.BizTalk, Version=1.0.0.0, Culture=neutral, PublicKeyToken=80464dbfab31f762" Type="1" TrackingOption="ServiceStartEnd MessageSendReceive PipelineEvents" Description="" />
+          <ReceivePipelineData xsi:nil="true" />
+          <SendPipeline xsi:nil="true" />
+          <SendPipelineData xsi:nil="true" />
+          <Enable>false</Enable>
+          <ReceiveHandler Name="BizTalkServerApplication" HostTrusted="false">
+            <TransportType Name="FILE" Capabilities="11" ConfigurationClsid="5e49e3a6-b4fc-4077-b44c-22f34a242fdb" />
+          </ReceiveHandler>
+        </ReceiveLocation>
+      </ReceiveLocations>
+      <SendPipelineData xsi:nil="true" />
+      <Authentication>0</Authentication>
+      <Tracking>0</Tracking>
+      <Transforms />
+      <RouteFailedMessage>false</RouteFailedMessage>
+      <ApplicationName>ExcelUpload</ApplicationName>
+    </ReceivePort>
+    <ReceivePort Name="ReceiveAddProduct.MSMQ" IsTwoWay="false" BindingOption="0">
+      <Description xsi:nil="true" />
+      <ReceiveLocations>
+        <ReceiveLocation Name="ReceiveAddProduct.MSMQ">
+          <Description xsi:nil="true" />
+          <Address>FORMATNAME:DIRECT=OS:WIN2003R2-VM\PRIVATE$\EXCELUPLOAD.ADDPRODUCTSERVICE.1.INPUTQUEUE</Address>
+          <PublicAddress />
+          <Primary>true</Primary>
+          <ReceiveLocationServiceWindowEnabled>false</ReceiveLocationServiceWindowEnabled>
+          <ReceiveLocationFromTime>2000-01-01T00:00:00</ReceiveLocationFromTime>
+          <ReceiveLocationToTime>2000-01-01T23:59:59</ReceiveLocationToTime>
+          <ReceiveLocationStartDateEnabled>false</ReceiveLocationStartDateEnabled>
+          <ReceiveLocationStartDate>2009-11-19T00:00:00</ReceiveLocationStartDate>
+          <ReceiveLocationEndDateEnabled>false</ReceiveLocationEndDateEnabled>
+          <ReceiveLocationEndDate>2009-11-20T23:59:59</ReceiveLocationEndDate>
+          <ReceiveLocationTransportType Name="MSMQ" Capabilities="13579" ConfigurationClsid="ff5cee87-fd92-4422-b47d-f7d033311693" />
+          <ReceiveLocationTransportTypeData>&lt;CustomProps&gt;&lt;AdapterConfig vt="8"&gt;&amp;lt;Config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&amp;gt;&amp;lt;queue&amp;gt;FORMATNAME:DIRECT=OS:WIN2003R2-VM\PRIVATE$\EXCELUPLOAD.ADDPRODUCTSERVICE.1.INPUTQUEUE&amp;lt;/queue&amp;gt;&amp;lt;uri&amp;gt;FORMATNAME:DIRECT=OS:WIN2003R2-VM\PRIVATE$\EXCELUPLOAD.ADDPRODUCTSERVICE.1.INPUTQUEUE&amp;lt;/uri&amp;gt;&amp;lt;batchSize&amp;gt;100&amp;lt;/batchSize&amp;gt;&amp;lt;transactional&amp;gt;true&amp;lt;/transactional&amp;gt;&amp;lt;serialProcessing&amp;gt;false&amp;lt;/serialProcessing&amp;gt;&amp;lt;onFailure&amp;gt;suspendResumable&amp;lt;/onFailure&amp;gt;&amp;lt;/Config&amp;gt;&lt;/AdapterConfig&gt;&lt;/CustomProps&gt;</ReceiveLocationTransportTypeData>
+          <ReceivePipeline Name="Microsoft.BizTalk.DefaultPipelines.XMLReceive" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.XMLReceive, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="1" TrackingOption="ServiceStartEnd MessageSendReceive PipelineEvents" Description="" />
+          <ReceivePipelineData xsi:nil="true" />
+          <SendPipeline xsi:nil="true" />
+          <SendPipelineData xsi:nil="true" />
+          <Enable>true</Enable>
+          <ReceiveHandler Name="BizTalkServerApplication" HostTrusted="false">
+            <TransportType Name="MSMQ" Capabilities="13579" ConfigurationClsid="ff5cee87-fd92-4422-b47d-f7d033311693" />
+          </ReceiveHandler>
+        </ReceiveLocation>
+      </ReceiveLocations>
+      <SendPipelineData xsi:nil="true" />
+      <Authentication>0</Authentication>
+      <Tracking>0</Tracking>
+      <Transforms />
+      <RouteFailedMessage>false</RouteFailedMessage>
+      <ApplicationName>ExcelUpload</ApplicationName>
+    </ReceivePort>
+  </ReceivePortCollection>
+  <PartyCollection />
+</BindingInfo>

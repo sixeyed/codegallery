@@ -1,0 +1,21 @@
+body
+{
+	color: #660066;
+	font-family: Verdana, Tahoma;
+}
+.headerText
+{
+	font-weight: bold;
+	font-size: xx-large;
+	text-transform: capitalize;
+}
+.footerText
+{
+	font-weight: bold;
+	font-size:xx-small;
+	text-transform: capitalize;
+}
+a
+{
+	text-decoration: none;
+}

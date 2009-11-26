@@ -1,0 +1,10 @@
+<RecordResult xmlns="http://TriathlonResults.Central.Schemas.Flat/1.0/">
+  <result>
+    <RaceId>1</RaceId>
+    <SectorId>1</SectorId>
+    <AthleteId>1</AthleteId>
+    <StartTime>0001-01-01T00:00:00</StartTime>
+    <EndTime>0001-01-01T00:00:00</EndTime>
+    <Duration>823</Duration>
+  </result>
+</RecordResult>
