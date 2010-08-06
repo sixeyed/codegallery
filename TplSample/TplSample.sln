@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{D19C3409-2E54-4F5A-BE9E-1503ACE9BE1D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C986F684-39BB-41F1-BD61-21DA05071F16}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		TplSample.vsmdi = TplSample.vsmdi
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TplSample.Service", "TplSample.Service\TplSample.Service.csproj", "{E2728FEA-C29B-4132-BE68-63BC9DD7AA46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TplSample", "TplSample\TplSample.csproj", "{709669FD-057B-4584-97C0-EAC20CCEAC4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TplSample.Tests", "TplSample.Tests\TplSample.Tests.csproj", "{25345C7C-EA20-4959-BA57-79A67084F45A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{63BCBF10-78A4-41D1-A281-96C87D0554EF}"
+	ProjectSection(SolutionItems) = preProject
+		Common\AssemblyInfoCommon.cs = Common\AssemblyInfoCommon.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = TplSample.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E2728FEA-C29B-4132-BE68-63BC9DD7AA46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2728FEA-C29B-4132-BE68-63BC9DD7AA46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2728FEA-C29B-4132-BE68-63BC9DD7AA46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2728FEA-C29B-4132-BE68-63BC9DD7AA46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{709669FD-057B-4584-97C0-EAC20CCEAC4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{709669FD-057B-4584-97C0-EAC20CCEAC4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{709669FD-057B-4584-97C0-EAC20CCEAC4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{709669FD-057B-4584-97C0-EAC20CCEAC4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25345C7C-EA20-4959-BA57-79A67084F45A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25345C7C-EA20-4959-BA57-79A67084F45A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25345C7C-EA20-4959-BA57-79A67084F45A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25345C7C-EA20-4959-BA57-79A67084F45A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C986F684-39BB-41F1-BD61-21DA05071F16} = {D19C3409-2E54-4F5A-BE9E-1503ACE9BE1D}
+		{25345C7C-EA20-4959-BA57-79A67084F45A} = {D19C3409-2E54-4F5A-BE9E-1503ACE9BE1D}
+	EndGlobalSection
+EndGlobal

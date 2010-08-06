@@ -1,0 +1,2 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" 
+Service="TplSample.Service.StorageService" CodeBehind="StorageService.svc.cs" %>
