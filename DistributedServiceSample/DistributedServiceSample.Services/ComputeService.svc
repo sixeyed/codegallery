@@ -1,0 +1,3 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" 
+Service="DistributedServiceSample.Services.ComputeService" 
+CodeBehind="ComputeService.svc.cs" %>
