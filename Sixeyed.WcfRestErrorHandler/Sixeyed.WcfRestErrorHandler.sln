@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sixeyed.WcfRestErrorHandler.ServiceModel", "Sixeyed.WcfRestErrorHandler.ServiceModel\Sixeyed.WcfRestErrorHandler.ServiceModel.csproj", "{2187E9EF-B50C-41CD-B69D-97E03DC612C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sixeyed.WcfRestErrorHandler.Sample", "Sixeyed.WcfRestErrorHandler.Sample\Sixeyed.WcfRestErrorHandler.Sample.csproj", "{58AB72FD-4EE5-4E51-AD2E-05BD040880A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sixeyed.WcfRestErrorHandler.Sample.Tests", "Sixeyed.WcfRestErrorHandler.Sample.Tests\Sixeyed.WcfRestErrorHandler.Sample.Tests.csproj", "{16A320CE-881C-4586-BFD9-2DE02B9B3859}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{10C3F5AA-39C6-4B63-B83A-7A8F675B2EA2}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		Sixeyed.WcfRestErrorHandler.vsmdi = Sixeyed.WcfRestErrorHandler.vsmdi
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2187E9EF-B50C-41CD-B69D-97E03DC612C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2187E9EF-B50C-41CD-B69D-97E03DC612C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2187E9EF-B50C-41CD-B69D-97E03DC612C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2187E9EF-B50C-41CD-B69D-97E03DC612C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58AB72FD-4EE5-4E51-AD2E-05BD040880A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58AB72FD-4EE5-4E51-AD2E-05BD040880A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58AB72FD-4EE5-4E51-AD2E-05BD040880A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58AB72FD-4EE5-4E51-AD2E-05BD040880A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16A320CE-881C-4586-BFD9-2DE02B9B3859}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16A320CE-881C-4586-BFD9-2DE02B9B3859}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16A320CE-881C-4586-BFD9-2DE02B9B3859}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16A320CE-881C-4586-BFD9-2DE02B9B3859}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{16A320CE-881C-4586-BFD9-2DE02B9B3859} = {10C3F5AA-39C6-4B63-B83A-7A8F675B2EA2}
+	EndGlobalSection
+EndGlobal
