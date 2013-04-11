@@ -105,9 +105,7 @@
       <SubType>Task</SubType>
     </Pipeline>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Bindings\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Map Include="Maps\Vehicle_VehicleSnapshot.btm">
       <TypeName>Vehicle_VehicleSnapshot</TypeName>
@@ -130,6 +128,7 @@
     </Pipeline>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Bindings\Sixeyed.BizTalk.JsonParser.Sample.BindingInfo.xml" />
     <Content Include="SampleFiles\VehicleSnapshotRequest.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
