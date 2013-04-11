@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sixeyed.BizTalk.JsonParser.PipelineComponents", "Sixeyed.BizTalk.JsonParser.PipelineComponents\Sixeyed.BizTalk.JsonParser.PipelineComponents.csproj", "{AA058257-494A-43B1-9B65-454F5E7A6750}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{920B4CF4-B59C-41B9-A8CC-C1727150B772}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sixeyed.BizTalk.JsonParser.Sample", "Sixeyed.BizTalk.JsonParser.Sample\Sixeyed.BizTalk.JsonParser.Sample.btproj", "{F22F1235-FC65-4C87-A237-135B1B77B17F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Setup", "Setup", "{2C6F0234-12B3-4B54-80D2-BDBB5A7FA61C}"
+	ProjectSection(SolutionItems) = preProject
+		Setup\Setup.cmd = Setup\Setup.cmd
+		Setup\Sixeyed.BizTalk.JsonParser.PipelineComponents.dll = Setup\Sixeyed.BizTalk.JsonParser.PipelineComponents.dll
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://sixeyed.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Sixeyed.BizTalk.JsonParser.PipelineComponents\\Sixeyed.BizTalk.JsonParser.PipelineComponents.csproj
+		SccProjectName1 = Sixeyed.BizTalk.JsonParser.PipelineComponents
+		SccLocalPath1 = Sixeyed.BizTalk.JsonParser.PipelineComponents
+		SccProjectUniqueName2 = Sixeyed.BizTalk.JsonParser.Sample\\Sixeyed.BizTalk.JsonParser.Sample.btproj
+		SccProjectTopLevelParentUniqueName2 = Sixeyed.BizTalk.JsonParser.sln
+		SccProjectName2 = Sixeyed.BizTalk.JsonParser.Sample
+		SccLocalPath2 = Sixeyed.BizTalk.JsonParser.Sample
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA058257-494A-43B1-9B65-454F5E7A6750}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA058257-494A-43B1-9B65-454F5E7A6750}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA058257-494A-43B1-9B65-454F5E7A6750}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA058257-494A-43B1-9B65-454F5E7A6750}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F22F1235-FC65-4C87-A237-135B1B77B17F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F22F1235-FC65-4C87-A237-135B1B77B17F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F22F1235-FC65-4C87-A237-135B1B77B17F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F22F1235-FC65-4C87-A237-135B1B77B17F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F22F1235-FC65-4C87-A237-135B1B77B17F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F22F1235-FC65-4C87-A237-135B1B77B17F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F22F1235-FC65-4C87-A237-135B1B77B17F} = {920B4CF4-B59C-41B9-A8CC-C1727150B772}
+		{2C6F0234-12B3-4B54-80D2-BDBB5A7FA61C} = {920B4CF4-B59C-41B9-A8CC-C1727150B772}
+	EndGlobalSection
+EndGlobal
