@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CarValetModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="CarValetModelStoreContainer">
+    <EntitySet Name="Makes" EntityType="CarValetModel.Store.Makes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Models" EntityType="CarValetModel.Store.Models" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Vehicles" EntityType="CarValetModel.Store.Vehicles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VehicleTypes" EntityType="CarValetModel.Store.VehicleTypes" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="MakeModel" Association="CarValetModel.Store.MakeModel">
+      <End Role="Make" EntitySet="Makes" />
+      <End Role="Model" EntitySet="Models" />
+    </AssociationSet>
+    <AssociationSet Name="ModelVehicle" Association="CarValetModel.Store.ModelVehicle">
+      <End Role="Model" EntitySet="Models" />
+      <End Role="Vehicle" EntitySet="Vehicles" />
+    </AssociationSet>
+    <AssociationSet Name="VehicleTypeVehicle" Association="CarValetModel.Store.VehicleTypeVehicle">
+      <End Role="VehicleType" EntitySet="VehicleTypes" />
+      <End Role="Vehicle" EntitySet="Vehicles" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Makes">
+    <Key>
+      <PropertyRef Name="MakeCode" />
+    </Key>
+    <Property Name="MakeCode" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="MakeName" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="MakeNameLower" Type="varchar" Nullable="true" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Models">
+    <Key>
+      <PropertyRef Name="MakeCode" />
+      <PropertyRef Name="ModelCode" />
+    </Key>
+    <Property Name="MakeCode" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ModelCode" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ModelName" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="ModelNameLower" Type="varchar" Nullable="true" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Vehicles">
+    <Key>
+      <PropertyRef Name="VehicleId" />
+    </Key>
+    <Property Name="VehicleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProducedFromUtc" Type="datetime" Nullable="false" />
+    <Property Name="ProducedToUtc" Type="datetime" Nullable="true" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ImageUrl" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Model_MakeCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Model_ModelCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="VehicleType_TypeCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VehicleTypes">
+    <Key>
+      <PropertyRef Name="TypeCode" />
+    </Key>
+    <Property Name="TypeCode" Type="nvarchar" StoreGeneratedPattern="Identity" Nullable="false" MaxLength="10" />
+    <Property Name="TypeDescription" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="MakeModel">
+    <End Role="Make" Type="CarValetModel.Store.Makes" Multiplicity="1" />
+    <End Role="Model" Type="CarValetModel.Store.Models" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Make">
+        <PropertyRef Name="MakeCode" />
+      </Principal>
+      <Dependent Role="Model">
+        <PropertyRef Name="MakeCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ModelVehicle">
+    <End Role="Model" Type="CarValetModel.Store.Models" Multiplicity="1" />
+    <End Role="Vehicle" Type="CarValetModel.Store.Vehicles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Model">
+        <PropertyRef Name="MakeCode" />
+        <PropertyRef Name="ModelCode" />
+      </Principal>
+      <Dependent Role="Vehicle">
+        <PropertyRef Name="Model_MakeCode" />
+        <PropertyRef Name="Model_ModelCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VehicleTypeVehicle">
+    <End Role="VehicleType" Type="CarValetModel.Store.VehicleTypes" Multiplicity="1" />
+    <End Role="Vehicle" Type="CarValetModel.Store.Vehicles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VehicleType">
+        <PropertyRef Name="TypeCode" />
+      </Principal>
+      <Dependent Role="Vehicle">
+        <PropertyRef Name="VehicleType_TypeCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="VehicleModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="VehicleEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Makes" EntityType="VehicleModel.Make" />
+          <EntitySet Name="Models" EntityType="VehicleModel.Model" />
+          <AssociationSet Name="MakeModel" Association="VehicleModel.MakeModel">
+            <End Role="Make" EntitySet="Makes" />
+            <End Role="Model" EntitySet="Models" />
+          </AssociationSet>
+          <EntitySet Name="Vehicles" EntityType="VehicleModel.Vehicle" />
+          <EntitySet Name="VehicleTypes" EntityType="VehicleModel.VehicleType" />
+          <AssociationSet Name="ModelVehicle" Association="VehicleModel.ModelVehicle">
+            <End Role="Model" EntitySet="Models" />
+            <End Role="Vehicle" EntitySet="Vehicles" />
+          </AssociationSet>
+          <AssociationSet Name="VehicleTypeVehicle" Association="VehicleModel.VehicleTypeVehicle">
+            <End Role="VehicleType" EntitySet="VehicleTypes" />
+            <End Role="Vehicle" EntitySet="Vehicles" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Make">
+          <Key>
+            <PropertyRef Name="MakeCode" />
+          </Key>
+          <Property Name="MakeCode" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MakeName" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="MakeNameLower" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Models" Relationship="VehicleModel.MakeModel" FromRole="Make" ToRole="Model" />
+        </EntityType>
+        <EntityType Name="Model">
+          <Key>
+            <PropertyRef Name="MakeCode" />
+            <PropertyRef Name="ModelCode" />
+          </Key>
+          <Property Name="MakeCode" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ModelCode" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ModelName" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="ModelNameLower" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Make" Relationship="VehicleModel.MakeModel" FromRole="Model" ToRole="Make" />
+          <NavigationProperty Name="Vehicles" Relationship="VehicleModel.ModelVehicle" FromRole="Model" ToRole="Vehicle" />
+        </EntityType>
+        <Association Name="MakeModel">
+          <End Type="VehicleModel.Make" Role="Make" Multiplicity="1" />
+          <End Type="VehicleModel.Model" Role="Model" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Make">
+              <PropertyRef Name="MakeCode" />
+            </Principal>
+            <Dependent Role="Model">
+              <PropertyRef Name="MakeCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Vehicle">
+          <Key>
+            <PropertyRef Name="VehicleId" />
+          </Key>
+          <Property Type="Int32" Name="VehicleId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="ProducedFromUtc" Nullable="false" />
+          <Property Type="DateTime" Name="ProducedToUtc" Nullable="true" />
+          <NavigationProperty Name="Model" Relationship="VehicleModel.ModelVehicle" FromRole="Vehicle" ToRole="Model" />
+          <Property Type="String" Name="Name" Nullable="false" />
+          <NavigationProperty Name="VehicleType" Relationship="VehicleModel.VehicleTypeVehicle" FromRole="Vehicle" ToRole="VehicleType" />
+          <Property Type="String" Name="ImageUrl" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VehicleType">
+          <Key>
+            <PropertyRef Name="TypeCode" />
+          </Key>
+          <Property Type="String" Name="TypeCode" Nullable="false" annotation:StoreGeneratedPattern="Identity" MaxLength="10" />
+          <Property Type="String" Name="TypeDescription" Nullable="false" />
+          <NavigationProperty Name="Vehicles" Relationship="VehicleModel.VehicleTypeVehicle" FromRole="VehicleType" ToRole="Vehicle" />
+        </EntityType>
+        <Association Name="ModelVehicle">
+          <End Type="VehicleModel.Model" Role="Model" Multiplicity="1" />
+          <End Type="VehicleModel.Vehicle" Role="Vehicle" Multiplicity="*" />
+        </Association>
+        <Association Name="VehicleTypeVehicle">
+          <End Type="VehicleModel.VehicleType" Role="VehicleType" Multiplicity="1" />
+          <End Type="VehicleModel.Vehicle" Role="Vehicle" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CarValetModelStoreContainer" CdmEntityContainer="VehicleEntities">
+    <EntitySetMapping Name="Makes">
+      <EntityTypeMapping TypeName="IsTypeOf(VehicleModel.Make)">
+        <MappingFragment StoreEntitySet="Makes">
+          <ScalarProperty Name="MakeCode" ColumnName="MakeCode" />
+          <ScalarProperty Name="MakeName" ColumnName="MakeName" />
+          <ScalarProperty Name="MakeNameLower" ColumnName="MakeNameLower" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Models">
+      <EntityTypeMapping TypeName="IsTypeOf(VehicleModel.Model)">
+        <MappingFragment StoreEntitySet="Models">
+          <ScalarProperty Name="MakeCode" ColumnName="MakeCode" />
+          <ScalarProperty Name="ModelCode" ColumnName="ModelCode" />
+          <ScalarProperty Name="ModelName" ColumnName="ModelName" />
+          <ScalarProperty Name="ModelNameLower" ColumnName="ModelNameLower" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vehicles">
+      <EntityTypeMapping TypeName="IsTypeOf(VehicleModel.Vehicle)">
+        <MappingFragment StoreEntitySet="Vehicles">
+          <ScalarProperty Name="VehicleId" ColumnName="VehicleId" />
+          <ScalarProperty Name="ProducedFromUtc" ColumnName="ProducedFromUtc" />
+          <ScalarProperty Name="ProducedToUtc" ColumnName="ProducedToUtc" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VehicleTypes">
+      <EntityTypeMapping TypeName="IsTypeOf(VehicleModel.VehicleType)">
+        <MappingFragment StoreEntitySet="VehicleTypes">
+          <ScalarProperty Name="TypeCode" ColumnName="TypeCode" />
+          <ScalarProperty Name="TypeDescription" ColumnName="TypeDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="ModelVehicle" TypeName="VehicleModel.ModelVehicle" StoreEntitySet="Vehicles">
+      <EndProperty Name="Model">
+        <ScalarProperty Name="MakeCode" ColumnName="Model_MakeCode" />
+        <ScalarProperty Name="ModelCode" ColumnName="Model_ModelCode" />
+      </EndProperty>
+      <EndProperty Name="Vehicle">
+        <ScalarProperty Name="VehicleId" ColumnName="VehicleId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="VehicleTypeVehicle" TypeName="VehicleModel.VehicleTypeVehicle" StoreEntitySet="Vehicles">
+      <EndProperty Name="VehicleType">
+        <ScalarProperty Name="TypeCode" ColumnName="VehicleType_TypeCode" />
+      </EndProperty>
+      <EndProperty Name="Vehicle">
+        <ScalarProperty Name="VehicleId" ColumnName="VehicleId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,739 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{829A5FEC-C303-43AF-8A4B-BC33E9B300A0}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sixeyed.CarValet.Node</RootNamespace>
+    <AssemblyName>Sixeyed.CarValet.Node</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AmqpPublisher\amqp\amqp-0-9-1-rabbit.xml" />
+    <Content Include="AmqpPublisher\amqp\amqp-0-9-1.xml" />
+    <Content Include="AmqpPublisher\amqp\amqp-definitions-0-9-1.js" />
+    <Content Include="AmqpPublisher\amqp\amqp.js" />
+    <Content Include="AmqpPublisher\amqp\constants.js" />
+    <Content Include="AmqpPublisher\amqp\jspack.js" />
+    <Content Include="AmqpPublisher\amqp\promise.js" />
+    <Content Include="AmqpPublisher\amqp\test2\federation.js" />
+    <Content Include="AmqpPublisher\amqp\test2\firehose.js" />
+    <Content Include="AmqpPublisher\amqp\test\harness.js" />
+    <Content Include="AmqpPublisher\amqp\test\proxy.js" />
+    <Content Include="AmqpPublisher\amqp\test\test-auto-delete-queue.js" />
+    <Content Include="AmqpPublisher\amqp\test\test-basic-return.js" />
+    <Content Include="AmqpPublisher\amqp\test\test-buffer.js" />
+    <Content Include="AmqpPublisher\amqp\test\test-connection-array.js" />
+    <Content Include="AmqpPublisher\amqp\test\test-connection-callbacks.js" />
+    <Content Include="AmqpPublisher\amqp\test\test-default-exchange.js" />
+    <Content Include="AmqpPublisher\amqp\test\test-destroy-close-delete.js" />
+    <Content Include="AmqpPublisher\amqp\test\test-ex-and-q-deletions.js" />
+    <Content Include="AmqpPublisher\amqp\test\test-exchange-bind.js" />
+    <Content Include="AmqpPublisher\amqp\test\test-exchange-callbacks.js" />
+    <Content Include="AmqpPublisher\amqp\test\test-exchange-unbind.js" />
+    <Content Include="AmqpPublisher\amqp\test\test-flow.js" />
+    <Content Include="AmqpPublisher\amqp\test\test-headers.js" />
+    <Content Include="AmqpPublisher\amqp\test\test-heartbeat-disconnect.js" />
+    <Content Include="AmqpPublisher\amqp\test\test-heartbeat.js" />
+    <Content Include="AmqpPublisher\amqp\test\test-json.js" />
+    <Content Include="AmqpPublisher\amqp\test\test-large-body.js" />
+    <Content Include="AmqpPublisher\amqp\test\test-large-multiframe-body.js" />
+    <Content Include="AmqpPublisher\amqp\test\test-parser.js" />
+    <Content Include="AmqpPublisher\amqp\test\test-properties.js" />
+    <Content Include="AmqpPublisher\amqp\test\test-publish-confirms-callback.js" />
+    <Content Include="AmqpPublisher\amqp\test\test-publish-confirms-emitter.js" />
+    <Content Include="AmqpPublisher\amqp\test\test-purge.js" />
+    <Content Include="AmqpPublisher\amqp\test\test-queue-args.js" />
+    <Content Include="AmqpPublisher\amqp\test\test-queue-bind-callbacks-cascaded.js" />
+    <Content Include="AmqpPublisher\amqp\test\test-queue-bind-callbacks-sequential.js" />
+    <Content Include="AmqpPublisher\amqp\test\test-queue-bind-callbacks-single.js" />
+    <Content Include="AmqpPublisher\amqp\test\test-queue-creation.js" />
+    <Content Include="AmqpPublisher\amqp\test\test-receive-empty-messages.js" />
+    <Content Include="AmqpPublisher\amqp\test\test-reconnection.js" />
+    <Content Include="AmqpPublisher\amqp\test\test-reject.js" />
+    <Content Include="AmqpPublisher\amqp\test\test-shift.js" />
+    <Content Include="AmqpPublisher\amqp\test\test-simple.js" />
+    <Content Include="AmqpPublisher\amqp\test\test-type-and-headers.js" />
+    <Content Include="AmqpPublisher\amqp\test\test-unbind.js" />
+    <Content Include="AmqpPublisher\amqp\test\test-unsubscribe.js" />
+    <Content Include="AmqpPublisher\amqp\test\test-volume.js" />
+    <Content Include="AmqpPublisher\amqp\util\delete-exchange.js" />
+    <Content Include="AmqpPublisher\amqp\util\delete-queue.js" />
+    <Content Include="ServiceBusPublisher\AzurePasswordReset.js" />
+    <Content Include="FormatService\FormatService.js" />
+    <Content Include="AmqpPublisher\PasswordReset.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\ChangeLog.txt" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\examples\samples\blobuploaddownloadsample.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\examples\samples\continuationsample.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\examples\samples\leaseblobsample.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\examples\samples\longpolling.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\examples\samples\retrypolicysample.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\examples\samples\sassample.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\examples\samples\sbqueue.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\examples\samples\sbtopic.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\examples\samples\snapshotsample.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\azure.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\diagnostics\logger.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\http\webresource.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\serviceruntime\fileinputchannel.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\serviceruntime\goalstatedeserializer.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\serviceruntime\namedpipeinputchannel.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\serviceruntime\namedpipeoutputchannel.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\serviceruntime\protocol1runtimeclient.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\serviceruntime\protocol1runtimecurrentstateclient.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\serviceruntime\protocol1runtimegoalstateclient.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\serviceruntime\roleenvironment.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\serviceruntime\runtimekernel.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\serviceruntime\runtimeversionmanager.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\serviceruntime\runtimeversionprotocolclient.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\serviceruntime\xmlcurrentstateserializer.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\serviceruntime\xmlgoalstatedeserializer.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\serviceruntime\xmlroleenvironmentdatadeserializer.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\blob\blobservice.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\blob\hmacsha256sign.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\blob\models\blobresult.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\blob\models\blocklistresult.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\blob\models\containeraclresult.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\blob\models\containerresult.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\blob\models\leaseresult.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\blob\models\listblobsresultcontinuation.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\blob\models\listcontainersresultcontinuation.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\blob\models\servicepropertiesresult.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\blob\sharedaccesssignature.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\blob\sharedkey.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\blob\sharedkeylite.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\core\connectionstringparser.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\core\exponentialretrypolicyfilter.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\core\linearretrypolicyfilter.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\core\servicebusserviceclient.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\core\servicebussettings.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\core\serviceclient.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\core\servicemanagementclient.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\core\servicemanagementsettings.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\core\servicesettings.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\core\sqlserviceclient.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\core\storageserviceclient.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\core\storageservicesettings.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\queue\models\listqueuesresultcontinuation.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\queue\models\queuemessageresult.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\queue\models\queueresult.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\queue\models\servicepropertiesresult.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\queue\queueservice.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\serviceBus\apnsservice.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\serviceBus\models\acstokenresult.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\serviceBus\models\notificationhubresult.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\serviceBus\models\queuemessageresult.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\serviceBus\models\queueresult.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\serviceBus\models\resourceresult.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\serviceBus\models\ruleresult.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\serviceBus\models\subscriptionresult.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\serviceBus\models\topicresult.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\serviceBus\notificationhubservice.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\serviceBus\servicebusservice.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\serviceBus\servicebusservicebase.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\serviceBus\sharedaccesssignature.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\serviceBus\wnsservice.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\serviceBus\wrap.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\serviceBus\wrapservice.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\serviceBus\wraptokenmanager.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\serviceManagement\models\namevalidation.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\serviceManagement\models\roleparser.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\serviceManagement\models\servicemanagementserialize.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\serviceManagement\servicebusmanagementservice.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\serviceManagement\servicemanagementservice.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\serviceManagement\sqlmanagementservice.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\sqlAzure\models\databaseresult.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\sqlAzure\sqlserveracs.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\sqlAzure\sqlservice.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\table\batchserviceclient.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\table\models\entityresult.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\table\models\queryentitiesresultcontinuation.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\table\models\querytablesresultcontinuation.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\table\models\servicepropertiesresult.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\table\models\tableresult.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\table\sharedkeylitetable.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\table\sharedkeytable.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\table\tablequery.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\table\tableservice.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\util\atomhandler.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\util\constants.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\util\date.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\util\edmtype.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\util\iso8061date.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\util\js2xml.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\util\odatahandler.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\util\rfc1123date.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\util\util.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\util\validate.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\LICENSE.txt" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\dateformat\lib\dateformat.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\dateformat\test\test_weekofyear.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\mime\mime.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\mime\test.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\node-uuid\test\benchmark-native.c" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\node-uuid\test\benchmark.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\node-uuid\test\compare_v1.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\node-uuid\test\options.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\node-uuid\test\test.html" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\node-uuid\test\test.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\node-uuid\uuid.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\index.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\aws-sign\index.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\cookie-jar\index.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\cookie-jar\jar.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\cookie-jar\tests\run.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\cookie-jar\tests\test-cookie.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\cookie-jar\tests\test-cookiejar.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\forever-agent\index.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\lib\form_data.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\node_modules\async\index.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\node_modules\async\lib\async.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\node_modules\combined-stream\lib\combined_stream.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\node_modules\combined-stream\node_modules\delayed-stream\lib\delayed_stream.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\node_modules\combined-stream\node_modules\delayed-stream\test\common.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\node_modules\combined-stream\node_modules\delayed-stream\test\run.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\node_modules\combined-stream\test\common.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\node_modules\combined-stream\test\fixture\file1.txt" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\node_modules\combined-stream\test\fixture\file2.txt" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\node_modules\combined-stream\test\integration\test-callback-streams.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\node_modules\combined-stream\test\integration\test-data-size.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\node_modules\combined-stream\test\integration\test-delayed-streams.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\node_modules\combined-stream\test\integration\test-empty-string.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\node_modules\combined-stream\test\integration\test-is-stream-like.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\node_modules\combined-stream\test\integration\test-max-data-size.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\node_modules\combined-stream\test\integration\test-unpaused-streams.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\node_modules\combined-stream\test\run.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\test\common.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\test\fixture\bacon.txt" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\test\fixture\unicycle.jpg" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\test\integration\test-custom-headers.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\test\integration\test-form-get-length.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\test\integration\test-get-boundary.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\test\integration\test-http-response.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\test\integration\test-pipe.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\test\integration\test-submit-custom.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\test\integration\test-submit.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\test\run.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\example\usage.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\images\hawk.png" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\images\logo.png" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\index.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\lib\client.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\lib\crypto.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\lib\index.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\lib\server.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\lib\uri.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\lib\utils.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\boom\images\boom.png" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\boom\index.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\boom\lib\index.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\boom\test\index.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\cryptiles\index.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\cryptiles\lib\index.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\cryptiles\test\index.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\hoek\images\hoek.png" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\hoek\index.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\hoek\lib\escape.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\hoek\lib\index.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\hoek\test\escaper.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\hoek\test\index.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\hoek\test\modules\test1.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\hoek\test\modules\test2.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\hoek\test\modules\test3.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\sntp\examples\offset.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\sntp\examples\time.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\sntp\index.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\sntp\lib\index.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\sntp\test\index.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\test\client.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\test\crypto.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\test\index.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\test\readme.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\test\server.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\test\uri.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\test\utils.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\json-stringify-safe\stringify.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\json-stringify-safe\test.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\node-uuid\benchmark\benchmark-native.c" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\node-uuid\benchmark\benchmark.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\node-uuid\test\compare_v1.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\node-uuid\test\test.html" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\node-uuid\test\test.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\node-uuid\uuid.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\oauth-sign\index.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\oauth-sign\test.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\qs\benchmark.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\qs\examples.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\qs\index.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\qs\test\browser\expect.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\qs\test\browser\index.html" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\qs\test\browser\jquery.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\qs\test\browser\mocha.css" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\qs\test\browser\mocha.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\qs\test\browser\qs.css" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\qs\test\browser\qs.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\qs\test\parse.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\qs\test\stringify.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\tunnel-agent\index.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\googledoodle.jpg" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\run.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\server.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\ssl\ca\server.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\test-basic-auth.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\test-body.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\test-defaults.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\test-digest-auth.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\test-errors.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\test-follow-all-303.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\test-follow-all.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\test-form.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\test-hawk.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\test-headers.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\test-httpModule.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\test-https-strict.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\test-https.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\test-oauth.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\test-params.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\test-piped-redirect.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\test-pipes.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\test-pool.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\test-protocol-changing-redirect.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\test-proxy.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\test-qs.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\test-redirect.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\test-s3.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\test-timeout.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\test-toJSON.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\test-tunnel.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\unicycle.jpg" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\tunnel\index.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\tunnel\lib\tunnel.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\tunnel\test\http-over-http.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\tunnel\test\http-over-https.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\tunnel\test\https-over-http.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\tunnel\test\https-over-https-error.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\tunnel\test\https-over-https.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\tunnel\test\keys\ca2-database.txt" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\underscore\favicon.ico" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\underscore\index.html" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\underscore\index.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\underscore\underscore-min.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\underscore\underscore.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\validator\foo.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\validator\index.html" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\validator\index.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\validator\lib\defaultError.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\validator\lib\entities.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\validator\lib\filter.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\validator\lib\index.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\validator\lib\validator.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\validator\lib\validators.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\validator\lib\xss.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\validator\test.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\validator\test\filter.test.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\validator\test\run.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\validator\test\validator.test.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\validator\validator-min.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\validator\validator.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\lib\wns.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\LICENSE.txt" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\apis.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\createBindingResults.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\createResults.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\failure.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\Badge-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\InvalidChannel-failure.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\InvalidCredentials-failure.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\Raw-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\Send-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\sendTile-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\sendToast-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\SendToastText01WithAudioAndToastOptions-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileSquareBlock-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileSquareImage-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileSquarePeekImageAndText01-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileSquarePeekImageAndText02-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileSquarePeekImageAndText03-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileSquarePeekImageAndText04-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileSquareText01-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileSquareText02-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileSquareText03-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileSquareText04-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileWideBlockAndText01-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileWideBlockAndText02-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileWideImage-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileWideImageAndText01-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileWideImageAndText02-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileWideImageCollection-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileWidePeekImage01-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileWidePeekImage02-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileWidePeekImage03-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileWidePeekImage04-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileWidePeekImage05-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileWidePeekImage06-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileWidePeekImageAndText01-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileWidePeekImageAndText02-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileWidePeekImageCollection01-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileWidePeekImageCollection02-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileWidePeekImageCollection03-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileWidePeekImageCollection04-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileWidePeekImageCollection05-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileWidePeekImageCollection06-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileWideSmallImageAndText01-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileWideSmallImageAndText02-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileWideSmallImageAndText03-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileWideSmallImageAndText04-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileWideSmallImageAndText05-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileWideText01-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileWideText02-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileWideText03-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileWideText04-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileWideText05-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileWideText06-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileWideText07-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileWideText08-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileWideText09-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileWideText10-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\TileWideText11-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\ToastImageAndText01-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\ToastImageAndText02-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\ToastImageAndText03-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\ToastImageAndText04-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\ToastText01-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\ToastText02-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\ToastText03-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\nock\ToastText04-success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\notify.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\notify_failure.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\notify_success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\success.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\test\templates.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\lib\xml2js.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\examples\big-not-pretty.xml" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\examples\example.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\examples\get-products.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\examples\hello-world.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\examples\not-pretty.xml" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\examples\pretty-print.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\examples\shopping.xml" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\examples\switch-bench.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\examples\test.html" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\examples\test.xml" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\lib\sax.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\test\buffer-overrun.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\test\case.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\test\cdata-chunked.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\test\cdata-end-split.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\test\cdata-fake-end.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\test\cdata-multiple.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\test\cdata.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\test\index.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\test\issue-23.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\test\issue-30.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\test\issue-35.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\test\issue-47.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\test\issue-49.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\test\parser-position.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\test\script.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\test\self-closing-child-strict.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\test\self-closing-child.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\test\self-closing-tag.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\test\stray-ending.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\test\trailing-non-whitespace.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\test\unquoted.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\test\xmlns-issue-41.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\test\xmlns-rebinding.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\test\xmlns-strict.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\test\xmlns-unbound.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\test\xmlns-xml-default-ns.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\test\xmlns-xml-default-prefix-attribute.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\test\xmlns-xml-default-prefix.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\test\xmlns-xml-default-redefine.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xmlbuilder\lib\index.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xmlbuilder\lib\XMLBuilder.js" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xmlbuilder\lib\XMLFragment.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AmqpPublisher\PasswordReset.cmd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FormatService\FormatService.cmd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AmqpPublisher\amqp\.npmignore" />
+    <Content Include="AmqpPublisher\amqp\.travis.yml" />
+    <Content Include="AmqpPublisher\amqp\History.md" />
+    <Content Include="AmqpPublisher\amqp\LICENSE-MIT" />
+    <Content Include="AmqpPublisher\amqp\Makefile" />
+    <Content Include="AmqpPublisher\amqp\package.json" />
+    <Content Include="AmqpPublisher\amqp\qparser.rb" />
+    <Content Include="AmqpPublisher\amqp\README.md" />
+    <Content Include="AmqpPublisher\amqp\test2src\Cakefile" />
+    <Content Include="AmqpPublisher\amqp\test2src\federation.coffee" />
+    <Content Include="AmqpPublisher\amqp\test2src\firehose.coffee" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ServiceBusPublisher\AzurePasswordReset.cmd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ServiceBusPublisher\azure" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ServiceBusPublisher\node_modules\azure\.jshintrc" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\.npmignore" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\.travis.yml" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\lib\services\serviceManagement\models\roleschema.json" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\dateformat\package.json" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\dateformat\Readme.md" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\dateformat\test\test_weekofyear.sh" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\mime\LICENSE" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\mime\package.json" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\mime\README.md" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\mime\types\mime.types" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\mime\types\node.types" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\node-uuid\LICENSE.md" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\node-uuid\package.json" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\node-uuid\README.md" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\LICENSE" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\aws-sign\package.json" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\cookie-jar\package.json" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\forever-agent\package.json" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\.npmignore" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\License" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\Makefile" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\node_modules\async\.gitmodules" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\node_modules\async\.npmignore" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\node_modules\async\LICENSE" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\node_modules\async\Makefile" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\node_modules\async\package.json" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\node_modules\async\README.md" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\node_modules\combined-stream\.npmignore" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\node_modules\combined-stream\License" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\node_modules\combined-stream\Makefile" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\node_modules\combined-stream\node_modules\delayed-stream\.npmignore" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\node_modules\combined-stream\node_modules\delayed-stream\License" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\node_modules\combined-stream\node_modules\delayed-stream\Makefile" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\node_modules\combined-stream\node_modules\delayed-stream\package.json" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\node_modules\combined-stream\node_modules\delayed-stream\Readme.md" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\node_modules\combined-stream\package.json" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\node_modules\combined-stream\Readme.md" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\package.json" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\Readme.md" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\.npmignore" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\.travis.yml" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\LICENSE" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\Makefile" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\boom\.npmignore" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\boom\.travis.yml" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\boom\LICENSE" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\boom\Makefile" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\boom\package.json" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\boom\README.md" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\cryptiles\.npmignore" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\cryptiles\.travis.yml" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\cryptiles\LICENSE" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\cryptiles\Makefile" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\cryptiles\package.json" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\cryptiles\README.md" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\hoek\.npmignore" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\hoek\.travis.yml" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\hoek\LICENSE" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\hoek\Makefile" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\hoek\package.json" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\hoek\README.md" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\sntp\.npmignore" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\sntp\.travis.yml" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\sntp\LICENSE" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\sntp\Makefile" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\sntp\package.json" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\node_modules\sntp\README.md" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\package.json" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\hawk\README.md" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\json-stringify-safe\LICENSE" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\json-stringify-safe\package.json" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\json-stringify-safe\README.md" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\node-uuid\.npmignore" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\node-uuid\benchmark\bench.gnu" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\node-uuid\benchmark\bench.sh" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\node-uuid\benchmark\README.md" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\node-uuid\LICENSE.md" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\node-uuid\package.json" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\node-uuid\README.md" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\oauth-sign\package.json" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\qs\.gitmodules" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\qs\.npmignore" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\qs\.travis.yml" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\qs\component.json" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\qs\History.md" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\qs\Makefile" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\qs\package.json" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\qs\Readme.md" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\tunnel-agent\package.json" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\package.json" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\README.md" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\squid.conf" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\ssl\ca\ca.cnf" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\ssl\ca\ca.crl" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\ssl\ca\ca.crt" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\ssl\ca\ca.csr" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\ssl\ca\ca.key" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\ssl\ca\ca.srl" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\ssl\ca\server.cnf" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\ssl\ca\server.crt" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\ssl\ca\server.csr" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\ssl\ca\server.key" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\ssl\npm-ca.crt" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\ssl\test.crt" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\request\tests\ssl\test.key" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\tunnel\.npmignore" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\tunnel\CHANGELOG.md" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\tunnel\package.json" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\tunnel\README.md" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\tunnel\test\keys\agent1-cert.pem" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\tunnel\test\keys\agent1-csr.pem" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\tunnel\test\keys\agent1-key.pem" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\tunnel\test\keys\agent1.cnf" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\tunnel\test\keys\agent2-cert.pem" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\tunnel\test\keys\agent2-csr.pem" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\tunnel\test\keys\agent2-key.pem" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\tunnel\test\keys\agent2.cnf" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\tunnel\test\keys\agent3-cert.pem" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\tunnel\test\keys\agent3-csr.pem" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\tunnel\test\keys\agent3-key.pem" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\tunnel\test\keys\agent3.cnf" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\tunnel\test\keys\agent4-cert.pem" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\tunnel\test\keys\agent4-csr.pem" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\tunnel\test\keys\agent4-key.pem" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\tunnel\test\keys\agent4.cnf" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\tunnel\test\keys\ca1-cert.pem" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\tunnel\test\keys\ca1-cert.srl" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\tunnel\test\keys\ca1-key.pem" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\tunnel\test\keys\ca1.cnf" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\tunnel\test\keys\ca2-cert.pem" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\tunnel\test\keys\ca2-cert.srl" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\tunnel\test\keys\ca2-crl.pem" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\tunnel\test\keys\ca2-key.pem" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\tunnel\test\keys\ca2-serial" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\tunnel\test\keys\ca2.cnf" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\tunnel\test\keys\Makefile" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\underscore\.npmignore" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\underscore\.travis.yml" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\underscore\CNAME" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\underscore\CONTRIBUTING.md" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\underscore\LICENSE" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\underscore\package.json" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\underscore\README.md" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\validator\.npmignore" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\validator\LICENSE" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\validator\package.json" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\validator\README.md" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\.npmignore" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\package.json" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\wns\README.md" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\.npmignore" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\.travis.yml" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\LICENSE" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\AUTHORS" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\examples\strict.dtd" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\LICENSE" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\package.json" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\node_modules\sax\README.md" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\package.json" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xml2js\README.md" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xmlbuilder\.npmignore" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xmlbuilder\package.json" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\node_modules\xmlbuilder\README.md" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\package.json" />
+    <Content Include="ServiceBusPublisher\node_modules\azure\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ServiceBusPublisher\node_modules\azure\node_modules\request\node_modules\form-data\node_modules\combined-stream\node_modules\delayed-stream\test\integration\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2435/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

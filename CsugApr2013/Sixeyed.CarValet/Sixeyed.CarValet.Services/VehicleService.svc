@@ -1,0 +1,4 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" 
+    Service="Sixeyed.CarValet.Services.VehicleService" 
+    CodeBehind="VehicleService.svc.cs"
+    Factory="System.ServiceModel.Activation.WebServiceHostFactory"%>

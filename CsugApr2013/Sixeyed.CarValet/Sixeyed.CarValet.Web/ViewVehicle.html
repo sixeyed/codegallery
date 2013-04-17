@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>View Vehicle Details</title>
+    <script src="Scripts/jquery-1.8.2.min.js"></script>
+    <script src="Scripts/ApiClient.js"></script>
+</head>
+<body>
+
+    <h1>Get Vehicle Details</h1>
+    <div id="lookup">
+        <label for="txtMakeCode">Make Code:</label>
+        <input id="txtMakeCode" type="text" />
+        <label for="txtModelCode">Model Code:</label>
+        <input id="txtModelCode" type="text" />
+        <button id="btnLookup">Go!</button>
+    </div>
+
+    <div id="vehicle"></div>
+
+    <script>
+        $(document).ready(function () {
+            $('#btnLookup').on('click', function () {
+                $('#vehicle').empty();
+                var makeCode = $('#txtMakeCode').val();
+                var modelCode = $('#txtModelCode').val();
+                var client = new ApiClient.Vehicles();
+                client.getVehicle(makeCode, modelCode, function (data) {
+                    $('#vehicle').append('<h1>' + data.Make + ' ' + data.Model + '</h1>');
+                    $('#vehicle').append('<img src=' + data.ImageUrl + '></img>');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

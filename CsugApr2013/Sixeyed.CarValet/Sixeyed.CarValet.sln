@@ -1,0 +1,137 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{A538004A-6E84-4636-B994-B71416C2A694}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Sixeyed.CarValet.Database", "Sixeyed.CarValet.Database\Sixeyed.CarValet.Database.sqlproj", "{520EB106-1BDB-4B53-86AC-030C2E268459}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{4E2FFAC5-9D4B-4D01-86BC-3D584A8A6981}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sixeyed.CarValet.Entities", "Sixeyed.CarValet.Entities\Sixeyed.CarValet.Entities.csproj", "{879E26F7-B8EF-4E7C-B963-61D759F06941}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{31DB98D9-97EB-48A8-BC4E-397CC6ED5920}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{1A4764BA-6947-49F4-8587-4E8395E69611}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sixeyed.CarValet.Services", "Sixeyed.CarValet.Services\Sixeyed.CarValet.Services.csproj", "{FDF14B55-EAA5-4A96-A9B2-8FF611C23A5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sixeyed.CarValet.Api", "Sixeyed.CarValet.Api\Sixeyed.CarValet.Api.csproj", "{2FEED4DE-7286-431A-87BF-315F18A76D2E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{2CFBB979-A3CB-489E-BE33-AC2EF1B76897}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sixeyed.CarValet.Web", "Sixeyed.CarValet.Web\Sixeyed.CarValet.Web.csproj", "{352B8D52-D258-4641-A74A-CB3808F75F43}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assets", "Assets", "{A078A74B-E85F-4148-A75B-1AA9A12E8498}"
+	ProjectSection(SolutionItems) = preProject
+		Assets\FirefoxBookmarks.json = Assets\FirefoxBookmarks.json
+		Assets\RESTClient.json = Assets\RESTClient.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Node", "Node", "{73B23786-3ACC-45B8-912E-5D745E8F45A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sixeyed.CarValet.Node", "Sixeyed.CarValet.Node\Sixeyed.CarValet.Node.csproj", "{829A5FEC-C303-43AF-8A4B-BC33E9B300A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sixeyed.CarValet.AmqpConsumer", "Sixeyed.CarValet.Amqp\Sixeyed.CarValet.AmqpConsumer.csproj", "{148F6055-54D8-4394-B4FE-8A91EA36664C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Azure", "Azure", "{6E078909-5F00-4291-8C5B-7EDC0C1039D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sixeyed.CarValet.AzureQueueConsumer", "Sixeyed.CarValet.AzureQueueConsumer\Sixeyed.CarValet.AzureQueueConsumer.csproj", "{7E589E0F-1093-4AAF-A01C-C9FDB0C78034}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 9
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://sixeyed.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Sixeyed.CarValet.Entities\\Sixeyed.CarValet.Entities.csproj
+		SccProjectTopLevelParentUniqueName1 = Sixeyed.CarValet.sln
+		SccProjectName1 = Sixeyed.CarValet.Entities
+		SccLocalPath1 = Sixeyed.CarValet.Entities
+		SccProjectUniqueName2 = Sixeyed.CarValet.Services\\Sixeyed.CarValet.Services.csproj
+		SccProjectTopLevelParentUniqueName2 = Sixeyed.CarValet.sln
+		SccProjectName2 = Sixeyed.CarValet.Services
+		SccLocalPath2 = Sixeyed.CarValet.Services
+		SccProjectUniqueName3 = Sixeyed.CarValet.Api\\Sixeyed.CarValet.Api.csproj
+		SccProjectTopLevelParentUniqueName3 = Sixeyed.CarValet.sln
+		SccProjectName3 = Sixeyed.CarValet.Api
+		SccLocalPath3 = Sixeyed.CarValet.Api
+		SccProjectUniqueName4 = Sixeyed.CarValet.Database\\Sixeyed.CarValet.Database.sqlproj
+		SccProjectTopLevelParentUniqueName4 = Sixeyed.CarValet.sln
+		SccProjectName4 = Sixeyed.CarValet.Database
+		SccLocalPath4 = Sixeyed.CarValet.Database
+		SccProjectUniqueName5 = Sixeyed.CarValet.Web\\Sixeyed.CarValet.Web.csproj
+		SccProjectTopLevelParentUniqueName5 = Sixeyed.CarValet.sln
+		SccProjectName5 = Sixeyed.CarValet.Web
+		SccLocalPath5 = Sixeyed.CarValet.Web
+		SccProjectUniqueName6 = Sixeyed.CarValet.Node\\Sixeyed.CarValet.Node.csproj
+		SccProjectTopLevelParentUniqueName6 = Sixeyed.CarValet.sln
+		SccProjectName6 = Sixeyed.CarValet.Node
+		SccLocalPath6 = Sixeyed.CarValet.Node
+		SccProjectUniqueName7 = Sixeyed.CarValet.Amqp\\Sixeyed.CarValet.AmqpConsumer.csproj
+		SccProjectTopLevelParentUniqueName7 = Sixeyed.CarValet.sln
+		SccProjectName7 = Sixeyed.CarValet.Amqp
+		SccLocalPath7 = Sixeyed.CarValet.Amqp
+		SccProjectUniqueName8 = Sixeyed.CarValet.AzureQueueConsumer\\Sixeyed.CarValet.AzureQueueConsumer.csproj
+		SccProjectTopLevelParentUniqueName8 = Sixeyed.CarValet.sln
+		SccProjectName8 = Sixeyed.CarValet.AzureQueueConsumer
+		SccLocalPath8 = Sixeyed.CarValet.AzureQueueConsumer
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{520EB106-1BDB-4B53-86AC-030C2E268459}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{520EB106-1BDB-4B53-86AC-030C2E268459}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{520EB106-1BDB-4B53-86AC-030C2E268459}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{520EB106-1BDB-4B53-86AC-030C2E268459}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{520EB106-1BDB-4B53-86AC-030C2E268459}.Release|Any CPU.Build.0 = Release|Any CPU
+		{520EB106-1BDB-4B53-86AC-030C2E268459}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{879E26F7-B8EF-4E7C-B963-61D759F06941}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{879E26F7-B8EF-4E7C-B963-61D759F06941}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{879E26F7-B8EF-4E7C-B963-61D759F06941}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{879E26F7-B8EF-4E7C-B963-61D759F06941}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDF14B55-EAA5-4A96-A9B2-8FF611C23A5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDF14B55-EAA5-4A96-A9B2-8FF611C23A5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDF14B55-EAA5-4A96-A9B2-8FF611C23A5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDF14B55-EAA5-4A96-A9B2-8FF611C23A5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FEED4DE-7286-431A-87BF-315F18A76D2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FEED4DE-7286-431A-87BF-315F18A76D2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FEED4DE-7286-431A-87BF-315F18A76D2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FEED4DE-7286-431A-87BF-315F18A76D2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{352B8D52-D258-4641-A74A-CB3808F75F43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{352B8D52-D258-4641-A74A-CB3808F75F43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{352B8D52-D258-4641-A74A-CB3808F75F43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{352B8D52-D258-4641-A74A-CB3808F75F43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{829A5FEC-C303-43AF-8A4B-BC33E9B300A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{829A5FEC-C303-43AF-8A4B-BC33E9B300A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{829A5FEC-C303-43AF-8A4B-BC33E9B300A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{829A5FEC-C303-43AF-8A4B-BC33E9B300A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{148F6055-54D8-4394-B4FE-8A91EA36664C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{148F6055-54D8-4394-B4FE-8A91EA36664C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{148F6055-54D8-4394-B4FE-8A91EA36664C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{148F6055-54D8-4394-B4FE-8A91EA36664C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E589E0F-1093-4AAF-A01C-C9FDB0C78034}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E589E0F-1093-4AAF-A01C-C9FDB0C78034}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E589E0F-1093-4AAF-A01C-C9FDB0C78034}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E589E0F-1093-4AAF-A01C-C9FDB0C78034}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{520EB106-1BDB-4B53-86AC-030C2E268459} = {A538004A-6E84-4636-B994-B71416C2A694}
+		{31DB98D9-97EB-48A8-BC4E-397CC6ED5920} = {4E2FFAC5-9D4B-4D01-86BC-3D584A8A6981}
+		{1A4764BA-6947-49F4-8587-4E8395E69611} = {4E2FFAC5-9D4B-4D01-86BC-3D584A8A6981}
+		{2CFBB979-A3CB-489E-BE33-AC2EF1B76897} = {4E2FFAC5-9D4B-4D01-86BC-3D584A8A6981}
+		{73B23786-3ACC-45B8-912E-5D745E8F45A1} = {4E2FFAC5-9D4B-4D01-86BC-3D584A8A6981}
+		{6E078909-5F00-4291-8C5B-7EDC0C1039D0} = {4E2FFAC5-9D4B-4D01-86BC-3D584A8A6981}
+		{879E26F7-B8EF-4E7C-B963-61D759F06941} = {31DB98D9-97EB-48A8-BC4E-397CC6ED5920}
+		{FDF14B55-EAA5-4A96-A9B2-8FF611C23A5E} = {1A4764BA-6947-49F4-8587-4E8395E69611}
+		{2FEED4DE-7286-431A-87BF-315F18A76D2E} = {1A4764BA-6947-49F4-8587-4E8395E69611}
+		{352B8D52-D258-4641-A74A-CB3808F75F43} = {2CFBB979-A3CB-489E-BE33-AC2EF1B76897}
+		{829A5FEC-C303-43AF-8A4B-BC33E9B300A0} = {73B23786-3ACC-45B8-912E-5D745E8F45A1}
+		{148F6055-54D8-4394-B4FE-8A91EA36664C} = {73B23786-3ACC-45B8-912E-5D745E8F45A1}
+		{7E589E0F-1093-4AAF-A01C-C9FDB0C78034} = {6E078909-5F00-4291-8C5B-7EDC0C1039D0}
+	EndGlobalSection
+EndGlobal
